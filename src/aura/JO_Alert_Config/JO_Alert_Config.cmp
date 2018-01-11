@@ -1,0 +1,52 @@
+<aura:component controller="JO_AlertConfigController" implements="force:appHostable" >
+    <aura:attribute name="alertList" type="List" />
+    <aura:attribute name="alertType" type="JO_Wrapper.JO_AlertConfigWrapper[]" />
+    <aura:attribute name="selectedStatus" type="String" />
+    <aura:attribute name="userPriority" type="List" />
+    <aura:attribute name="msg" type="String" />
+   	<aura:attribute name="contactId" type="String" />
+    <aura:attribute name="jobOwnerIds" type="String[]" /> 
+    <aura:attribute name="dashBoardRecId" type="Customer_Config__c" /> 
+     <aura:attribute name="listOptions" type="List" default="[]"/>
+    <aura:attribute name="defaultOptions" type="List" default="[]"/> 
+    <aura:method name="doInitOnLoad" action="{!c.onLoadAlertConfig}" access="GLOBAL"/>
+    <!--<aura:handler name="init" value="{!this}" action="{!c.doInit}" />-->
+    <aura:registerEvent name="chartEvnt" type="c:JO_ChartEvent" />
+    
+    <div class="slds-m-around--xx-large slds-modal_large" style="width: 100% !important;">
+        <div role="dialog" tabindex="-1" aria-labelledby="header99" class="slds-modal slds-fade-in-open ">
+            <div class="slds-modal__container" style = "width: 55%;; max-width: none; " >
+                <div class="slds-modal__header">
+                    <button class="slds-button slds-modal__close slds-button__icon_large slds-button--icon-inverse" title="Close" onclick="{!c.closeModel}">
+                        X
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                    <h2 id="header99" class="slds-text-heading--medium">Alerts Configuration</h2>
+                </div>
+                 <div class="slds-modal__content slds-p-around--medium">
+                     <div Style="margin-left: 80px;">                
+                   <lightning:dualListbox aura:id="statusData" name="Statuses"
+                                                           sourceLabel="Available Fields" 
+                                                           selectedLabel="Selected Fields" 
+                                                           options="{! v.listOptions }"
+                                                           value="{! v.defaultOptions }"
+                                                           onchange="{! c.handleChange }"
+                                                           
+                                          /> </div>
+         </div>      
+                
+                <div class="slds-modal__footer">
+                    <div>
+                        <div class="slds-text-align_center" style="color:Green;font-weight:600;">{!v.msg}</div>
+                        <div class="slds-text-align_right">
+                            <lightning:button onclick="{!c.saveAlert}" label="Save" variant="brand" type="button" title="Save" />
+                            <lightning:button onclick="{!c.closeModel}" label="Close" variant="brand" type="button" title="Close" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slds-backdrop slds-backdrop--open"></div>
+    </div>
+    
+</aura:component>

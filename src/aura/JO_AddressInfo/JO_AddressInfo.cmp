@@ -1,0 +1,65 @@
+<aura:component controller='JO_Orderinfo' implements='flexipage:availableForRecordHome,force:hasrecordId'>
+    <aura:handler name="init" value="{!this}" action="{!c.doinit}" />
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="ordCustomer" type="Contact" />
+    <article class="slds-card">
+        <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="slds-media__figure">
+                    <span class="slds-icon_container slds-icon-standard-contact" title="description of icon when needed"> 
+                    </span>
+                </div>
+                <div class="slds-media__body">    
+                    <h2>
+                        <lightning:icon iconName="standard:contact" variant="bare" size="small"/>&nbsp;&nbsp;
+                        <span class="slds-text-heading_small"><b> Customer Info </b> </span>
+                    </h2>
+                </div>
+            </header>
+        </div>
+    </article>
+        <div class="slds">
+           <div class="slds-grid slds-wrap">
+               <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-1">
+                   <div class="slds-form-element slds-has-divider--bottom">
+                       <label class="slds-form-element__label" for="Initiated">Name</label>
+                       <div class="slds-form-element__control">
+                           <ui:Outputtext class="slds-form-element__static1" value="{!v.ordCustomer.Name}"/>              
+                       </div>
+                   </div>
+               </div>
+               <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2">
+                   <div class="slds-form-element slds-has-divider--bottom">
+                       <label class="slds-form-element__label" for="Initiated">Title</label>
+                       <div class="slds-form-element__control">
+                           <ui:Outputtext class="slds-form-element__static1" value="{!v.ordCustomer.Title}"/>              
+                       </div>
+                   </div>
+               </div>
+               <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2">
+                   <div class="slds-form-element slds-has-divider--bottom">
+                       <label class="slds-form-element__label" for="Initiated">Acount Name</label>
+                       <div class="slds-form-element__control">
+                           <ui:Outputtext class="slds-form-element__static1" value="{!v.ordCustomer.Account.Name }"/>              
+                       </div>
+                   </div>
+               </div>
+               <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2">
+                   <div class="slds-form-element">
+                       <label class="slds-form-element__label" for="Initiated">Email</label>
+                       <div class="slds-form-element__control">
+                           <ui:Outputtext class="slds-form-element__static1" value="{!v.ordCustomer.Email}"/>              
+                       </div>
+                   </div>
+               </div>
+               <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2">
+                   <div class="slds-form-element">
+                       <label class="slds-form-element__label" for="Initiated">Phone</label>
+                       <div class="slds-form-element__control">
+                           <ui:Outputtext class="slds-form-element__static1" value="{!v.ordCustomer.Phone}"/>              
+                       </div>
+                   </div>
+               </div>
+            </div>
+        </div>
+</aura:component>

@@ -1,0 +1,74 @@
+<aura:component controller="JO_NotificationOrders" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" 
+                access="global" >
+    <ltng:require scripts='/resource/Highchart/PGE/jquery-3.2.1.min.js'/>   
+    <aura:attribute name="orders" type="Order__c[]" />
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="ext" type="String" default="plus"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <article class="slds-card">
+        <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="slds-media__figure">
+                    <lightning:icon iconName="standard:note" size="small" alternativeText="Orders"/>
+                </div>
+                <div class="slds-media__body">
+                    <h2>
+                        <a href="javascript:void(0);" class="slds-card__header-link slds-truncate" title="Orders">
+                            <span class="slds-text-heading_small">Orders ({!v.orders.length})</span>
+                        </a>
+                    </h2>
+                </div>
+            </header>
+        </div>
+        <div class="slds-card__body slds-card__body_inner">
+            <ul class="slds-tree" role="tree" aria-labelledby="treeheading" aria-activedescendant="tree0-node0">
+                <li  id="tree0-node0" class="slds-tree__branch slds-is-open" role="treeitem" aria-level="1" aria-expanded="true">
+                    <div class="slds-tree__item">
+                        <aura:if isTrue="{!v.orders[0].Sub_Orders__r[0] != null}">
+                            <aura:if isTrue="{!v.ext=='plus'}">
+                                <div id="plus" >
+                                    <a id="tree0-node0-0-link"  tabindex="-1" onclick="{!c.showHidePanel}" role="presentation">
+                                        <lightning:icon iconName="utility:dash" size="x-small" alternativeText="➖"/>
+                                    </a>
+                                </div>
+                                <aura:set attribute="else">
+                                    <div id="minus">
+                                        <div id="plus" >
+                                            <a id="tree0-node0-0-link"  tabindex="-1" onclick="{!c.showHidePanel}" role="presentation">
+                                                <lightning:icon iconName="utility:add" size="x-small" alternativeText="➕"/>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </aura:set>
+                            </aura:if> 
+                            &nbsp;
+                            <aura:set attribute="else">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</aura:set>
+                        </aura:if> 
+                        <!--<aura:if isTrue="{!v.orders[0].Sub_Orders__r[0] == null}">-->
+                        <aura:if isTrue="{!v.orders.length >0}">
+                            <a id="tree0-node0-0-link" target="_blank" style="color: blue;" tabindex="-1" href="{!'/'+v.orders[0].Id}" role="presentation" title ="{!'Name :'+ v.orders[0].Name+'-'+'Priority:'+ v.orders[0].Priority__c+'-'+'OrderType:'+v.orders[0].OrderType__c}" >{!v.orders[0].Name}</a>
+                            <div class="slds-card__body slds-card__body_inner">
+                                {!'Order Status : ' + v.orders[0].OrderStatus__c}
+                                <!--{!'JobOwner : ' + v.orders[0].Job_Owner__r.Name}-->
+                                
+                            </div>
+                       </aura:if>
+                    </div>
+                    
+                    <ul aura:id="{!v.orders[0].Id}" id="{!v.orders[0].Id}" style="display:block;" role="group" aria-labelledby="tree0-node0-link">
+                        <aura:iteration items="{!v.orders[0].Sub_Orders__r}" var="cOrd">
+                            <li id="tree0-node0-1" class="slds-tree__item" role="treeitem" aria-level="2" style="margin-left: 45px;">
+                                <a href="{!'/'+cOrd.Id}"  target="_blank" role="presentation" title ="{!'Name :'+ cOrd.Name+'-'+'Priority:'+ cOrd.Priority__c+'-'+'OrderType:'+cOrd.OrderType__c}" >{!cOrd.Name}</a>   
+                                <div class="slds-card__body slds-card__body_inner" >
+                                    {!'Order Status : ' + cOrd.OrderStatus__c}
+                                </div>
+                            </li>
+                        </aura:iteration>
+                    </ul>
+                </li>
+            </ul>
+            
+        </div>
+    </article>
+</aura:component>

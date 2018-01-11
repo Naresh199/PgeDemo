@@ -1,0 +1,54 @@
+<aura:component controller="JO_PortfolioController" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">
+    
+    <aura:attribute name="sObjectName" type="String"/>
+    <aura:attribute name="fieldSetName" type="String"/>
+    <aura:attribute name="fieldSetValues" type="List"/>
+    <aura:attribute name="tableRecords" type="List"/>
+    <aura:attribute name="criteriafield" type="String" default="Jb_Owner__c"/>
+    
+    <aura:attribute name="viewId" type="String" />   
+    <aura:attribute name="contactIds" type="String[]"/>
+    <aura:attribute name="userConfigRec" type="Customer_Config__c"/>
+    <aura:attribute name="notificationIds" type="String[]" />
+
+    <aura:attribute name="PaginationList" type="List"/>
+    <aura:attribute name="startPage" type="Integer" />
+    <aura:attribute name="endPage" type="Integer"/>
+    <aura:attribute name="totalRecords" type="Integer"/>
+    <aura:attribute name="pageNo" type="Integer" default="0"/>
+    <aura:attribute name="pagecount" type="Integer" default="0"/>
+    <aura:attribute name="pageSize" type="Integer" default="10"/>
+
+    <aura:method name="fetchTaskEventData" action="{!c.doInit}" access="GLOBAL">
+        <aura:attribute name="sObjectName" type="String" />   
+        <aura:attribute name="fieldSetValues" type="String[]"/>
+        <aura:attribute name="contactIds" type="String[]"/>
+        <aura:attribute name="userConfigRec" type="Customer_Config__c"/> 
+    </aura:method> 
+    <aura:handler event="c:JO_TaskEvent" action="{!c.doInit}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <table class="slds-table slds-table_bordered"> 
+        <thead>             
+            <tr  class="slds-line-height_reset " >
+                <aura:iteration items="{!v.fieldSetValues}" var="field">
+                    <th> {!field.label}</th>
+                </aura:iteration>
+            </tr>
+        </thead>
+        <tbody>
+            <aura:iteration items="{!v.PaginationList}" var="row">
+                <tr>
+                    <aura:iteration items="{!v.fieldSetValues}" var="field">
+                        <td> <c:JO_PortfolioColumnFields record="{!row}" field="{!field}"/></td>
+                    </aura:iteration>
+                </tr>
+            </aura:iteration>
+        </tbody>
+    </table>
+    <center class="slds-m-top--medium">
+        <lightning:button label="Previous" disabled="{!v.startPage == 0}" onclick="{!c.previous}" variant="brand" iconName='utility:back'/>
+        <span style="padding-left:10px;padding-right:10px;padding-top:20px;">&nbsp;{!v.totalRecords} Records • Page {!v.pageNo} / {!v.pagecount} &nbsp;</span>
+        <lightning:button label="Next" disabled="{!v.endPage >= v.totalRecords}" onclick="{!c.next}" variant="brand" iconName='utility:forward' iconPosition='right'/>
+    </center>
+</aura:component>

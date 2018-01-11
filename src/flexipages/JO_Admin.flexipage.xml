@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flexiPageRegions>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>entityNames</name>
+                <value>[&quot;Jo_Alert__c&quot;,&quot;Contact&quot;]</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>label</name>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>maxRecords</name>
+                <value>10</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:recentItems</componentName>
+        </componentInstances>
+        <name>region1</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <componentInstances>
+            <componentName>JO_Dashboard</componentName>
+        </componentInstances>
+        <name>region2</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <name>region3</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <masterLabel>JO Admin</masterLabel>
+    <template>
+        <name>flexipage:appHomeTemplateTwoColumnsStacked</name>
+    </template>
+    <type>AppPage</type>
+</FlexiPage>

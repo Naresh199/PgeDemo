@@ -1,0 +1,29 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global" >
+    <aura:attribute name="myURL" type="String" default="https://drmiuat--drmsuat.lightning.force.com/c/Job_Owner_Dashboard.app"/>   
+    <article class="slds-card"> 
+        <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+              
+                <div class="slds-media__body">
+                    <h2>
+                        <!--  <lightning:icon iconName="utility:chart" variant="bare" size="small"/>&nbsp;&nbsp; -->
+                        <lightning:icon iconName="action:share_poll" variant="share_poll"/>&nbsp;&nbsp;
+                        <!-- <span class="slds-text-heading_medium"><b>Job Owner Dashboard</b></span> -->
+                        <span title="hoverin' words">
+                            <b> <ui:outputURL value="{!v.myURL}" title="Access Job Owner Dashboard" label="Job Owner Dashboard"  target="_new"/></b>
+                        </span>
+                    </h2>
+                </div>
+            </header>
+        </div>
+        <div>
+            <dl class="slds-dl_inline slds-m-left_small" style="height: 52px;">
+                <dd class="slds-dl_inline__detail slds-m-left_small $font-size-text-small"><b>View details of Notification, Statues, Alerts respective to Job Owner</b></dd>
+            </dl>
+        </div>
+        <div class="slds-card__body slds-card__body_inner slds-m-left_small">
+            <!-- <ui:outputURL value="{!v.myURL}" label="Click to View"/> -->
+            <!--  <lightning:button variant="brand" label="Click to View" onclick="{!c.handleClick }" /> -->
+        </div>
+    </article>
+</aura:component>

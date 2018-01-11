@@ -1,0 +1,52 @@
+<aura:component access="global">
+    <aura:attribute name="record" type="sObject" description="record which is being displayed"/>
+    <aura:attribute name="field" type="Object" description="field object which is being rendered"/>
+    <aura:attribute name="cellValue" type="Object"/>
+    <aura:attribute name="cellLabel" type="String"/>
+    <aura:attribute name="isTextField" type="boolean" default="false"/>
+    <aura:attribute name="isEmailField" type="boolean" default="false"/>
+    <aura:attribute name="isPhoneField" type="boolean" default="false"/>
+    <aura:attribute name="isReferenceField" type="boolean" default="false"/>
+    <aura:attribute name="isDateField" type="boolean" default="false"/>
+    <aura:attribute name="isDateTimeField" type="boolean" default="false"/>
+    <aura:attribute name="isCurrencyField" type="boolean" default="false"/>
+    <aura:attribute name="isLinkField" type="boolean" default="false"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <aura:if isTrue="{!v.isEmailField}">
+        <ui:outputEmail value="{!v.cellValue}"/>
+    </aura:if>
+    <aura:if isTrue="{!v.isPhoneField}">
+        <ui:outputPhone value="{!v.cellValue}"/>
+    </aura:if>
+    <aura:if isTrue="{!v.isTextField}">
+        <aura:if isTrue="{!v.field.name =='Name'}">
+            <ui:outputURL value="{!'/one/one.app?#/sObject/'+ v.cellLabel + '/view'}" target="_blank" label="{!v.cellValue}" title="{!v.cellValue}"/>
+            <aura:set attribute="else">
+                <ui:outputText value="{!v.cellValue}"/>
+            </aura:set>
+        </aura:if>
+    </aura:if>
+    <aura:if isTrue="{!v.isDateField}">
+        <ui:outputDate value="{!v.cellValue}"/>
+    </aura:if>
+    <aura:if isTrue="{!v.isDateTimeField}">
+        <ui:outputDateTime value="{!v.cellValue}"/>
+    </aura:if>
+    <aura:if isTrue="{!v.isCurrencyField}">
+        <ui:outputCurrency value="{!v.cellValue}"/>
+    </aura:if>
+    <aura:if isTrue="{!v.isReferenceField}">
+        <aura:if isTrue="{! and(v.field.name !='Customer__c', v.field.name !='Jb_Owner__c')}">
+            <ui:outputURL value="{!'/one/one.app?#/sObject/'+ v.cellValue + '/view'}" target="_blank" label="{!v.cellLabel}" title="{!v.cellLabel}"/>
+            <aura:set attribute="else">
+                {!v.cellLabel}
+            </aura:set>
+        </aura:if>
+    </aura:if>    
+    <aura:if isTrue="{!v.isLinkField}">
+        <a href="{!$Label.c.ZOrder + v.cellLabel}" target="_blank" >
+        <lightning:buttonIcon size="medium" value="{!v.cellLabel}" iconName="utility:link" variant="bare" alternativeText="{! 'Link to SAP:'+ v.cellLabel}" /> </a>
+    	<!-- <ui:outputURL value="{!$Label.c.ZOrder +'/'+ v.cellLabel}" target="_blank" /> -->
+    </aura:if>
+</aura:component>

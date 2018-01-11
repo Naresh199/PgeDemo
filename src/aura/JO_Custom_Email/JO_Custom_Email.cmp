@@ -1,0 +1,85 @@
+<aura:component controller="JO_Custom_Email" implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId" access="global">
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="mailStatus" type="boolean" default="false"/>
+    <aura:attribute name="emailId" type="String" />
+    <aura:attribute name="recordsendId" type="String" />
+    <aura:attribute name="comTempltes" type="List"/>
+    <aura:attribute name="attachlist" type="List"/>
+    <aura:attribute name="fileToBeUploaded" type="boolean" default="false"/>
+    <lightning:spinner aura:id="mySpinner" class="slds-hide"/>
+    <aura:method name="doIntOnLoad" action="{!c.displayEmaildetails}" access="GLOBAL"/>
+    
+    <div class="slds-backdrop slds-backdrop--open">
+        <section  class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container" aura:id="containerId"  style="max-width:100% !important; width:80% !important; top:125px; height:85%;" >
+                <div class="slds-modal__header">
+                    <button class="slds-button slds-modal__close slds-button--icon-inverse" title="Close" onclick="{!c.closeModel}">
+                        X
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                    <aura:iteration var="c" items="{!v.comTempltes}">
+                        <h2 id="header" class="slds-text-heading--medium slds-text-body_regular">{!c.businessname} Email</h2>
+                    </aura:iteration>
+                </div>                        
+                <div class="slds-modal__content slds-p-around--medium">
+                    <aura:iteration var="c" items="{!v.comTempltes}">
+                        <div class="slds-grid">
+                            <div class="slds-col" style="flex: 0.055 auto !important; margin-top: 10px;">To:</div>
+                            <div class="slds-col"><ui:inputText class="field" aura:id="to" value="{!c.CustomerEmail}" placeholder="abc@email.com" required="true"/></div>
+                        </div>
+                        <div class="slds-grid" style="margin-top: 8px;">
+                            <div class="slds-col" style="flex: 0.02 auto !important; margin-top: 10px;">Subject:</div>
+                            <div class="slds-col"><ui:inputText class="slds-input" aura:id="subject" value="{!c.subject}" placeholder="Subject"/></div>
+                        </div>
+                        
+                        <div class="slds-form-element">
+                            <div class="slds-form-element__control" style="margin-top: 10px;">
+                                <lightning:inputRichText aura:id="body"  value="{!c.Htmlbody}" />
+                            </div>
+                        </div>
+                    </aura:iteration>
+                    <aura:if isTrue="{!v.mailStatus}">
+                        <div role="alertdialog" tabindex="-1" aria-labelledby="prompt-heading-id" aria-describedby="prompt-message-wrapper" class="slds-modal slds-fade-in-open slds-modal--prompt">
+                            <div aura:id="exampleModal" class="slds-modal__container" style=" width: 50%max-width: 40rem;min-width: 20rem;">
+                                <div class="slds-modal__header slds-theme--success slds-theme--alert-texture">
+                                    <h2 class="slds-text-heading--medium" id="prompt-heading-id">Mail Status</h2>
+                                </div>
+                                <div class="slds-modal__content slds-p-around--medium">
+                                    <p>Email Sent successfully </p>
+                                </div>
+                                <div class="slds-modal__footer slds-theme--default">
+                                    <button class="slds-button slds-button--brand" onclick="{!c.closeMessage}">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-backdrop slds-backdrop--open"></div>
+                    </aura:if>
+                    
+                </div>
+                <div class="slds-docked-composer__footer slds-shrink-none">
+                    <aura:if isTrue="{!v.fileToBeUploaded}">
+                        <aura:iteration var="c" items="{!v.attachlist}">
+                            <div class="slds-form-element">
+                                <div class="slds-form-element__control">
+                                    <label class="slds-form-element__label" for="textareaSample2"><b>Attachments</b></label>
+                                    <ui:outputText class="slds-output" title="{!c.name}" aura:id="attchfile"  value="{!c.name}"/>
+                                </div>
+                            </div>
+                        </aura:iteration>
+                    </aura:if>
+                    <div class="slds-col_bump-left slds-grid slds-grid_vertical-align-center">
+                        <div class="slds-grid slds-m-right_small" role="toolbar">
+                            <label class="slds-file-selector__body" for="file-upload-input-01">
+                                <input type="file" aura:id="file" class="slds-file-selector__input slds-assistive-text" id="file-upload-input-01" aria-describedby="file-selector-id" multiple="true" onchange="{!c.fileToBeUploaded}"/> 
+                                <lightning:icon iconName="utility:attach" size="x-small" alternativeText="Indicates approval"/>
+                            </label>
+                        </div>
+                        <lightning:button onclick="{!c.sendMail}" label="Send" variant="brand" type="button" title="Send" />
+                        <lightning:button onclick="{!c.closeModel}" label="Cancel" variant="brand" type="button" title="Close" />
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</aura:component>

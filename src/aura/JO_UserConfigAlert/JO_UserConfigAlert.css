@@ -1,0 +1,31 @@
+/*.THIS .slds-input {
+    text-align: -webkit-center;
+}
+
+.THIS .slds-active{
+    background-color: rgb(85, 117, 165);
+    border-top-right-radius: 20px;
+}
+
+.THIS .slds-tabs--default__nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    border-bottom: 2px solid #d8dde6;
+}
+.THIS .slds-tabs--default__item.slds-active .slds-tabs--default__link {
+    color: #f7f8f9 !important;
+}
+.THIS .data-row:hover {
+ background-color: #0070d2 ;
+ color:white;
+ cursor:pointer;
+}
+.THIS .data-row.selectedRow{
+  background-color: #0070d2;
+  color:white;
+ }*/
+.THIS .slds-icon-text-default {
+  fill: none !important;
+}

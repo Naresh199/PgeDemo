@@ -1,0 +1,13 @@
+.THIS .slds-modal__container{
+    max-width: 25%;
+    max-width:50% !important;
+}
+@media (min-width: 50%){
+	.THIS .slds-modal__container{
+	    max-width: 25%;
+	    max-width:50% !important;
+	}
+}
+.THIS.slds-tabs--default__link {
+	text-transform:capitalize !important;
+}

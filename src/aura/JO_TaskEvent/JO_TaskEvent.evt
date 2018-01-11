@@ -1,0 +1,4 @@
+<aura:event type="APPLICATION">
+    <aura:attribute name="notificationIds" type="List"/>
+    <aura:attribute name="jobOwnerIds" type="String[]"/>
+</aura:event>

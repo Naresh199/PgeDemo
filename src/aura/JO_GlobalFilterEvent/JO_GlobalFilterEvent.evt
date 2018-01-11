@@ -1,0 +1,5 @@
+<aura:event type="APPLICATION" description="Event template" >
+    <aura:attribute name="loggedInContact" type="String"/>
+    <aura:attribute name="jobOwnerIds" type="String[]"/>
+    <aura:attribute name="dashboardId" type="Customer_Config__c"/>
+</aura:event>

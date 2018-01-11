@@ -1,0 +1,75 @@
+<aura:component controller="JO_AlertController">     
+    <aura:attribute name="body" type="String" default="{!$Label.c.JoDashHelpTextForTask}"/> 
+    <aura:attribute name="hidebody" type="String" /> 
+    <aura:attribute name="alertList" type="JO_Wrapper.JO_AlertCountWrapper" />
+    <aura:attribute name="filterContacts" type="String[]" />
+    <aura:attribute name="loggedInContact" type="String" />
+    <aura:attribute name="notificationIds" type="string[]" />
+    <aura:attribute name="totalAlertCount" type="Integer" />
+    <aura:attribute name="activeCount" type="Integer" />
+    <aura:attribute name="hideCount" type="Integer" />
+    <aura:handler name="chartEvnt" event="c:JO_ChartEvent" action="{!c.setContactIds}" /> 
+    <aura:registerevent name="loadtable" type="c:JO_TaskEvent"/>
+    <aura:registerEvent name="globalEvnt" type="c:JO_GlobalFilterEvent"/>
+    <aura:handler event="c:JO_GlobalFilterEvent" action="{!c.setContactIds}" />
+   	<aura:attribute name="dashboardRec" type="Customer_Config__c" /> 
+
+    
+    <aura:dependency resource="markup://c:JO_HelpModel" />
+    <aura:dependency resource="markup://c:JO_AlertConfig" />
+        <ul class="slds-tabs_default__nav" role="tablist">
+            <li class="slds-tabs_default__item slds-text-body_regular slds-is-active" title="Alert Requiring Actions" role="presentation">Actions and Alerts: Total ({!v.totalAlertCount})&nbsp; Visible ({!v.activeCount}) &nbsp; Hidden ({!v.hideCount}) </li>
+            
+        </ul>
+        <div class="slds-float_right slds-is-static" style="margin-top: -1.3rem;margin-right: 0.35rem">
+            <ul  class="slds-tabs_default__nav" role="tablist">              
+                <li><lightning:buttonIcon iconName="utility:help"  alternativeText="Help" variant="bare" onclick="{!c.openModelTask}"/></li> 
+                <!-- <li><lightning:buttonIcon iconName="utility:expand_alt" alternativeText="Expand" variant="bare" onclick=""/></li> -->
+                <li><lightning:buttonIcon iconName="utility:settings" alternativeText="Configure" variant="bare" onclick="{!c.openModelConfig}"/></li>
+            </ul>
+        </div>
+        <div class="slds-table--header-fixed_container" style="height:90%; width:99%">
+            <div class="slds-scrollable_y" style="height:100%;">
+                <table class="slds-table slds-table_bordered slds-table--header-fixed"> 
+                    <thead>             
+                        <tr  class="slds-line-height_reset " >
+                            <th scope="col" class="slds-is-sortable slds-is-resizable"  style="text-align: -webkit-left;padding-left: 1%;padding-right: 0.5rem;"  aria-label="Count">
+                                <div class="slds-cell-fixed" title="Count">
+                                    <span class="slds-truncate" title="Alert Count">Count</span>
+                                </div>
+                            </th>
+                            <th scope="col" class="slds-is-sortable slds-is-resizable" aria-label="Alert Name">
+                                <div class=" slds-cell-fixed" title="Alert Name" >Alert Name</div>
+                            </th>
+                        </tr>                
+                    </thead>
+                    <tbody>
+                    <aura:iteration items="{!v.alertList}" var="pro" indexVar="index">
+                        <tr class="slds-line-height_reset" >
+                            <td scope="row" style="text-align: -webkit-left;padding-left: 2rem;padding-right: 0.5rem;">
+                                <div class="slds-text-body_regular" title="{!pro.alertId}"> 
+                                    <a onclick="{!c.fireTaskEvent}" data-recId="{!pro.alertId}" href="#">{!pro.alertCount}</a>
+                                </div>
+                            </td>
+                            <td scope="row" style="text-align: -webkit-left;">
+                                <div class="slds-text-body_regular" title="{!pro.alertName}"> 
+                                    <ui:outputtext aura:id="proname" value="{!pro.alertName}"/>
+                                </div>
+                            </td>
+                        </tr>
+                    </aura:iteration> 
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    <div aura:id="ModalDialogPlaceholder" />
+    <div aura:id="AlertConfigModel" />
+   <!--  <aura:handler event="aura:waiting" action="{!c.showWaiting}"/>
+    <aura:handler event="aura:doneWaiting" action="{!c.hideWaiting}"/>-->
+
+    <aura:attribute name="toggleSpinner" type="Boolean"/>
+    <aura:if isTrue="{!v.toggleSpinner}">
+        <lightning:spinner variant="brand"  size="large" />
+    </aura:if>
+  
+</aura:component>

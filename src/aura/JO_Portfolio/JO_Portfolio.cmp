@@ -1,0 +1,82 @@
+<aura:component controller="JO_Portfolio" >
+    <aura:attribute name="all" type="String[]"/>   
+    <aura:attribute name="views" type="String[]"/>
+    <aura:attribute name="notificationDetails" type="List"/>
+    <aura:attribute name="allTabTotal" type="Integer"/>    
+    <aura:attribute name="notifTabTotal" type="Integer"/>
+    <aura:attribute name="filterContacts" type="String[]" />
+    <aura:attribute name="loggedInContact" type="String" />    
+    <aura:attribute name="portfolioList" type="JO_Wrapper.PortfolioViews[]" />
+    <aura:attribute name="dashboardRec" type="Customer_Config__c" />  
+    <aura:attribute name="selectedTabId" type="String" />
+    <aura:attribute name="tColumns" type="Map" />
+    <aura:attribute name="allCount" type="String" default="All" />
+    <aura:attribute name="viewList" type="List" default="[{ value : 'Test' , label: 'Test', selected: 'Test'}]" />
+    <aura:attribute name="sapLink" type="String" default="{!$Resource.SAPNotificationOrderDisplay}" />    
+    <aura:attribute name="moretabs" type="Aura.Component[]"/>
+    <aura:attribute name="selectTab" type="String" default="Id_All" />
+    
+    <aura:attribute name="fieldSetValues" type="List"/>
+
+    <aura:handler name="change" value="{!v.moretabs}" action="{!c.handleSelectedTabIdChange}"/>
+    <aura:handler event="c:JO_GlobalFilterEvent" action="{!c.displayAllTabsData}" />
+    <aura:handler event="c:JO_Portfolio_Config_Event" action="{!c.refreshListViews}" />
+    <!-- <aura:handler event="c:JO_TaskEvent" action="{!c.displayPortfolioTable}"/> -->
+    
+    <aura:dependency resource="markup://c:JO_HelpModel" />  
+    <aura:dependency resource="markup://c:JO_PortfolioConfig" />
+    <ul class="slds-tabs_default__nav" role="tablist" style="margin-top: 9px;">
+        <li class="slds-tabs_default__item slds-is-active" title="Project Portfolio" role="presentation">
+            Project Portfolio
+        </li>
+    </ul>
+    
+    <div class="slds-float_right slds-is-static" style="margin-top: -1.81rem;margin-right: 0.35rem">
+        <ul  class="slds-tabs_default__nav" role="tablist">            
+            <li>
+                <div class="slds-grid slds-grid_vertical-align-start">
+                    <div class="slds-text-body_regular slds-p-top_xx-small slds-size_3-of-10">Portfolio View </div>
+                    <div class="slds-text-body_regular slds-size_3-of-10">
+                        <lightning:select aura:id="selectV" name="selectItem" label="" variant="label-hidden" onchange="{!c.loadView}">
+                            <option value="None" text="--Select View--"></option>
+                            <aura:iteration items="{!v.viewList}" var="l">
+                                <option value="{!l.value}" text="{!l.label}" selected="{!l.selected}" ></option>
+                            </aura:iteration> 
+                        </lightning:select>
+                    </div>
+                </div>
+            </li>
+            <li><lightning:buttonIcon iconName="utility:help" alternativeText="Help" variant="bare" onclick="{!c.openModelTask}"/></li>
+            <li><lightning:buttonIcon iconName="utility:crossfilter" alternativeText="Clear Filter" variant="bare" onclick="{!c.reFireGlobalEvent}"/></li>
+            <!-- <li><lightning:buttonIcon iconName="utility:record"  alternativeText="Expand" variant="bare" onclick="{!c.opendynaModel}"/></li>  -->
+            <li><lightning:buttonIcon iconName="utility:settings" alternativeText="setting" variant="bare" onclick="{!c.openModel}" /></li>
+            
+        </ul>
+    </div>
+    
+    <lightning:tabset variant="default" aura:id="tabsetId"  selectedTabId="{!v.selectedTabId}" class="cPGE_PortfolioTopSpace">
+        <aura:if isTrue="{!v.allTabTotal == v.all.length}">
+            <lightning:tab label="{!'All ('+v.allTabTotal+')'}" id='Id_All' aura:id="allTabId" class="slds-is-active slds-text-body_regular" >
+                <c:JO_PortfolioGrid sObjectName="Notifications__c" fieldSetValues="{!v.fieldSetValues}" contactIds="{!v.filterContacts}" userConfigRec="{!v.dashboardRec}" aura:id="porforlioGridId"/>
+            </lightning:tab>            
+        </aura:if>   
+        {!v.moretabs}
+    </lightning:tabset>
+
+    <!-- <lightning:button label="Add tab" onclick="{!c.addTab}"/> -->
+    
+
+
+    <div aura:id="pfbody" />
+    <div aura:id="ModalDialogPlaceholder" />
+    <div aura:id="PortfolioPopOut" />
+    <!-- <div aura:id="portoGrid" /> -->
+
+    <aura:handler event="aura:waiting" action="{!c.showWaiting}"/>
+    <aura:handler event="aura:doneWaiting" action="{!c.hideWaiting}"/>
+
+    <aura:attribute name="toggleSpinner" type="Boolean"/>
+    <aura:if isTrue="{!v.toggleSpinner}">
+        <lightning:spinner variant="brand"  size="large" />
+    </aura:if>
+</aura:component>

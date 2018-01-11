@@ -1,0 +1,39 @@
+<aura:component controller="JO_ConfigGraph" implements="force:appHostable,flexipage:availableForAllPageTypes" access="GLOBAL">
+    <aura:attribute name="listOptions" type="List" default="[]"/>
+    <aura:attribute name="defaultOptions" type="List" default="[]"/>    
+    <aura:attribute name="userConfigId" type="String"/>    
+    <aura:attribute name="loggedInContact" type="String" />
+    <aura:attribute name="jobOwnerIds" type="String[]"/>
+    <aura:attribute name="dashboardRec" type="Customer_Config__c" />
+    <aura:method name="doIntOnLoad" action="{!c.onLoadGraphConfig}" access="GLOBAL"/>
+    <aura:registerEvent name="chartEvnt" type="c:JO_ChartEvent" />
+    
+    <div class="demo-only"  style="height: 100%;">
+        <section  class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <button class="slds-button slds-modal__close" title="Close" onclick="{!c.closeModel}">
+                        <lightning:buttonIcon iconName="utility:close"/> 
+                        <span class="slds-assistive-text">Close</span>
+                    </button>            
+                    <h2 id="header99" class="slds-text-heading--medium">Chart Configuration</h2>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium">
+                    <lightning:dualListbox aura:id="statusData" name="Statuses"
+                                           sourceLabel="Available Options" 
+                                           selectedLabel="Selected Options" 
+                                           options="{! v.listOptions }"
+                                           value="{! v.defaultOptions }"
+                                           onchange="{! c.handleChange }"                                           
+                                           />  
+                </div>
+                <footer class="slds-modal__footer">
+                    <lightning:button onclick="{!c.saveHandler}" label="Save" variant="brand" type="button" title="Save" />
+                    <lightning:button onclick="{!c.closeModel}" label="Close" variant="brand" type="button" title="Close" />
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </div>
+    
+</aura:component>

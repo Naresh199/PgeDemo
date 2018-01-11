@@ -1,0 +1,19 @@
+.THIS .cPGE_Tasks{    
+    margin-top: 20px;   
+    border: 1px solid lightgrey;
+}
+.THIS .textWrapper{
+    
+     word-wrap: break-word;
+    /* Keyword values */
+    overflow-wrap: normal;
+    overflow-wrap: break-word;
+}
+.THIS .slds-tabs_default__item {
+   text-transform: capitalize !important;
+}
+.THIS .slds-cell-fixed {
+    top: 10px;
+    min-height: 0rem;
+    margin-left: 8px;
+}

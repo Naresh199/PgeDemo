@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>User_Config_Compact</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>User_Config_Compact</fullName>
+        <fields>Name</fields>
+        <fields>CreatedById</fields>
+        <fields>Job_Owner__c</fields>
+        <fields>LastModifiedById</fields>
+        <label>User Config Compact</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>Is_Active__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <label>Is Active</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_Admin__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Is Admin</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_Default__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Is Default</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Job_Owner__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>User Configs</relationshipLabel>
+        <relationshipName>User_Configs</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Json_Config__c</fullName>
+        <externalId>false</externalId>
+        <label>Json Config</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Sort_Order__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Sort Order</label>
+        <precision>3</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>User_Config__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>User Config</label>
+        <referenceTo>Customer_Config__c</referenceTo>
+        <relationshipLabel>User Configs</relationshipLabel>
+        <relationshipName>User_Configs</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>User_Module__c</fullName>
+        <defaultValue>&quot;JO User&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>User Module</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>JO User</fullName>
+                    <default>false</default>
+                    <label>JO User</label>
+                </value>
+                <value>
+                    <fullName>Petition User</fullName>
+                    <default>false</default>
+                    <label>Petition User</label>
+                </value>
+                <value>
+                    <fullName>Report User</fullName>
+                    <default>false</default>
+                    <label>Report User</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>View_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>View Name</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>User Config</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>View_Name__c</columns>
+        <columns>User_Config__c</columns>
+        <columns>Job_Owner__c</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>Json_Config__c</columns>
+        <columns>Is_Active__c</columns>
+        <columns>Is_Admin__c</columns>
+        <columns>Is_Default__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>JO_Admin</fullName>
+        <columns>NAME</columns>
+        <columns>View_Name__c</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>User_Config__c</columns>
+        <columns>Is_Active__c</columns>
+        <columns>Is_Admin__c</columns>
+        <columns>Is_Default__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Customer_Config__c.JO_Admin_Views</value>
+        </filters>
+        <label>JO Admin</label>
+    </listViews>
+    <listViews>
+        <fullName>JO_Alerts</fullName>
+        <columns>NAME</columns>
+        <columns>Job_Owner__c</columns>
+        <columns>User_Config__c</columns>
+        <columns>Is_Active__c</columns>
+        <columns>View_Name__c</columns>
+        <columns>Sort_Order__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Customer_Config__c.JO_Alert</value>
+        </filters>
+        <label>JO Alerts</label>
+    </listViews>
+    <listViews>
+        <fullName>JO_Charts</fullName>
+        <columns>NAME</columns>
+        <columns>Job_Owner__c</columns>
+        <columns>User_Config__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>Json_Config__c</columns>
+        <columns>Is_Active__c</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Customer_Config__c.Chart_Config</value>
+        </filters>
+        <label>JO Charts</label>
+    </listViews>
+    <listViews>
+        <fullName>JO_Dashboard_Defaults</fullName>
+        <columns>NAME</columns>
+        <columns>View_Name__c</columns>
+        <columns>Job_Owner__c</columns>
+        <columns>Is_Active__c</columns>
+        <columns>Is_Admin__c</columns>
+        <columns>Is_Default__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Customer_Config__c.JO_Dashboard</value>
+        </filters>
+        <filters>
+            <field>View_Name__c</field>
+            <operation>equals</operation>
+            <value>Default</value>
+        </filters>
+        <label>JO Dashboard Defaults</label>
+    </listViews>
+    <listViews>
+        <fullName>JO_Dashboards</fullName>
+        <columns>NAME</columns>
+        <columns>View_Name__c</columns>
+        <columns>Json_Config__c</columns>
+        <columns>Job_Owner__c</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>Is_Active__c</columns>
+        <columns>Is_Admin__c</columns>
+        <columns>Is_Default__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Customer_Config__c.JO_Dashboard</value>
+        </filters>
+        <filters>
+            <field>View_Name__c</field>
+            <operation>notEqual</operation>
+            <value>Default</value>
+        </filters>
+        <label>JO Dashboards</label>
+    </listViews>
+    <listViews>
+        <fullName>Jo_Portfolio</fullName>
+        <columns>NAME</columns>
+        <columns>View_Name__c</columns>
+        <columns>Job_Owner__c</columns>
+        <columns>User_Config__c</columns>
+        <columns>Is_Active__c</columns>
+        <columns>Is_Admin__c</columns>
+        <columns>Sort_Order__c</columns>
+        <columns>Is_Default__c</columns>
+        <columns>Json_Config__c</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Customer_Config__c.JO_Portfolio</value>
+        </filters>
+        <label>JO Portfolio</label>
+    </listViews>
+    <nameField>
+        <displayFormat>UC{000000}</displayFormat>
+        <label>User Config ID</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>User Configs</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Chart_Config</fullName>
+        <active>true</active>
+        <description>Saves configuration related to JO Dashboard Chart</description>
+        <label>JO Chart</label>
+        <picklistValues>
+            <picklist>User_Module__c</picklist>
+            <values>
+                <fullName>JO User</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Petition User</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Report User</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>JO_Admin_Views</fullName>
+        <active>true</active>
+        <description>Used in saving admin configuration for views</description>
+        <label>JO Admin Views</label>
+        <picklistValues>
+            <picklist>User_Module__c</picklist>
+            <values>
+                <fullName>JO User</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Petition User</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Report User</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>JO_Alert</fullName>
+        <active>true</active>
+        <label>JO Alert</label>
+        <picklistValues>
+            <picklist>User_Module__c</picklist>
+            <values>
+                <fullName>JO User</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Petition User</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Report User</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>JO_Dashboard</fullName>
+        <active>true</active>
+        <label>JO Dashboard</label>
+        <picklistValues>
+            <picklist>User_Module__c</picklist>
+            <values>
+                <fullName>JO User</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Petition User</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Report User</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>JO_Portfolio</fullName>
+        <active>true</active>
+        <label>JO Portfolio</label>
+        <picklistValues>
+            <picklist>User_Module__c</picklist>
+            <values>
+                <fullName>JO User</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Petition User</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Report User</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>View_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>RECORDTYPE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Is_Active__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Is_Admin__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Is_Default__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>UPDATEDBY_USER</customTabListAdditionalFields>
+        <customTabListAdditionalFields>User_Config__c</customTabListAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

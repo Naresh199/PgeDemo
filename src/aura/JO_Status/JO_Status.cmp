@@ -1,0 +1,47 @@
+<aura:component controller="JO_JobStatus" implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId" access="global">
+    <aura:handler name="init" value="{!this}" action="{!c.doinit}" />
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="jobStatus" type="List" />
+    <article class="slds-card">
+        <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="slds-media__figure">
+                </div>
+                <div class="slds-media__body">
+                    <h2>
+                        <a href="javascript:void(0);" class="slds-card__header-link slds-truncate" title="[object Object]">
+                            <lightning:icon iconName="standard:contact" variant="bare" size="small"/>&nbsp;&nbsp;
+                            <span class="slds-text-heading_small">JO Status({!v.jobStatus.length})</span>
+                        </a>
+                    </h2>
+                </div>
+            </header>
+        </div>
+        <div class="slds-card__body slds-card__body_inner">  
+            <table class="slds-table_bordered slds-table " role="grid" style="border: 1px solid lightgrey;"> 
+                <thead>
+                    <th>Name</th>
+                    <th>Status</th>
+                    <th>Created Date</th>
+                </thead>
+                <tbody>
+                    <aura:iteration items="{!v.jobStatus}" var="jb" indexVar="index">
+                        <tr class="slds-line-height_reset">
+                            <td scope="row" style="text-align: -webkit-left;" >
+                                <!--  <a  data-recId="{!jb.Id}" href="#">{!jb.Name}</a> -->
+                                <div class="slds-truncate" title="Name">{!jb.Name}</div>
+                            </td>
+                            <td scope="row" style="text-align: -webkit-left;">
+                                <div class="slds-truncate" title="Job Status">{!jb.Status__c}</div>
+                            </td>
+                            <td scope="row" style="text-align: -webkit-left;">
+                                <!--  <div class="slds-truncate" title="CreatedDate">{!jb.CreatedDate}</div> -->
+                                <ui:outputDateTime format="yyyy/MM/dd" value="{!jb.CreatedDate}"/> 
+                            </td>
+                        </tr>
+                    </aura:iteration> 
+                </tbody>
+            </table>
+        </div>
+    </article>
+</aura:component>

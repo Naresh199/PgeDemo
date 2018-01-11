@@ -1,0 +1,3 @@
+<aura:event type="COMPONENT" description="">
+    <aura:attribute name="conatctByEvent" type="string"/>
+</aura:event>

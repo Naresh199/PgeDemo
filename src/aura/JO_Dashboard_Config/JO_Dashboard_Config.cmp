@@ -1,0 +1,98 @@
+<aura:component controller="JO_GlobalFilters" implements="force:appHostable,force:lightningQuickActionWithoutHeader,force:hasRecordId,force:appHostable,flexipage:availableForAllPageTypes">
+	<aura:attribute name="dashboardActive" type="boolean" default="true"/>
+    <aura:attribute name="dashboardDefault" type="boolean" default="false"/>
+    <aura:attribute name="dashboardName" type="String"/>
+    <aura:attribute name="dashboardId" type="String"/>
+    <aura:attribute name="loggedInContact" type="String"/>
+    <aura:attribute name="dashboardRecords" type="List"/>
+    <aura:attribute name="globalFilterContacts" type="String"/>
+    <aura:attribute name="show" type="boolean"/>
+    <aura:attribute name="editDisabled" type="Boolean" default="true"/>
+    <aura:attribute name="defaultDashboard" type="String"/>
+   <aura:attribute name="msg" type="String" />
+    <aura:attribute name="typeStr" type="String" />
+    <aura:attribute name="defaultSelection" type="String" />
+     <aura:attribute name="deleteDisabled" type="boolean" default="true"/>
+    <aura:attribute name="cloneDisabled" type="boolean"/>
+    <aura:registerEvent name="evntOption" type="c:JO_Dashboard_ConfigEvnt" />
+     <aura:method name="doIntOnLoad" action="{!c.doInit}" access="GLOBAL"/>
+    <div class="slds-modal_large" aura:id="modalId">
+        <div role="dialog" tabindex="-1" aria-labelledby="header" class="slds-modal slds-fade-in-open ">
+            <div class="slds-modal__container" aura:id="containerId">
+                <div class="slds-modal__header">
+                    <button class="slds-button slds-modal__close slds-button--icon-inverse" title="Close" onclick="{!c.closeModel}">
+                        X
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                    <h2 id="header" class="slds-text-heading--medium">Dashboard Configuration</h2>
+                </div>                        
+                <div class="slds-modal__content slds-p-around--medium">
+                    <div class="slds-scrollable--x">      <!--  style="width:100% !important;"  -->                 
+                        <table class="slds-table slds-table_cell-buffer">
+                            <tr>
+                            <th scope="col"> 
+                                <div class="slds-size_1-of-2">
+                                    <div class="slds-grid slds-grid_vertical-align-start">
+                                        <div class="slds-p-around_xx-small slds-p-right_small slds-text-body_regular" >Dashboard</div>
+                                        <div class="slds-size_3-of-4"> <!--  style="width: 30rem !important;" -->
+                                            <lightning:select name="Dashboards: " label=""  variant="label-hidden" onchange="{!c.loadOption}" aura:id="selectV">
+                                                <aura:iteration items="{!v.dashboardRecords}" var="db">
+                                                    <Option value="{!db.Id}" text="{!db.View_Name__c}" selected="{!db.Id == v.defaultSelection}" class="slds-size_1-of-3"/>
+                                                </aura:iteration>
+                                            </lightning:select>   
+                                        </div>
+                                        <div class="slds-size_1-of-10  slds-m-left_large">   
+                                            <lightning:button label="Edit" variant="brand" onclick="{!c.editDashboard}"  class="slds-text-body_regular" disabled="{!v.editDisabled}"/> <!--disabled="{!v.editDisabled}"-->
+                                            <lightning:button label="Clone" variant="brand" onclick="{!c.newDashboard}" class="slds-text-body_regular" disabled="{!v.cloneDisabled}"/>
+                                            <lightning:button label="Delete" variant="brand" onclick="{!c.deleteDashboard}" class="slds-text-body_regular" disabled="{!v.deleteDisabled}"/> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </th> 
+                                </tr>
+                            <aura:if isTrue="{!v.show}">
+                            <tr>
+                                <th scope="col"> 
+                                    <div class="slds-size_8-of-8">
+                                        <div class="slds-grid slds-grid_vertical-align-start slds-size_1-of-2">
+                                            <div class="slds-p-around_xx-small slds-m-right_x-small slds-p-right_large slds-text-body_regular">Name</div>
+                                            <div class="slds-size_9-of-12"> <!--  style="width: 30rem !important;" -->
+                                                <lightning:input value="{!v.dashboardName}"  type="text" variant="label-hidden" class="slds-size_8-of-8 slds-input:active slds-input:focus" required="true"/>
+                                            </div>
+                                            
+                                            
+                                            <div class="slds-p-top_x-medium slds-p-right_medium slds-text-body_regular" style="margin-top: 10px !important;margin-left:35px !important;">Active</div>
+                                            <div class="slds-size_1-of-10 slds-m-right_medium" style="margin-top: 11px !important;">   
+                                                <ui:inputCheckbox value="{!v.dashboardActive}"/>
+                                            </div>
+                                            
+                                             <div class="slds-p-top_x-medium slds-p-right_medium slds-text-body_regular" style="margin-top: 10px !important;">Default</div>
+                                              <div class="slds-size_1-of-10" style="margin-top: 11px !important;">   
+                                                <ui:inputCheckbox value="{!v.dashboardDefault}"/>
+                                            </div>
+                                            
+                                        </div> 
+                                    </div>
+                                </th>
+                                </tr>
+                            </aura:if>
+                        </table>
+                    </div>
+                </div>
+                   
+                <div class="slds-modal__footer">
+                    <div class="slds-grid slds-grid_vertical-align-start">
+                        <div class="slds-size_1-of-2 slds-is-relative slds-text-heading_small slds-text-align_left" Style="font-style: oblique;"> {!v.msg} </div> 
+                        <div class="slds-size_1-of-2 slds-is-relative slds-text-align_left slds-is-relative" style="text-align: -webkit-right;">
+                            <lightning:button onclick="{!c.saveDashboard}" label="Save" variant="brand" type="button" title="Save" /> 
+                            <lightning:button onclick="{!c.closeModel}"  label="Close" variant="brand" type="button" title="Close" /> 
+                        </div>              
+                    </div>
+                </div>
+            </div>
+        </div>
+          
+        <div class="slds-backdrop slds-backdrop--open"></div>
+    </div>
+  
+</aura:component>

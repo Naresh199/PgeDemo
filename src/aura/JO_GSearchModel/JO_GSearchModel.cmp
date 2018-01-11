@@ -1,0 +1,80 @@
+<aura:component >
+	<aura:attribute name="title" type="String" required="true"/>
+    
+     <div class="demo-only"  style="height: 200% !important;">
+     	<section  class="slds-modal slds-fade-in-open">
+     		<div class="slds-modal__container" >
+                    <header class="slds-modal__header">
+                        <button class="slds-button slds-modal__close" title="Close"  onclick="{!c.close}">
+                            <lightning:icon class="white slds-icon_small" size="small" iconName="utility:close"/> 
+                            <span class="slds-assistive-text">Close</span>
+                        </button>
+                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">
+                            {#v.title}</h2>
+                    </header>
+                    <div class="slds-modal__content slds-p-around_medium" > 
+     	<div class="slds-form-element" style="width:100%; height:25rem !important;">
+		  <label class="slds-form-element__label" for="combobox-unique-id">Search</label>
+		  <div class="slds-form-element__control">
+		    <div class="slds-combobox_container slds-has-object-switcher slds-has-input-focus">
+		      <div class="slds-listbox_object-switcher slds-dropdown-trigger slds-dropdown-trigger_click">
+		        <button class="slds-button slds-button_icon" aria-haspopup="true" title="Select object to search in">
+		          <span class="slds-icon_container slds-icon-standard-account" title="Accounts">
+		            <lightning:icon iconName="standard:account" size="small" variant="brand" title="account" />
+		            <span class="slds-assistive-text">Searching in: Accounts</span>
+		          </span>
+		          <lightning:icon iconName="utility:down" size="x-small" variant="brand" title="down" />
+		        </button>
+		      </div>
+		      <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open" aria-expanded="true" aria-haspopup="listbox" role="combobox">
+		        <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
+		          <input type="text" class="slds-input slds-combobox__input" id="combobox-unique-id" aria-autocomplete="list" aria-controls="listbox-unique-id" autocomplete="off" role="textbox" placeholder="Search Salesforce" />
+		          <span class="slds-icon_container slds-icon-utility-search slds-input__icon slds-input__icon_right">
+		            <lightning:icon iconName="utility:search" size="x-small" variant="brand" title="search" />
+		          </span>
+		        </div>
+		        <div id="listbox-unique-id" role="listbox">
+		          <ul class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid" role="presentation">
+		            <li role="presentation" class="slds-listbox__item">
+		              <span id="listbox-option-unique-id-01" class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta" role="option">
+		                <span class="slds-media__figure">
+		                  <span class="slds-icon_container slds-icon-standard-account" title="Description of icon when needed">
+		                  	<lightning:icon iconName="standard:account" size="small" variant="brand" title="account" />
+		                   		                    <span class="slds-assistive-text">Description of icon</span>
+		                  </span>
+		                </span>
+		                <span class="slds-media__body">
+		                  <span class="slds-listbox__option-text slds-listbox__option-text_entity">Acme</span>
+		                  <span class="slds-listbox__option-meta slds-listbox__option-meta_entity">Account • San Francisco</span>
+		                </span>
+		              </span>
+		            </li>
+		            <li role="presentation" class="slds-listbox__item">
+		              <span id="listbox-option-unique-id-02" class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta" role="option">
+		                <span class="slds-media__figure">
+		                  <span class="slds-icon_container slds-icon-standard-account" title="Description of icon when needed">
+		                    <lightning:icon iconName="standard:account" size="small" variant="brand" title="account" />
+		                    <span class="slds-assistive-text">Description of icon</span>
+		                  </span>
+		                </span>
+		                <span class="slds-media__body">
+		                  <span class="slds-listbox__option-text slds-listbox__option-text_entity">Salesforce.com, Inc.</span>
+		                  <span class="slds-listbox__option-meta slds-listbox__option-meta_entity">Account • San Francisco</span>
+		                </span>
+		              </span>
+		            </li>
+		          </ul>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		</div>
+                    <footer class="slds-modal__footer"> 
+                        <!-- <button class="slds-button slds-button_brand" onclick="{!c.close}">Ok</button> -->
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+    </div>
+</aura:component>

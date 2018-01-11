@@ -1,0 +1,4 @@
+<aura:event type="APPLICATION" description="Event template" >
+    <aura:attribute name="portfolioRec" type="List"/>
+    <aura:attribute name="typeAct" type="String"/>
+</aura:event>

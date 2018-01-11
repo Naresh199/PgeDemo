@@ -1,0 +1,64 @@
+<aura:component controller="JO_CommunicationHistory" implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId" access="global">
+    <aura:handler name="init" value="{!this}" action="{!c.doinit}" />
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="comTempltes" type="List" />
+    
+    <!-- Data table starts -->
+    <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+        <thead>
+            <tr class="slds-text-title_caps">
+                <th scope="col">
+                    <div class="slds-truncate" style="text-align: -webkit-center;" title="Notification Number"><b>Record ID</b></div>
+                </th>
+                <th scope="col">
+                    <div class="slds-truncate " style="text-align: -webkit-center;" title="Notification Type"><b> Type</b></div>
+                </th>
+                <th scope="col">
+                    <div class="slds-truncate" style="text-align: -webkit-center;" title="Subject"><b>Subject</b></div>
+                </th>
+                <th scope="col">
+                    <div class="slds-truncate" style="text-align: -webkit-center;" title="Last Sent"><b>Last Sent</b></div>
+                </th>
+                <th scope="col">
+                    <div class="slds-truncate" style="text-align: -webkit-center;" title="View"><b>Action</b></div>
+                </th>
+            </tr>                
+        </thead>                                    
+        <tbody>
+            <aura:iteration items="{!v.comTempltes}" var="pf">                                            
+                <tr style="height:10px;">
+                    <td class="slds-cell-shrink"  scope="row">
+                        <div class="slds-text-align_center" title="{!pf.RecordId}">
+                            <button class="slds-button slds-button--icon slds-not-selected underline" style="color:#5163ec;"
+                                    onclick="{!c.displayRecordDetails}" data-recId="{!pf.RecordId}">{!pf.RecordName}</button>
+                        </div>
+                    </td>
+                    <td scope="row" > 
+                        <div class="slds-truncate">
+                            <div class="slds-truncate slds-cell-wrap"  style="text-align: -webkit-center;" title="{!pf.NotifType}">{!pf.RecordType}</div></div>
+                    </td>
+                    <td scope="row" > 
+                        <div class="slds-truncate">
+                            <div class="slds-truncate slds-cell-wrap"  style="text-align: -webkit-center;" title="{!pf.EmailMess.Subject}">{!pf.EmailMess.Subject}</div></div>
+                    </td> 
+                    <td scope="row" > 
+                        <div class="slds-truncate" style="text-align: -webkit-center;">    
+                           <lightning:formattedDateTime value="{!pf.EmailMess.MessageDate}" year="numeric" month="numeric" day="numeric"  hour="2-digit" minute="2-digit" />
+						</div>
+                    </td> 
+                    <td scope="row" > 
+                        <div class="slds-truncate">
+                            <div class="slds-text-align_center" title="{!pf.Name}">
+                                <lightning:button iconName="action:preview" value="{!pf.EmailMess.Id}" onclick="{!c.displaydetailpage}" label="" variant="bare" type="button" title="Sent Email View" />
+                        	</div>
+                        </div>
+                    </td>
+                </tr>
+            </aura:iteration>
+        </tbody>
+    </table>
+    
+    <!-- Data table ends-->
+    
+    
+</aura:component>

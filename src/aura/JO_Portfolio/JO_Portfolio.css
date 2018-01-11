@@ -1,0 +1,103 @@
+.THIS .slds-button__iconn {
+    width: 1rem;
+    height: .9rem;
+    color: #4169E1;
+    padding:1px;
+    
+}
+.THIS .slds-p-top_x-small slds-p-right_small{
+    margin-top: 19px;
+}
+.THIS .slds-active{
+    background-color: rgb(85, 117, 165);
+    border-top-right-radius: 20px;
+}
+.THIS select.slds-select{
+    
+    background: transparent;
+    width: 100%;
+    border: 1px solid rgb(216, 221, 230);
+    height: 26.5px !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-repeat: no-repeat;
+    background-position: 97.5% 50%;
+    background-size: .875rem .875rem, 100% 100%;
+}
+.THIS.cPGE_PortfolioTopSpace {
+    margin-top: 5px !important;
+}
+.THIS .slds-tabs--default__nav .slds-tabs_default__nav{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    border-bottom: 1px solid #d8dde6;
+}
+.THIS .slds-tabs--default__item.slds-active .slds-tabs--default__link {
+    color: #f7f8f9 !important;
+}
+
+.THIS .slds-truncate{
+   color:black; 
+   text-align: center;
+}
+.THIS .slds-item {
+
+    border-radius: 0.25rem;
+    background-clip: padding-box;
+    padding: 0.45rem;
+    margin: 0.25rem;
+   
+}
+.THIS .High {
+    border: 1px solid #d8dde6;
+    border-radius: 0.25rem;
+    background-clip: padding-box;
+    padding: 0.45rem;
+    margin: 0.25rem;
+    background:#e47d7d;
+}
+.THIS .Low {
+    border: 1px solid #d8dde6;
+    border-radius: 0.25rem;
+    background-clip: padding-box;
+    padding: 0.45rem;
+    margin: 0.25rem;
+    background:#edef73;
+}
+.THIS .Medium {
+    border: 1px solid #d8dde6;
+    border-radius: 0.25rem;
+    background-clip: padding-box;
+    padding: 0.45rem;
+    margin: 0.25rem;
+    background:#baeaba;
+}
+.THIS .stageContainer{
+ /*   width:320px; */
+    float:left;
+    margin: 0.05rem;
+    border-radius: .25rem;
+    
+}
+.THIS .slds-page-header__title {
+    padding: 5px;
+    font-size: 12px;
+    border-radius: initial;
+    /*background: #f7f9fb;*/
+}
+.THIS.slds-has-divider_bottom-space
+.THIS.slds-has-divider--bottom-space{
+    border-bottom: 1px solid rgb(217, 219, 221);
+    margin-bottom: .01rem !important;
+    padding-bottom: .01rem !important;
+    background-color: rgb(224, 229, 238);
+}
+.THIS .dropZone{
+    min-height:25rem;
+}
+.THIS .slds-tabs_default__item {
+   text-transform: capitalize !important;
+}

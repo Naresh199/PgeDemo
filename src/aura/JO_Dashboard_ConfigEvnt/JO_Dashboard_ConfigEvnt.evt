@@ -1,0 +1,4 @@
+<aura:event type="APPLICATION" description="Event template" >
+    <aura:attribute name="optiontoAdd" type="List"/>
+    <aura:attribute name="typeofAction" type="String"/>
+</aura:event>

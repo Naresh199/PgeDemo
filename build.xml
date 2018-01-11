@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:sf="antlib:com.salesforce" name="Sample usage of Salesforce Ant tasks" default="help" basedir=".">
+	
+	<!-- property's Keys and Values  -->
+	<property file="${env}.properties" />
+	<property name="temp.folder" value="deploy"/>
+	<property name="backup.folder" value="backup"/>
+	
+	<!-- References Library  --> 
+	<taskdef resource="com/salesforce/antlib.xml" uri="antlib:com.salesforce">
+		<classpath>
+			<pathelement location="apache-ant-1.9.4/lib/ant-salesforce.jar" />
+		</classpath>
+	</taskdef>
+	
+	<!-- Timestamps Format --> 
+	<tstamp> 
+            <format  property = "TIMESTAMP"  pattern = "yyyy-MM-dd_HH-mm-ss"/> 
+    </tstamp> 
+
+    <!-- Help Messages -->       
+	<target name="help">
+	    <echo message ="1. To Retrieve code  from the org     : retrieve"/>	
+		<echo message ="2. To Validate code for the org       : validate"/>
+        <echo message ="3. To Validate Test classes for org   : validateTest"/>		
+        <echo message ="4. To Deploy code into org            : deploy"/>
+		<echo message ="5. To Backup code into org            : backup"/>
+        <echo message =""/>			
+		<echo message ="ant [target] -Denv=[destination org]"/>
+		<echo message ="Sample :"/>
+		<echo message ="ant validate -Denv=uat"/>
+		<echo message =""/>			
+		<echo message ="you need to make sure that there is corresponding .properties file present."/>
+		<echo message ="We have created deployment user for dev/qa/uat/Prod environments."/>
+	</target>
+	
+	<!-- Delete  the deploy folder  -->
+	<target name="cleanup">
+		<echo message="Selected Environment : ${env}" />
+		<delete dir="${temp.folder}" />
+		<mkdir dir="${temp.folder}" />
+	</target>
+	
+	<!-- Copy All the source into deploy folder  -->
+	<target name="copyAll">
+	  <copy todir="${temp.folder}">
+		<fileset dir="src" >
+			<exclude name="sharingRules/**.*" />
+			<exclude name="flows/**.*" />
+		</fileset>
+		</copy>
+		<delete file="${temp.folder}/package.xml" />
+		<copy file="package-Deploy.xml" tofile="${temp.folder}/package.xml" />
+	</target>	
+	
+	<!-- Backup  All the source into backup folder  -->
+	<target name="backup" depends="retrieve">
+		<copy todir="${backup.folder}/${env}_${TIMESTAMP}">
+			<fileset dir="${env}" />
+		</copy>
+	</target>
+	
+	<!-- Retrieve code from org.  -->
+	<target name="retrieve" depends="cleanup">
+		<echo message="Selected Environment : ${env}" />
+		<delete dir="${env}" />
+		<mkdir dir="${env}" />
+		<sf:retrieve username="${username}" password="${password}" serverurl="${serverurl}" maxPoll="${maxPoll}" retrieveTarget="${env}" unpackaged="package-RetrieveOnly.xml" />
+	</target>
+	
+	<!-- Validate Validate  code  for the specific org. -->
+	<target name="validate" depends="cleanup,copyAll">
+		<sf:deploy username="${username}" password="${password}" serverurl="${serverurl}" maxPoll="${maxPoll}" deployRoot="${temp.folder}" checkOnly="true" />
+	</target>
+	
+	<!-- Validate Test  code  for the specific org  -->
+	<target name="validateTest" depends="cleanup,copyAll">
+		<sf:deploy username="${username}" password="${password}" serverurl="${serverurl}" maxPoll="${maxPoll}" deployRoot="${temp.folder}" checkOnly="true" testLevel="RunLocalTests" />
+	</target>
+	
+	<!-- Deploy the  code  for the specific org  -->
+	<target name="deploy" depends="cleanup,copyAll">
+		<sf:deploy username="${username}" password="${password}" serverurl="${serverurl}" maxPoll="${maxPoll}" deployRoot="${temp.folder}" rollbackOnError="true" />
+	</target>
+</project>

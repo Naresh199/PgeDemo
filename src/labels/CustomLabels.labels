@@ -1,0 +1,3170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>AP_EI_Atleast_One_Measure</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AP EI Atleast One Measure</shortDescription>
+        <value>Project should have atleast one Project Measure attached to it.</value>
+    </labels>
+    <labels>
+        <fullName>AP_EI_BulkImport_Source</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AP EI BulkImport Source</shortDescription>
+        <value>Bulk Import</value>
+    </labels>
+    <labels>
+        <fullName>AP_EI_Equipment_Tonnage_Error</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AP EI Equipment Tonnage Error</shortDescription>
+        <value>Matching equipment does not have the quantity populated;</value>
+    </labels>
+    <labels>
+        <fullName>AP_EI_LeadConv_Source</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AP EI LeadConv Source</shortDescription>
+        <value>Lead Conversion</value>
+    </labels>
+    <labels>
+        <fullName>AP_EI_Locked_Error</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AP EI Locked Error</shortDescription>
+        <value>You cannot edit the Locked type Opportunity.</value>
+    </labels>
+    <labels>
+        <fullName>AP_EI_MultipleSitesError</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AP_EI_MultipleSitesError</shortDescription>
+        <value>Multiple Sites found. Please enter correct SAID.</value>
+    </labels>
+    <labels>
+        <fullName>AP_EI_NoCustAccount</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AP_EI_NoCustAccount</shortDescription>
+        <value>Associated Site does not contain Customer Primary Account</value>
+    </labels>
+    <labels>
+        <fullName>AP_EI_NoSitesError</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AP_EI_NoSitesError</shortDescription>
+        <value>No sites found. Please enter correct SAID.</value>
+    </labels>
+    <labels>
+        <fullName>AP_EI_PhoneEmailReqd</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AP_EI_PhoneEmailReqd</shortDescription>
+        <value>At least one of Site Phone or Site Email should be populated.</value>
+    </labels>
+    <labels>
+        <fullName>AP_EI_ProjectMasterAccError</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AP_EI_ProjectMasterAccError</shortDescription>
+        <value>Multiple customer Accounts found from Sites on Project Measures</value>
+    </labels>
+    <labels>
+        <fullName>AP_EI_ProjectMeasureStatusError</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AP_EI_ProjectMeasureStatusError</shortDescription>
+        <value>Can not check post install review complete until all project measures have a status on Project Measure Status - Post Install Review Passed, Rejected, Withdrawn.</value>
+    </labels>
+    <labels>
+        <fullName>AP_EI_SAIDLengthError</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AP_EI_SAIDLengthError</shortDescription>
+        <value>SAID should be 10 digits in length.</value>
+    </labels>
+    <labels>
+        <fullName>AP_EI_ValidSitePhone</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AP_EI_ValidSitePhone</shortDescription>
+        <value>Please input a valid Site Contact Phone.</value>
+    </labels>
+    <labels>
+        <fullName>AP_EI_custom_locked</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AP EI custom locked</shortDescription>
+        <value>Custom Project - Locked</value>
+    </labels>
+    <labels>
+        <fullName>AP_EI_deemed_locked</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AP EI deemed locked</shortDescription>
+        <value>Deemed Project - Locked</value>
+    </labels>
+    <labels>
+        <fullName>AllAlertsAreClosed</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AllAlertsAreClosed</shortDescription>
+        <value>All selected alerts are already closed.</value>
+    </labels>
+    <labels>
+        <fullName>CreateAlert15DailyBatch</fullName>
+        <categories>Alert Batch Class</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CreateAlert15DailyBatch</shortDescription>
+        <value>CreateAlert15DailyBatch</value>
+    </labels>
+    <labels>
+        <fullName>CreateAlert3DailyBatch</fullName>
+        <categories>Alert Batch Class</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CreateAlert3DailyBatch</shortDescription>
+        <value>CreateAlert3DailyBatch</value>
+    </labels>
+    <labels>
+        <fullName>CreateAlert4DailyBatch</fullName>
+        <categories>Alert Batch Class</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CreateAlert4DailyBatch</shortDescription>
+        <value>CreateAlert4DailyBatch</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_ActiveLabel</fullName>
+        <categories>Active Label for searchEnrollments method</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_ActiveLabel</shortDescription>
+        <value>Active</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_ActiveLocationEndDateChange</fullName>
+        <categories>Location Edit</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_ActiveLocationEndDateChange</shortDescription>
+        <value>Confirmed:GRDT Pending:GRDT Complete:SQMD Pending</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_Active_Location_Popup</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI Active Location Popup</shortDescription>
+        <value>This is an &apos;Active&apos; Location. Corresponding Registration will be Terminated.  Do you want to Proceed?</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_BID_Manage_Bid</fullName>
+        <categories>DRMS Bid Toast</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_BID_Manage Bid</shortDescription>
+        <value>Manage Bid</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_BID_No_Resource_linked_with_Bid_found</fullName>
+        <categories>DRMS Bid Toast</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_BID_No Resource linked with Bid found.</shortDescription>
+        <value>No Resource linked with Bid found.</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_BID_Update_Fail</fullName>
+        <categories>Manage Bid</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_BID_Update_Fail</shortDescription>
+        <value>Record is not successfully updated !</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_BID_Update_Success</fullName>
+        <categories>DRMS Bid Toast</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_BID_Update_Success</shortDescription>
+        <value>The record has been updated successfully</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_BidSubmitErrorMessage</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_BidSubmitErrorMessage</shortDescription>
+        <value>For Submit request, All Bid should be either &quot;Forecast Validated&quot;. &quot;Rejected&quot; or &quot;Bid Submission Error&quot; Status.</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_BidSubmitErrorMessage2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_BidSubmitErrorMessage2</shortDescription>
+        <value>All Bids must be submitted before one day of trade date &amp; cut-off time.</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_BidSubmitErrorMessage3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_BidSubmitErrorMessage3</shortDescription>
+        <value>Please Check Trade Date for Events.</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_Bid_Cuff_Off_time</fullName>
+        <categories>DRMS Manage Bid</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_Bid_Cuff_Off_time</shortDescription>
+        <value>Bid Can-not be submitted after cut-off time.</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_Bid_Record_Not_Exist</fullName>
+        <categories>DRMS Manage Bid</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_Bid_Record_Not_Exist</shortDescription>
+        <value>No Bid Records are passed. Check with Adminstrator</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_Bid_Status_Submit</fullName>
+        <categories>List View Bid Submit</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_Bid_Status_Submit</shortDescription>
+        <value>Forecast Validated,Bid Submission Error,Rejected</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_Bid_Submission</fullName>
+        <categories>DRMS Manage Bid</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_Bid_Submission</shortDescription>
+        <value>Bid is submitted Successfully</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_Bid_confirmationMessage</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_Bid_confirmationMessage</shortDescription>
+        <value>Are you sure, you want to Submit Bids.</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_ConsiderMaxDispatchesSAC</fullName>
+        <categories>DRMI Dispacth</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_ConsiderMaxDispatchesSAC</shortDescription>
+        <value>false</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_CopyRegistrationValidationMessage</fullName>
+        <categories>Copy_RegistrationButton</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_CopyRegistrationValidationMessage</shortDescription>
+        <value>Only Registration in &apos;Terminated&apos; and &apos;Ready To Terminate&apos; status can be copy.</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_Dispach24</fullName>
+        <categories>DRMI Dispacth</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_Dispach24</shortDescription>
+        <value>24</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_Dispach60</fullName>
+        <categories>DRMI Dispacth</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_Dispach60</shortDescription>
+        <value>60</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_Dispach7200</fullName>
+        <categories>DRMI Dispacth</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_Dispach7200</shortDescription>
+        <value>7200</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_DispatchCBPProgram</fullName>
+        <categories>DRMI Dispacth</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_DispatchCBPProgram</shortDescription>
+        <value>CBPDAYAHEAD,CBPSAMEDAY</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_DispatchStatus_exclude</fullName>
+        <categories>DRMI Dispacth</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_DispatchStatus_exclude</shortDescription>
+        <value>Dispatch Cancelled;Not Accepted</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_Dispatch_currentdayLastMonth</fullName>
+        <categories>DRMI Dispacth</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_Dispatch_currentdayLastMonth</shortDescription>
+        <value>31</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_Dispatch_currentdayMinus</fullName>
+        <categories>DRMI Dispacth</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_Dispatch_currentdayMinus</shortDescription>
+        <value>14</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_Dispatch_currentdayNextMonth</fullName>
+        <categories>DRMI Dispacth</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_Dispatch_currentdayNextMonth</shortDescription>
+        <value>35</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_Dispatch_currentdayPlus</fullName>
+        <categories>DRMI Dispacth</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_Dispatch_currentdayPlus</shortDescription>
+        <value>5</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_Dispatch_pastEvent</fullName>
+        <categories>DRMI Dispacth</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_Dispatch_pastEvent</shortDescription>
+        <value>Event date cannot be in the past</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_EditEnddate_validation</fullName>
+        <categories>Location Edit</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_EditEnddate_validation</shortDescription>
+        <value>End date should be greater than Start Date</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_EventCancelErrorMessage</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_EventCancelErrorMessage</shortDescription>
+        <value>For Cancel request, Event Status should be &quot;Manual Dispatch&quot; or &quot;Accepted&quot;. Please go back.</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_EventCancelSelectoneErrMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_EventCancelSelectoneErrMsg</shortDescription>
+        <value>Please Select at least one record from the List</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_EventCancel_CBP</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_EventCancel_CBPNote</shortDescription>
+        <value>Note: Before Cancelling CBP Event, Please Cancel from APX System.</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_EventCancel_confirmationMessage</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_EventCancel_confirmationMessage</shortDescription>
+        <value>Are you sure, you want to Cancel Events.</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_EventOverlapp</fullName>
+        <categories>Event Dispatch</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_EventOverlapp</shortDescription>
+        <value>Event is overlapped.</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_EventStartEndValidation</fullName>
+        <categories>Event Dispatch</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_EventStartEndValidation</shortDescription>
+        <value>Event cannot start before it is ending.</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_EventStatus_Cancel</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_EventStatus_Cancel</shortDescription>
+        <value>Manual Dispatch,Accepted</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_EventType_Market</fullName>
+        <categories>DRMI Dispacth</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_EventType_Market</shortDescription>
+        <value>1</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_EventType_Retail</fullName>
+        <categories>DRMI Dispacth</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_EventType_Retail</shortDescription>
+        <value>2</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_EventType_Retroactive</fullName>
+        <categories>DRMI Dispacth</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_EventType_Retroactive</shortDescription>
+        <value>3</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_ExceedingThresholdValidation</fullName>
+        <categories>DRMI Registration</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_ExceedingThresholdValidation</shortDescription>
+        <value>Total PLR is exceeding the Maximum Resource Capacity.</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_InactiveLabel</fullName>
+        <categories>InActive Label for searchEnrollments method</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_InactiveLabel</shortDescription>
+        <value>Inactive</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_LessThanThresholdValidation</fullName>
+        <categories>DRMI Registration</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_LessThanThresholdValidation</shortDescription>
+        <value>Total PLR is less than Maximum Resource Capacity.</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_LocationBatchFailedReSubmit</fullName>
+        <categories>DRMI Location</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_LocationBatchFailedReSubmit</shortDescription>
+        <value>Only Locations in &apos;Failed Batch&apos; status can be Re-Submitted.</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_LocationEndDateUpdate</fullName>
+        <categories>Location Edit</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_LocationEndDateUpdate</shortDescription>
+        <value>Location End Date can&apos;t be less than Registration end date.</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_Location_Auto_Submit</fullName>
+        <categories>Location_Auto_Submit</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_Location_Auto_Submit</shortDescription>
+        <value>Location submission mode is currently in &apos;Auto&apos;</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_Location_Edit</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI Location Edit</shortDescription>
+        <value>Edit mode is not available for Status</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_Location_Manual_Submit</fullName>
+        <categories>Location_Auto_Submit</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_Location_Manual_Submit</shortDescription>
+        <value>Only Locations in &apos;Proposed&apos; status can be manually submitted to CAISO.</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_Location_ReSubmit_List</fullName>
+        <categories>Location</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_Location_ReSubmit_List</shortDescription>
+        <value>Please select at-least single record to Re-Submit.</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_Location_StartDateLessEndDate</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI Location StartDateLessEndDate</shortDescription>
+        <value>Start Date should be less than End date.</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_Location_StartDate_EndDate_Validate</fullName>
+        <categories>Location Edit</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI Location StartDate&amp;EndDate Validate</shortDescription>
+        <value>Start Date cannot be prior to existing Start Date and End Date cannot be greater than Existing End Date.</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_Location_Submit_List</fullName>
+        <categories>DRMI_Location_Submit_List</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_Location_Submit_List</shortDescription>
+        <value>Please select atleast single record to Submit to CAISO.</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_ManageRegistration_LocationAssigned</fullName>
+        <categories>Manage Registration</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_ManageRegistration_LocationAssigned</shortDescription>
+        <value>Location Assigned successfully.</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_ManageRegistration_LocationDeassigned</fullName>
+        <categories>Manage Registration</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_ManageRegistration_LocationDeassigned</shortDescription>
+        <value>Location De-Assigned successfully.</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_ManualSubmissionDisabled</fullName>
+        <categories>Registration</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_ManualSubmissionDisabled</shortDescription>
+        <value>Registration submission mode is currently in &apos;Auto&apos;</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_MaxCombined</fullName>
+        <categories>DRMI Dispacth</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_MaxCombined</shortDescription>
+        <value>Maximum Combined Wholesale &amp; Retail Events per month is exceeded</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_MaxHrDay</fullName>
+        <categories>DRMI Dispacth</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_MaxHrDay</shortDescription>
+        <value>Maximum Event Hours/ Day is exceeded</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_MaxHrMonth</fullName>
+        <categories>DRMI Dispacth</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_MaxHrMonth</shortDescription>
+        <value>Maximum Event Hours/Calendar Month is exceeded</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_MaxHrYear</fullName>
+        <categories>DRMI Dispacth</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_MaxHrYear</shortDescription>
+        <value>Maximum Event Hours/Calendar Year is exceeded</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_MaxMin_check</fullName>
+        <categories>SmartAc</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_MaxMin_check</shortDescription>
+        <value>Entered PLR value should be less than maximum PLR and greater than Minimum PLR</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_Max_RetailExceed</fullName>
+        <categories>DRMI Dispacth</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_Max_RetailExceed</shortDescription>
+        <value>Maximum Retail Events per Calendar Month is exceeded</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_MinPLRlessthanMaxPLR</fullName>
+        <categories>Manage Registration</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_MinPLRlessthanMaxPLR</shortDescription>
+        <value>Min PLR MW cannot be greater than of Max PLR MW.</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_NoLocation_Assigned</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_NoLocation_Assigned</shortDescription>
+        <value>There are no Location assigned with Registration</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_PLR_Lessthan_PLRPerUnit</fullName>
+        <categories>DRMI SmartAc</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_PLR_Lessthan_PLRPerUnit</shortDescription>
+        <value>PLR value entered is Less than PLR unit per Location</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_PLR_greaterthan_totalPLR</fullName>
+        <categories>SmartAc</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_PLR_greaterthan_totalPLR</shortDescription>
+        <value>PLR value entered is Greater than total PLR</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_ProgramProfileDateOverlap</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_ProgramProfileDateOverlap</shortDescription>
+        <value>Date Overlap</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_ProgramProfileInvalidRecord</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_ProgramProfileInvalidRecord</shortDescription>
+        <value>Invalid Record</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_Record_Updated_Message</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI Record Updated Message</shortDescription>
+        <value>Record updated successfully.</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_Regis_DateValidation</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_Regis_DateValidation</shortDescription>
+        <value>Date change is causing conflict with some Location&apos;s Date or Program Profile End Date</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_Regis_EndDateValidation</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_Regis_EndDateValidation</shortDescription>
+        <value>End Date change is causing conflict with some Location&apos;s End Date or Program Profile End Date</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_RegistrationClone</fullName>
+        <categories>DRMI Registration</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_RegistrationClone</shortDescription>
+        <value>Registration is cloned successfully.</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_RegistrationClonefail</fullName>
+        <categories>DRMI Registration</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_RegistrationClonefail</shortDescription>
+        <value>Copy Registration failed</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_RegistrationMeterThrsholderror</fullName>
+        <categories>Registraion</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_RegistrationMeterThrsholderror</shortDescription>
+        <value>Meter Data Value on Registration is Less than minimum required meter data value.</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_RegistrationStartDateIn_Past</fullName>
+        <categories>DRMI Registration</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI RegistrationStartDateIn Past</shortDescription>
+        <value>Start Date cannot be in the past Date</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_RegistrationTerminationErrorMessage</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_RegistrationTerminationErrorMessage</shortDescription>
+        <value>For Termination request, All registration should be either Confirmed, Validation failed, GRDT Pending, GRDT Complete, SQMD Pending, SQMD Failed or Ready to Bid Status.
+     Please go back.</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_Resource_Record_Not_Exist</fullName>
+        <categories>DRMS Manage Bid</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_Resource_Record_Not_Exist</shortDescription>
+        <value>Market program is not associated with Resource. Check with Adminstrator</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_Retroactive_dispatchError</fullName>
+        <categories>DRMI Dispacth</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_Retroactive_dispatchError</shortDescription>
+        <value>For &apos;Retroactive&apos;, the event date must be up to 14 days in the past.</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_SAC</fullName>
+        <categories>DRMI Dispacth</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_SAC</shortDescription>
+        <value>SAC</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_Schedule_Record_Not_Exist</fullName>
+        <categories>DRMS Manage Bid</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_Schedule_Record_Not_Exist</shortDescription>
+        <value>Schedule records does not exits</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_Select_ProgramOptionCBP14</fullName>
+        <categories>DRMI Dispacth</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_Select_ProgramOptionCBP14</shortDescription>
+        <value>Please select Program Option CBP 14 for CBP program</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_Select_ProgramOptionSAC</fullName>
+        <categories>DRMI Dispacth</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_Select_ProgramOptionSAC</shortDescription>
+        <value>Please select Program Option SAC for Smart AC program</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_SmartAC</fullName>
+        <categories>Smart AC</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_SmartAC</shortDescription>
+        <value>Smart AC</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_SmartAc_Remove_Error</fullName>
+        <categories>SmartAc</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_SmartAc_Remove_Error</shortDescription>
+        <value>Remove of Location is Unsuccessful</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_StatusCheckForProposedRegistration</fullName>
+        <categories>Registration</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_StatusCheckForProposedRegistration</shortDescription>
+        <value>Only Registration in &apos;Proposed&apos; status can be manually submitted to CAISO.</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_Valid_Status</fullName>
+        <categories>Termination Form</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI Valid Status</shortDescription>
+        <value>Confirmed,Validation failed,GRDT Pending,GRDT Complete,SQMD Pending,SQMD Failed,Ready to Bid</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_action_endDate_change</fullName>
+        <categories>Location Edit</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_action_endDate_change</shortDescription>
+        <value>End Date and Action cannot be changed at same time.</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_cbp14</fullName>
+        <categories>DRMI Dispacth</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_cbp14</shortDescription>
+        <value>CBP 14</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_maxDispatchPerEvent</fullName>
+        <categories>DRMI Dispacth</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_maxDispatchPerEvent</shortDescription>
+        <value>Maximum dispatches per event calendar day is exceeded</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_noEvent_OnHolidays</fullName>
+        <categories>DRMI Dispacth</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_noEvent_OnHolidays</shortDescription>
+        <value>Dispatch event cannot be created on Holidays</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_notStartAfterFiveDay</fullName>
+        <categories>DRMI Dispacth</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_notStartAfterFiveDay</shortDescription>
+        <value>Event date can only be up to 5 days from current date.</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_registrationLocation_Remove</fullName>
+        <categories>SmartAc</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_registrationLocation_Remove</shortDescription>
+        <value>Location De-Assigned Successfully.</value>
+    </labels>
+    <labels>
+        <fullName>DRMI_startAfterOneHr</fullName>
+        <categories>DRMI Dispacth</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DRMI_startAfterOneHr</shortDescription>
+        <value>Event can only start  from top of the next hour</value>
+    </labels>
+    <labels>
+        <fullName>EI_At_LeastOneProjectMeasureError</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_At_LeastOneProjectMeasureError</shortDescription>
+        <value>There should be at least one project measure associated with an application.</value>
+    </labels>
+    <labels>
+        <fullName>EI_AttachmentError</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_AttachmentError</shortDescription>
+        <value>Please add one attachment</value>
+    </labels>
+    <labels>
+        <fullName>EI_AttachmentInfo</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_AttachmentInfo</shortDescription>
+        <value>Attachment uploaded successfully.</value>
+    </labels>
+    <labels>
+        <fullName>EI_BuildingTypeNotFound</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_BuildingTypeNotFound</shortDescription>
+        <value>Measure Saving (Building Type) not found;</value>
+    </labels>
+    <labels>
+        <fullName>EI_BulkUploadCustomSettingName</fullName>
+        <categories>Bulk Upload</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_BulkUploadCustomSettingName</shortDescription>
+        <value>Bulk_Upload_Mapping__c</value>
+    </labels>
+    <labels>
+        <fullName>EI_BulkUploadMessage1</fullName>
+        <categories>Bulk Upload</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_BulkUploadMessage1</shortDescription>
+        <value>Please use this section to upload Object data into organization system.</value>
+    </labels>
+    <labels>
+        <fullName>EI_BulkUploadMessage2</fullName>
+        <categories>Bulk Upload</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_BulkUploadMessage2</shortDescription>
+        <value>Instructions:</value>
+    </labels>
+    <labels>
+        <fullName>EI_BulkUploadMessage3</fullName>
+        <categories>Bulk Upload</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_BulkUploadMessage3</shortDescription>
+        <value>&lt;ol&gt; 
+&lt;li&gt;Locate the Object data file from your local machine:&lt;/li&gt; 
+&lt;ul&gt;&lt;li&gt; File should be comma separated values (CSV) format&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;li&gt;Click the ‘Upload’ button.&lt;/li&gt; 
+&lt;li&gt;You will see the status of uploaded file with number of records successfully inserted or failed below.&lt;/li&gt; 
+&lt;/ol&gt;</value>
+    </labels>
+    <labels>
+        <fullName>EI_BulkUploadObjectsNotRelated</fullName>
+        <categories>Bulk Upload</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_BulkUploadObjectsNotRelated</shortDescription>
+        <value>Entered data is not related to each other. Please contact administrator for support.</value>
+    </labels>
+    <labels>
+        <fullName>EI_BulkUploadSelectFile</fullName>
+        <categories>Bulk Upload</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_BulkUploadSelectFile</shortDescription>
+        <value>Please select a file to upload.</value>
+    </labels>
+    <labels>
+        <fullName>EI_BulkUploadSuccess</fullName>
+        <categories>Bulk Upload</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_BulkUploadSuccess</shortDescription>
+        <value>File Uploaded Successfully. Please click on refresh button below to see the status.</value>
+    </labels>
+    <labels>
+        <fullName>EI_Bulk_Upload_Account_Name</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_Bulk Upload Account Name</shortDescription>
+        <value>Bulk Upload Account</value>
+    </labels>
+    <labels>
+        <fullName>EI_CECRegistration</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_CECRegistration</shortDescription>
+        <value>CEC registration number not valid;</value>
+    </labels>
+    <labels>
+        <fullName>EI_CalcertCallFail</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_CalcertCallFail</shortDescription>
+        <value>Calcerts api call failed: login failed;</value>
+    </labels>
+    <labels>
+        <fullName>EI_ClimateZoneNotFound</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_ClimateZoneNotFound</shortDescription>
+        <value>Measure Saving (Climate Zone) not found;</value>
+    </labels>
+    <labels>
+        <fullName>EI_CompanyNameError</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_CompanyNameError</shortDescription>
+        <value>Company Name cannot exceed 50 characters.</value>
+    </labels>
+    <labels>
+        <fullName>EI_DataNotAvailable</fullName>
+        <categories>Vendor Onboarding/Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_DataNotAvailable</shortDescription>
+        <value>Please populate the required field(s):</value>
+    </labels>
+    <labels>
+        <fullName>EI_Distributor_Program_Section</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_Distributor_Program_Section</shortDescription>
+        <value>Distributor Programs Information Section</value>
+    </labels>
+    <labels>
+        <fullName>EI_DummyMeasureCode</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_DummyMeasureCode</shortDescription>
+        <value>XXXX</value>
+    </labels>
+    <labels>
+        <fullName>EI_EmailAlreadyRegistered</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_EmailAlreadyRegistered</shortDescription>
+        <value>The email entered is already registered.</value>
+    </labels>
+    <labels>
+        <fullName>EI_EmailConfirmEmailNotMatch</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_EmailConfirmEmailNotMatch</shortDescription>
+        <value>Email and Confirm Email do not match.</value>
+    </labels>
+    <labels>
+        <fullName>EI_FileNameAttchment</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_FileNameAttchment</shortDescription>
+        <value>Please enter the file name</value>
+    </labels>
+    <labels>
+        <fullName>EI_FileNotFound</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_FileNotFound</shortDescription>
+        <value>Please select a file.</value>
+    </labels>
+    <labels>
+        <fullName>EI_File_Upload_Failed</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_File Upload Failed</shortDescription>
+        <value>Upload Failed (Technical Error)</value>
+    </labels>
+    <labels>
+        <fullName>EI_FirstLastNameLengthError</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_FirstLastNameLengthError</shortDescription>
+        <value>Firstname and Lastname cannot exceed 40 characters.</value>
+    </labels>
+    <labels>
+        <fullName>EI_FirstNameError</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_FirstNameError</shortDescription>
+        <value>First Name cannot exceed 40 characters.</value>
+    </labels>
+    <labels>
+        <fullName>EI_FormType</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_FormType</shortDescription>
+        <value>Form type not valid;</value>
+    </labels>
+    <labels>
+        <fullName>EI_FuelTypeMatchError</fullName>
+        <categories>Measure</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_FuelTypeMatchError</shortDescription>
+        <value>Fuel Type on measure not matching with the Service Type Code of selected site;</value>
+    </labels>
+    <labels>
+        <fullName>EI_FuelType_Not_Supported</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_FuelType_Not_Supported</shortDescription>
+        <value>Program does not support this Fuel Type.</value>
+    </labels>
+    <labels>
+        <fullName>EI_GoogleReCaptcha_SiteKey</fullName>
+        <categories>reCaptcha SiteKey</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_GoogleReCaptcha_SiteKey</shortDescription>
+        <value>6LdkBh4TAAAAAAypUrvTZf6ZdxKmo6alWowIrKi0</value>
+    </labels>
+    <labels>
+        <fullName>EI_HydrologicRejionNotFound</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_HydrologicRejionNotFound</shortDescription>
+        <value>Water Saving (Hydrologic Rejion) not found;</value>
+    </labels>
+    <labels>
+        <fullName>EI_InactivateCVError</fullName>
+        <categories>Product Measure Setup</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_InactivateCVError</shortDescription>
+        <value>Error occured while inactivating one of the CV Records.</value>
+    </labels>
+    <labels>
+        <fullName>EI_Inactive_Site_Error</fullName>
+        <categories>Project Validation</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI Inactive Site Error</shortDescription>
+        <value>The Site is either inactive or closed.</value>
+    </labels>
+    <labels>
+        <fullName>EI_IncorrectData</fullName>
+        <categories>IncorrectData</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_IncorrectData</shortDescription>
+        <value>No Matching application found with the values entered. Please check all entered fields are correct.</value>
+    </labels>
+    <labels>
+        <fullName>EI_InputEmailError</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_InputEmailError</shortDescription>
+        <value>Please input a valid Email.</value>
+    </labels>
+    <labels>
+        <fullName>EI_Instructions</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_Instructions</shortDescription>
+        <value>To enroll in Trade Pros, please populate the fields in the section &quot;Trade Pros Information&quot;. To enroll in a Distributor Program, please select a Program in the Distributor Program Information section.</value>
+    </labels>
+    <labels>
+        <fullName>EI_IntUserCreationError</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_IntUserCreationError</shortDescription>
+        <value>Only Integration User can create Measure records</value>
+    </labels>
+    <labels>
+        <fullName>EI_JobTitleError</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_JobTitleError</shortDescription>
+        <value>Jobtitle cannot exceed 50 characters.</value>
+    </labels>
+    <labels>
+        <fullName>EI_LastNameError</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_LastNameError</shortDescription>
+        <value>Last Name cannot exceed 40 characters.</value>
+    </labels>
+    <labels>
+        <fullName>EI_LoginFailed</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_LoginFailed</shortDescription>
+        <value>Loginfailed</value>
+    </labels>
+    <labels>
+        <fullName>EI_MandatoryFieldError</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_MandatoryFieldError</shortDescription>
+        <value>Following Fields Are Missing on the Project:</value>
+    </labels>
+    <labels>
+        <fullName>EI_MandatoryFieldErrorOnPM</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_MandatoryFieldErrorOnPM</shortDescription>
+        <value>Following Fields Are Missing on the Project Measure:</value>
+    </labels>
+    <labels>
+        <fullName>EI_MandatoryFieldErrorProject</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_MandatoryFieldErrorProject</shortDescription>
+        <value>Please populate the mandatory fields on Project measure</value>
+    </labels>
+    <labels>
+        <fullName>EI_MandatoryFieldsError</fullName>
+        <categories>Project Measure</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_MandatoryFieldsError</shortDescription>
+        <value>Please fill in all the mandatory fields.</value>
+    </labels>
+    <labels>
+        <fullName>EI_MeasureAHRIError</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_MeasureAHRIError</shortDescription>
+        <value>AHRI Number on Project Measure is either invalid or blank OR Installation Type between Project Measure and Equipment is not matching;</value>
+    </labels>
+    <labels>
+        <fullName>EI_MeasureCodeError</fullName>
+        <categories>Product Measure Setup</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_MeasureCodeError</shortDescription>
+        <value>Duplicate Measure with same Measure Code found. Please enter another Measure Code.</value>
+    </labels>
+    <labels>
+        <fullName>EI_MeasureCodeblankinvalid</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_MeasureCodeBlankInvalid</shortDescription>
+        <value>Measure Code on Project Measure is either invalid or blank;</value>
+    </labels>
+    <labels>
+        <fullName>EI_MeasureDateNotInProductDate</fullName>
+        <categories>Product Measure Setup</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_MeasureDateNotInProductDate</shortDescription>
+        <value>Can not update Measure Effective From/To dates as it is not in the range of Product Effective From/To dates.</value>
+    </labels>
+    <labels>
+        <fullName>EI_MeasureEffectiveToSavingError</fullName>
+        <categories>Product Measure Setup</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_MeasureEffectiveToSavingError</shortDescription>
+        <value>Measure Effective To Date change not allowed since active savings record exists with a later date.</value>
+    </labels>
+    <labels>
+        <fullName>EI_MeasureIncenitveDateSavingError</fullName>
+        <categories>Product Measure Setup</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_MeasureIncenitveDateSavingError</shortDescription>
+        <value>Change not allowed since Incentive From/To dates should lie within or equal to Saving From/To dates.</value>
+    </labels>
+    <labels>
+        <fullName>EI_MeasureIncentiveRateError</fullName>
+        <categories>Measure</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_MeasureIncentiveRateError</shortDescription>
+        <value>Measure does not have incentive rate populated.</value>
+    </labels>
+    <labels>
+        <fullName>EI_MeasureIncentiveSavingError</fullName>
+        <categories>Product Measure Setup</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_MeasureIncentiveSavingError</shortDescription>
+        <value>Change not allowed since Measure Incentive Effective From Date starts before Saving Start date.</value>
+    </labels>
+    <labels>
+        <fullName>EI_MeasureManuModelError</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_MeasureManuModelError</shortDescription>
+        <value>Equipment Manufacturer/Model on Project Measure is either invalid or blank OR Installation Type between Project Measure and Equipment is not matching;</value>
+    </labels>
+    <labels>
+        <fullName>EI_MeasureUpdateFailedError</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_MeasureUpdateFailedError</shortDescription>
+        <value>Only &apos;System admin, Work paper Engineer, Product Team&apos; profiles have permission to update measure records</value>
+    </labels>
+    <labels>
+        <fullName>EI_MeasureValidationCommonError</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_MeasureValidationCommonError</shortDescription>
+        <value>Need input for one or more Measure Validation on Project Measure: Measure Code OR Equipment Manufacturer/Model OR AHRI Number;</value>
+    </labels>
+    <labels>
+        <fullName>EI_MeasureValidationError</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_MeasureValidationError</shortDescription>
+        <value>Project Measure does not have any valid Measure and Program Measure record for Measure Code provided;</value>
+    </labels>
+    <labels>
+        <fullName>EI_MesureSavingsDatesOverlapError</fullName>
+        <categories>Product Measure Setup</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_MesureSavingsDatesOverlapError</shortDescription>
+        <value>Measure Saving dates are overlapping with the existing savings.</value>
+    </labels>
+    <labels>
+        <fullName>EI_MultipleMatchingSavingsRecordFound</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_MultipleMatchingSavingsRecordFound</shortDescription>
+        <value>More than one matching savings records found</value>
+    </labels>
+    <labels>
+        <fullName>EI_MultipleMatchingWaterSavingsRecordFound</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_MultipleMatchingWaterSavingsRecordFound</shortDescription>
+        <value>More than one matching water savings records found</value>
+    </labels>
+    <labels>
+        <fullName>EI_MultipleSiteError1</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_MultipleSiteError1</shortDescription>
+        <value>Multiple Active Sites found but Fuel Type does not match;</value>
+    </labels>
+    <labels>
+        <fullName>EI_MultipleSiteError2</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_MultipleSiteError2</shortDescription>
+        <value>Multiple Active Sites with same Fuel type found;</value>
+    </labels>
+    <labels>
+        <fullName>EI_NAICSNotFoundError</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_NAICSNotFoundError</shortDescription>
+        <value>NAICS not found on SA to determine building type;</value>
+    </labels>
+    <labels>
+        <fullName>EI_NewUserReg</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_NewUserReg</shortDescription>
+        <value>Program Enrollment</value>
+    </labels>
+    <labels>
+        <fullName>EI_NewVendorFormLabel</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_NewVendorFormLabel</shortDescription>
+        <value>Energy Savings Program New Partner Enrollment Form</value>
+    </labels>
+    <labels>
+        <fullName>EI_New_Project_Button_Error</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_New Project Button Error</shortDescription>
+        <value>User does not have access to this button.</value>
+    </labels>
+    <labels>
+        <fullName>EI_NoCustomPriceBookError</fullName>
+        <categories>PriceBook</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_NoCustomPriceBookError</shortDescription>
+        <value>Energy Efficiency pricebook not found during measure inser . There are measure records which do not have a corresponding pricebook entry record.</value>
+    </labels>
+    <labels>
+        <fullName>EI_NoMatchingSavingsRecordFound</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_NoMatchingSavingsRecordFound</shortDescription>
+        <value>No matching savings records found as one of the parameters doesn&apos;t match. Measure Code, Delivery Type, Application Received Date, Climate Zone, Building Type, Vintage;</value>
+    </labels>
+    <labels>
+        <fullName>EI_NoMatchingWaterSavingsRecordFound</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_NoMatchingWaterSavingsRecordFound</shortDescription>
+        <value>No matching water savings records found as one of the parameters doesn&apos;t match. Measure Code, Water Only Indicator, Parent Measure Code, Application Received Date;</value>
+    </labels>
+    <labels>
+        <fullName>EI_NoPriceBookEntryError</fullName>
+        <categories>PriceBookEntry</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_NoPriceBookEntryError</shortDescription>
+        <value>There is no pricebook entry for the selected measure or the price book is not active.</value>
+    </labels>
+    <labels>
+        <fullName>EI_NoStandardPriceBookError</fullName>
+        <categories>PriceBook</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_NoStandardPriceBookError</shortDescription>
+        <value>Standard pricebook not found during measure insert. There are measure records which do not have a corresponding pricebook entry record.</value>
+    </labels>
+    <labels>
+        <fullName>EI_NoValidaCEDARValueOnNAICS</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_NoValidaCEDARValueOnNAICS</shortDescription>
+        <value>No valid CEDAR value found on NAICS;</value>
+    </labels>
+    <labels>
+        <fullName>EI_OpportunityLineItemError</fullName>
+        <categories>Bulk Upload</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_OpportunityLineItemError</shortDescription>
+        <value>Error has occurred. Please Contact System Administrator.</value>
+    </labels>
+    <labels>
+        <fullName>EI_PriceBookName</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_PriceBookName</shortDescription>
+        <value>Energy Efficiency</value>
+    </labels>
+    <labels>
+        <fullName>EI_ProductEffectiveFromSavingError</fullName>
+        <categories>Product Measure Setup</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_ProductEffectiveFromSavingError</shortDescription>
+        <value>Product Effective From Date change not allowed since active savings record exists with a prior date.</value>
+    </labels>
+    <labels>
+        <fullName>EI_ProductEffectiveToSavingError</fullName>
+        <categories>Product Measure Setup</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_ProductEffectiveToSavingError</shortDescription>
+        <value>Product Effective To Date change not allowed since active savings record exists with a later date.</value>
+    </labels>
+    <labels>
+        <fullName>EI_ProductNotUpdateReason</fullName>
+        <categories>Product Measure Setup</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_ProductNotUpdateReason</shortDescription>
+        <value>Product associated with measure for this record can not be updated because:</value>
+    </labels>
+    <labels>
+        <fullName>EI_ProductToDateError</fullName>
+        <categories>Product Measure Setup</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_ProductToDateError</shortDescription>
+        <value>Effective To date cannot be less then or equal to Effective From date AND Effective To date cannot be in past.</value>
+    </labels>
+    <labels>
+        <fullName>EI_ProgNotContReqdFldError</fullName>
+        <categories>Product Measure Setup</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_ProgNotContReqdFldError</shortDescription>
+        <value>Measure records​ cannot be displayed​. The ​Program does not contain Start Date OR End Date OR Delivery Ty​pe.</value>
+    </labels>
+    <labels>
+        <fullName>EI_ProgarmError</fullName>
+        <categories>Appliction processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_ProgarmError</shortDescription>
+        <value>Please enter a Program value to select a Measure</value>
+    </labels>
+    <labels>
+        <fullName>EI_ProgramAccessError</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_ProgramAccessError</shortDescription>
+        <value>Partner does not have access to the Program. Please select a Program that the Partner is enrolled in.</value>
+    </labels>
+    <labels>
+        <fullName>EI_ProgramCodeError</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_ProgramCodeError</shortDescription>
+        <value>Please provide program code.</value>
+    </labels>
+    <labels>
+        <fullName>EI_ProgramDeliveryMatchError</fullName>
+        <categories>Product Measure Setup</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_ProgramDeliveryMatchError</shortDescription>
+        <value>Program delivery type does not match with measure savings.</value>
+    </labels>
+    <labels>
+        <fullName>EI_Program_Doesnot_Supp_CustType</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_Program_Doesnot_Supp_CustType</shortDescription>
+        <value>Program does not support this Customer Type;</value>
+    </labels>
+    <labels>
+        <fullName>EI_ProjectMeasures_Error</fullName>
+        <categories>Appliction processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_ProjectMeasures_Error</shortDescription>
+        <value>You can only insert/ update project and project measures when the project is in earlier stages.</value>
+    </labels>
+    <labels>
+        <fullName>EI_ProjectValidationError</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_ProjectValidationError</shortDescription>
+        <value>Project validation failed because one or more Project Measures failed</value>
+    </labels>
+    <labels>
+        <fullName>EI_Projectattachment</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_ProjectAttachmentError</shortDescription>
+        <value>Project should have atleast one attachment</value>
+    </labels>
+    <labels>
+        <fullName>EI_RoleNotFound</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_RoleNotFound</shortDescription>
+        <value>Following roles are not present under the Opportunity Team of this Opportunity:</value>
+    </labels>
+    <labels>
+        <fullName>EI_SAIDNotFound</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_SAIDNotFound</shortDescription>
+        <value>SA ID not found;</value>
+    </labels>
+    <labels>
+        <fullName>EI_SaidTooManyError</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_SaidTooManyError</shortDescription>
+        <value>Too many active sites or site number invalid</value>
+    </labels>
+    <labels>
+        <fullName>EI_SaidValidationError</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_SaidValidationError</shortDescription>
+        <value>Site on Project Measure is either invalid or blank;</value>
+    </labels>
+    <labels>
+        <fullName>EI_SalesOppAttachError</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_SalesOppAttachError</shortDescription>
+        <value>Please attach a signed agreement from the customer  to proceed to Stage &apos;6A - Application Received - Converted&apos;.</value>
+    </labels>
+    <labels>
+        <fullName>EI_SaveAndContinue</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_SaveAndContinue</shortDescription>
+        <value>Save and Continue</value>
+    </labels>
+    <labels>
+        <fullName>EI_SavingsEffectiveFromToDateError</fullName>
+        <categories>Product Measure Setup</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_SavingsEffectiveFromToDateError</shortDescription>
+        <value>Can not update Savings Effective From/To dates as it is not in the range of Product / Measure Effective From/To dates</value>
+    </labels>
+    <labels>
+        <fullName>EI_SelfRegistrationEmailError</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_SelfRegistrationEmailError</shortDescription>
+        <value>Please enter your email address to validate your account.</value>
+    </labels>
+    <labels>
+        <fullName>EI_SelfRegistrationFirstNameError</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_SelfRegistrationFirstNameError</shortDescription>
+        <value>Please input first name</value>
+    </labels>
+    <labels>
+        <fullName>EI_SelfRegistrationHeaderText</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_SelfRegistrationHeaderText</shortDescription>
+        <value>Ready to enroll? First, fill out the details below to create your login account. 
+You&apos;ll need to use a valid email address that you can access to confirm your account. 
+We&apos;ll be creating a unique username for you using your email address and a special suffix (example@email.com.pgevendor); 
+you can also find your username in the confirmation email.</value>
+    </labels>
+    <labels>
+        <fullName>EI_SelfRegistrationJobTitle</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_SelfRegistrationJobTitle</shortDescription>
+        <value>Please enter your Job Title.</value>
+    </labels>
+    <labels>
+        <fullName>EI_SelfRegistrationLastNameError</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_SelfRegistrationLastNameError</shortDescription>
+        <value>Please input last name</value>
+    </labels>
+    <labels>
+        <fullName>EI_SelfRegistrationOrgName</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_SelfRegistrationOrgName</shortDescription>
+        <value>Please enter your organization&apos;s name.</value>
+    </labels>
+    <labels>
+        <fullName>EI_SelfRegistrationPhoneNumber</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_SelfRegistrationPhoneNumber</shortDescription>
+        <value>Please enter your preferred contact phone number.</value>
+    </labels>
+    <labels>
+        <fullName>EI_SelfRegistrationReEnterEmail</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_SelfRegistrationReEnterEmail</shortDescription>
+        <value>Please re-enter your email address.</value>
+    </labels>
+    <labels>
+        <fullName>EI_Signature</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_Signature</shortDescription>
+        <value>The PG&amp;E Energy Savings Program Team</value>
+    </labels>
+    <labels>
+        <fullName>EI_Site_Guest_User</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_Site_Guest_User</shortDescription>
+        <value>Energy Insight for Partners Profile</value>
+    </labels>
+    <labels>
+        <fullName>EI_StandardError</fullName>
+        <categories>System</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_StandardError</shortDescription>
+        <value>Error has occurred. please contact system administrator.</value>
+    </labels>
+    <labels>
+        <fullName>EI_Start</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_Start</shortDescription>
+        <value>Start</value>
+    </labels>
+    <labels>
+        <fullName>EI_StoreValidationError</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_StoreValidationError</shortDescription>
+        <value>Store Number on Project Measure is either invalid or blank;</value>
+    </labels>
+    <labels>
+        <fullName>EI_SysAdMeasDeleteError</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_SysAdMeasDeleteError</shortDescription>
+        <value>Only System Administrator has permission to delete measure records</value>
+    </labels>
+    <labels>
+        <fullName>EI_SysAdminDeleteError</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_SysAdminDeleteError</shortDescription>
+        <value>Only System Administrator has permission to delete the Project/Project Measure. Please contact System Administrator of your organization.</value>
+    </labels>
+    <labels>
+        <fullName>EI_Thanks</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_Thanks</shortDescription>
+        <value>Thanks,</value>
+    </labels>
+    <labels>
+        <fullName>EI_TradePro_Program_Access_Error</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_TradePro Program Access Error</shortDescription>
+        <value>User does not have access to trade pro programs.</value>
+    </labels>
+    <labels>
+        <fullName>EI_Trade_Pros_Section</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_Trade_Pros_Section</shortDescription>
+        <value>Trade Pros Information Section</value>
+    </labels>
+    <labels>
+        <fullName>EI_TwoSitesError</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_TwoSitesError</shortDescription>
+        <value>Two sites with same site type code found. Please check entered site number;</value>
+    </labels>
+    <labels>
+        <fullName>EI_TypeNotFound</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_TypeNotFound</shortDescription>
+        <value>Please select the type</value>
+    </labels>
+    <labels>
+        <fullName>EI_UserCreatedMessage</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_UserCreatedMessage</shortDescription>
+        <value>Thank you for requesting access to PG&amp;E’s Energy Efficiency Partner Portal. Please check your email for a confirmation request that contains a link to confirm your account. Once you click the link in your email, you will be given a user name and directed to set your password. For any issues or questions, please contact your Program Implementer or Program Manager.</value>
+    </labels>
+    <labels>
+        <fullName>EI_ValidTelephoneError</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_ValidTelephoneError</shortDescription>
+        <value>Please input a valid telephone number.</value>
+    </labels>
+    <labels>
+        <fullName>EI_VendorEnrollmentInfo</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_VendorEnrollmentInfo</shortDescription>
+        <value>Partner Enrollment Information</value>
+    </labels>
+    <labels>
+        <fullName>EI_VendorOverviewFormText</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_VendorOverviewFormText</shortDescription>
+        <value>It&apos;s time to enroll your company into PG&amp;E’s Energy Efficiency Partner programs. &lt;br/&gt; &lt;br/&gt; The following company information are needed to properly complete the enrollment form: &lt;br/&gt; - Federal Tax Identification Number &lt;br/&gt; - Tax Status &lt;br/&gt; - Program Name &lt;br/&gt; - Primary Contact Information &lt;br/&gt;&lt;br/&gt; Please note, if another user has already enrolled your company using the same Federal Tax ID, that user &lt;br/&gt; will receive a request to approve your access for your company. &lt;br/&gt; &lt;br/&gt; To begin, please click the Start button.</value>
+    </labels>
+    <labels>
+        <fullName>EI_VendorOverviewFormText2</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_VendorOverviewFormText2</shortDescription>
+        <value>.</value>
+    </labels>
+    <labels>
+        <fullName>EI_Vendor_Dummy_Account_Name</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_Vendor Dummy Account Name</shortDescription>
+        <value>Energy Savings Dummy Account</value>
+    </labels>
+    <labels>
+        <fullName>EI_Vendor_Username_Suffix</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_Vendor Username Suffix</shortDescription>
+        <value>pgepartner</value>
+    </labels>
+    <labels>
+        <fullName>EI_VintageCodeNotFound</fullName>
+        <categories>Application Processing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_VintageCodeNotFound</shortDescription>
+        <value>Measure Saving (Vintage Code) not found;</value>
+    </labels>
+    <labels>
+        <fullName>EI_isSingleCaseComment</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EI_isSingleCaseComment</shortDescription>
+        <value>True</value>
+    </labels>
+    <labels>
+        <fullName>ER_CANCEL_GOTO_REVIEW</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_CANCEL_GOTO_REVIEW</shortDescription>
+        <value>CANCEL &amp; GO TO REVIEW</value>
+    </labels>
+    <labels>
+        <fullName>ER_CustomerContactInfoPage_AreUSure_Title</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_CustomerContactInfoPage_AreUSure_Title</shortDescription>
+        <value>Are you sure?</value>
+    </labels>
+    <labels>
+        <fullName>ER_CustomerContactInfoPage_ContactNameToolTip</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_CustomerContactInfoPage_ContactNameToolTip</shortDescription>
+        <value>Your application may be selected for inspection. Provide a contact who has site access and can demonstrate that the product is operational.</value>
+    </labels>
+    <labels>
+        <fullName>ER_CustomerContactInfoPage_Contact_FirstName</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_CustomerContactInfoPage_Contact_FirstName</shortDescription>
+        <value>CONTACT FIRST NAME</value>
+    </labels>
+    <labels>
+        <fullName>ER_CustomerContactInfoPage_ScreenTitle</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_CustomerContactInfoPage_ScreenTitle</shortDescription>
+        <value>Customer and Contact information</value>
+    </labels>
+    <labels>
+        <fullName>ER_CustomerContactInfoPage_TAXSTATUS</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_CustomerContactInfoPage_TAXSTATUS</shortDescription>
+        <value>TAX STATUS</value>
+    </labels>
+    <labels>
+        <fullName>ER_CustomerContactInfoPage_TAX_ID_OR_SOCIAL_SECURITY_NUMBER</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_CustomerContactInfoPage_TAX ID OR SOCIAL SECURITY NUMBER</shortDescription>
+        <value>TAX ID OR SOCIAL SECURITY NUMBER</value>
+    </labels>
+    <labels>
+        <fullName>ER_CustomerContactInfoPage_TaxIDToolTip</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_CustomerContactInfoPage_TaxIDToolTip</shortDescription>
+        <value>We are required to file a 1099 with the state of California if you receive rebates totaling $600 or more within a calendar year.</value>
+    </labels>
+    <labels>
+        <fullName>ER_CustomerContactInfoPage_TaxStatusToolTip</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_CustomerContactInfoPage_TaxStatusToolTip</shortDescription>
+        <value>We are required to file a 1099 with the state of California if you receive rebates totaling $600 or more within a calendar year.</value>
+    </labels>
+    <labels>
+        <fullName>ER_CustomerContactInfoPage_YearBuiltError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_CustomerContactInfoPage_YearBuiltError</shortDescription>
+        <value>Year Built should be minimum 4 digits and should not greater than current year.</value>
+    </labels>
+    <labels>
+        <fullName>ER_CustomerInfoPage_EmailNotMatch</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_CustomerInfoPage_EmailNotMatch</shortDescription>
+        <value>In order to proceed, email fields must match</value>
+    </labels>
+    <labels>
+        <fullName>ER_CustomerInfoPage_HeaderText</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_CustomerInfoPage_HeaderText</shortDescription>
+        <value>To continue your application, provide your customer and payee information below. This information will be used for each rebate in this application submission.</value>
+    </labels>
+    <labels>
+        <fullName>ER_CustomerInfoPage_TaxIDNotMatch</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_CustomerInfoPage_TaxIDNotMatch</shortDescription>
+        <value>In order to proceed, tax ID fields must match</value>
+    </labels>
+    <labels>
+        <fullName>ER_Customercontact_PhoneError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_Customercontact_PhoneError</shortDescription>
+        <value>should not be less than 10 digits.</value>
+    </labels>
+    <labels>
+        <fullName>ER_EveryPage_BackAltText</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_EveryPage_BackAltText</shortDescription>
+        <value>Close</value>
+    </labels>
+    <labels>
+        <fullName>ER_EveryPage_BackDialogTitle</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_EveryPage_BackDialogTitle</shortDescription>
+        <value>Do you want to start over?</value>
+    </labels>
+    <labels>
+        <fullName>ER_EveryPage_Backhelptext</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_EveryPage_Backhelptext</shortDescription>
+        <value>This link takes you back to landing page: opens dialog</value>
+    </labels>
+    <labels>
+        <fullName>ER_EveryPage_FieldNotSpecified</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_EveryPage_FieldNotSpecified</shortDescription>
+        <value>is required and must be in correct format.</value>
+    </labels>
+    <labels>
+        <fullName>ER_EveryPage_Footer</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_EveryPage_Footer</shortDescription>
+        <value>&lt;div class=&quot;slo-common-footer_container &quot; &gt;  
+&lt;p class=&quot;slo-common-copyright &quot;&gt;&amp;copy;2016 Pacific Gas and Electric Company&lt;/p&gt;  
+&lt;p class=&quot;slo-common-lnk_container&quot;&gt;  
+&lt;a target=&quot;_blank&quot; style=&quot;padding-right: 10px;&quot; class=&quot;footerAnchor&quot;  href=&quot;https://www.pge.com/includes/docs/pdfs/about/company/privacy/PGE_PrivacyPolicy.pdf&quot;&gt;Privacy&lt;span  class=&quot;slo-common-lnk_icon&quot;&gt;&lt;/span&gt;&lt;/a&gt;  
+&lt;a target=&quot;_blank&quot; href=&quot;https://www.pge.com/en_US/residential/customer-service/help/contact-pge-landing/contact-us.page&quot;&gt;Contact Us&lt;span   class=&quot;slo-common-lnk_icon&quot;&gt;&lt;/span&gt;&lt;/a&gt;  
+&lt;/p&gt;  
+&lt;/div&gt;</value>
+    </labels>
+    <labels>
+        <fullName>ER_EveryPage_ScreenTitle</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_EveryPage_ScreenTitle</shortDescription>
+        <value>Apply for rebates for your home or business</value>
+    </labels>
+    <labels>
+        <fullName>ER_LandingPage_BusinessRebateFAQ</fullName>
+        <categories>Content Dupe of: ER_LandingPage_RightSideHeaderSection3</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_LandingPage_BusinessRebateFAQ</shortDescription>
+        <value>&lt;a target=&quot;_blank&quot; href=&quot;https://www.pge.com/pge_global/common/pdfs/save-energy-money/savings-solutions-and-rebates/rebates-by-product/FAQs-For-Your-Business.pdf&quot; class=&quot;slo-common-spacings_vs3 col-xs-12 col-sm-12 col-md-12 col-lg-12&quot; style=&quot;padding:0;font-size:14px;&quot;&gt;BUSINESS REBATE FAQ&lt;span class=&quot;glyphicon glyphicon-menu-right&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&quot;col-lg-12 col-md-12 col-sm-12 col-xs-12&quot; style =&quot;padding:0;white-space:pre-line;font-size:14px;&quot; href=&quot;https://www.pge.com/pge_global/common/pdfs/save-energy-money/savings-solutions-and-rebates/rebates-by-product/Terms-and-Conditions-For-Your-Business.pdf&quot; target=&quot;_blank&quot;&gt;BUSINESS TERMS &amp; CONDITIONS&lt;span class=&quot;glyphicon glyphicon-menu-right&quot;&gt;&lt;/span&gt;&lt;/a&gt;</value>
+    </labels>
+    <labels>
+        <fullName>ER_LandingPage_Default_Paragraph</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_LandingPage_Default Paragraph</shortDescription>
+        <value>&lt;p Style =&quot;font-family: &apos;FFDINWeb&apos;, Arial;font-size: 16px,font-style: normal;&quot; &gt; 
+Receive your qualifying rebate faster when you apply online. Before you start, follow the easy steps below so you’ll have all the necessary information at hand. Then, set aside 35 to 60 minutes to complete the application.
+&lt;/p&gt;</value>
+    </labels>
+    <labels>
+        <fullName>ER_LandingPage_Headersection2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_LandingPage_Headersection2</shortDescription>
+        <value>&lt;div class=&quot;col-lg-9 col-md-10 col-sm-12 col-xs-12 clearfix eRebate-nopadding&quot;&gt; 
+&lt;h3 &gt;&lt;strong&gt;Review product rebate requirements&lt;/strong&gt;&lt;/h3&gt; 
+&lt;/div&gt; 
+&lt;div class=&quot;col-lg-9 col-md-10 col-sm-12 col-xs-12 clearfix eRebate-nopadding&quot;&gt; 
+&lt;p class=&quot;eRebate-margin-top-10&quot;&gt;Review the rebate catalog and understand the product rebate requirements for your &lt;a target=&quot;_blank&quot; class=&quot;anchorUnderline&quot; href=&quot;http://www.pge.com/includes/docs/pdfs/shared/saveenergymoney/rebates/ee_residential_rebate_catalog.pdf&quot;&gt;residence&lt;/a&gt; or 
+&lt;a target=&quot;_blank&quot; class=&quot;anchorUnderline&quot; href=&quot;https://www.pge.com/includes/docs/pdfs/mybusiness/energysavingsrebates/incentivesbyindustry/Business_Rebates_List.pdf&quot;&gt;business&lt;/a&gt;. Be prepared to provide: 
+&lt;/p&gt; 
+&lt;ul style=&quot;padding-left:0px&quot; &gt; 
+&lt;li &gt;The measure code from the appropriate rebate catalog.&lt;/li&gt; 
+&lt;li &gt;The make and model of the product purchased.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;/div&gt;</value>
+    </labels>
+    <labels>
+        <fullName>ER_LandingPage_Headersection3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_LandingPage_Headersection3</shortDescription>
+        <value>&lt;div class=&quot;col-lg-9 col-md-10 col-sm-12 col-xs-12 clearfix slo-common-spacings_vs3 eRebate-nopadding&quot;&gt; 
+&lt;h3   &gt;&lt;strong &gt; Gather documents so you can provide the following information:&lt;/strong&gt;&lt;/h3&gt; 
+&lt;ul style=&quot;padding-left:0&quot; class=&quot;eRebate-margin-top-10&quot;&gt; 
+&lt;li &gt;&lt;a target=&quot;_blank&quot; class=&quot;anchorUnderline&quot; href=&quot;https://www.pge.com/pge_global/common/pdfs/save-energy-money/savings-solutions-and-rebates/rebates-by-product/Proof-of-Purchase.pdf&quot;&gt;Proof of purchase&lt;/a&gt; for your qualified product(s). This includes an invoice.&lt;/li&gt; 
+&lt;li &gt;&lt;a target=&quot;_blank&quot; class=&quot;anchorUnderline&quot; href=&quot;https://www.pge.com/pge_global/common/pdfs/save-energy-money/savings-solutions-and-rebates/rebates-by-product/Service-Agreement-ID.pdf&quot;&gt;Service Agreement Identification Number &lt;/a&gt;located on your energy statement.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;/div&gt;</value>
+    </labels>
+    <labels>
+        <fullName>ER_LandingPage_MainHeader</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_LandingPage_MainHeader</shortDescription>
+        <value>Congratulations on the purchase of your energy efficient product</value>
+    </labels>
+    <labels>
+        <fullName>ER_LandingPage_NeedHelp</fullName>
+        <categories>Content dupe of:ER_LandingPage_RightSideHeaderSection2</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_LandingPage_NeedHelp</shortDescription>
+        <value>&lt;div class=&quot;clearfix&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;margin-top:30px&quot;&gt;
+&lt;h3 style=&quot;font-weight: normal;color:#333333;font-size: 18px;font-family: FFDINWebbold;line-height: 1.2&quot;&gt;Need help?&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div class=&quot;clearfix&quot;&gt;&lt;/div&gt;
+&lt;label style=&quot;margin-bottom: 0px&quot;  &gt;
+&lt;h4 style=&quot;font-size: 16px;font-family: &apos;FFDINWebbold&apos;;&quot;&gt; Business customers&lt;/h4&gt;
+&lt;/label&gt; 
+&lt;div class=&quot;clearfix&quot;&gt;&lt;p &gt; Call the Business Customer Service 
+Center at&lt;u&gt; &lt;a target=&quot;_blank&quot; href=&quot;tel:1-800-468-4743&quot; style=&quot;white-space:nowrap&quot;&gt;1-800-468-4743&lt;/a&gt;&lt;/u&gt; or visit 
+&lt;u&gt;&lt;a target=&quot;_blank&quot; href=&quot;https://www.pge.com/en_US/business/save-energy-money/business-solutions-and-rebates/product-rebates/product-rebates.page?WT.mc_id=Vanity_businessrebates&quot;&gt;pge.com/businessrebates&lt;/a&gt;&lt;/u&gt;. 
+&lt;/p&gt;
+&lt;/div&gt;</value>
+    </labels>
+    <labels>
+        <fullName>ER_LandingPage_PreferMail</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_LandingPage_PreferMail</shortDescription>
+        <value>&lt;div class=&quot;clearfix&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;margin-top:30px&quot;&gt;
+&lt;h3 style=&quot;font-weight: normal;color:#333333;font-size: 18px;font-family: FFDINWebbold;line-height: 1.2&quot;&gt;Prefer Mail?&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div class=&quot;clearfix&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;clearfix&quot;&gt;&lt;a target=&quot;_blank&quot; href=&quot;https://www.pge.com/includes/docs/pdfs/shared/saveenergymoney/rebates/ee_residential_rebate_app.pdf&quot; style=&quot;;font-size:14px;white-space:nowrap&quot;&gt;RESIDENTIAL PAPER APPLICATION&lt;span class=&quot;glyphicon glyphicon-menu-right&quot;&gt;&lt;/span&gt;&lt;/a&gt;&lt;p&gt;
+&lt;a target=&quot;_blank&quot; href=&quot;https://www.pge.com/includes/docs/pdfs/mybusiness/energysavingsrebates/incentivesbyindustry/ee_business_rebate_app_final.pdf&quot; style=&quot;;font-size:14px;white-space:nowrap&quot;&gt;BUSINESS PAPER APPLICATION&lt;span class=&quot;glyphicon glyphicon-menu-right&quot;&gt;&lt;/span&gt;&lt;/a&gt;&lt;/P&gt;
+&lt;/div&gt;</value>
+    </labels>
+    <labels>
+        <fullName>ER_LandingPage_ResidentialCustomers</fullName>
+        <categories>Missing Links</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_LandingPage_ResidentialCustomers</shortDescription>
+        <value>&lt;div class=&quot;clearfix &quot;&gt;&lt;h4 class=&quot; col-xs-12 col-sm-12 col-md-12 col-lg-12&quot; style=&quot;padding: 0;font-size: 16px;font-family: &apos;FFDINWebbold&apos;; margin-top:30px&quot;&gt;Residential customers&lt;/h4&gt; 
+&lt;p&gt; Call the Smarter Energy Line 
+Center at &lt;u&gt;&lt;a href=&quot;tel:1-800-933-9555&quot; style=&quot;white-space: nowrap&quot;&gt;1-800-933-9555 &lt;/a&gt;&lt;/u&gt; or visit 
+&lt;u&gt;&lt;a target=&quot;_blank&quot; href=&quot;https://www.pge.com/en_US/residential/save-energy-money/savings-solutions-and-rebates/rebates-by-product/rebates-by-product.page?WT.mc_id=Vanity_homemoneysaver&quot;&gt;pge.com/homemoneysaver&lt;/a&gt;&lt;/u&gt;
+&lt;/p&gt; 
+&lt;/div&gt;</value>
+    </labels>
+    <labels>
+        <fullName>ER_LandingPage_ResidentialRebateFAQ</fullName>
+        <categories>Content Dupe of: ER_LandingPage_RightSideHeaderSection4</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_LandingPage_ResidentialRebateFAQ</shortDescription>
+        <value>&lt;div class=&quot;clearfix&quot;&gt; &lt;a href=&quot;https://www.pge.com/pge_global/common/pdfs/save-energy-money/savings-solutions-and-rebates/rebates-by-product/FAQs-For-Your-Home.pdf&quot; target=&quot;_blank&quot; class=&quot;slo-common-spacings_vs3 col-xs-12 col-sm-12 col-md-12 col-lg-12&quot; style=&quot;padding: 0;font-size:14px;&quot;&gt;RESIDENTIAL REBATE FAQ&lt;span class=&quot;glyphicon glyphicon-menu-right&quot;&gt;&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;a class=&quot;col-lg-12 col-md-12 col-sm-12 col-xs-12&quot; style =&quot;padding:0;white-space:pre-line;font-size:14px;&quot; href=&quot;https://www.pge.com/pge_global/common/pdfs/save-energy-money/savings-solutions-and-rebates/rebates-by-product/Terms-and-Conditions-For-Your-Home.pdf&quot; target=&quot;_blank&quot;&gt;RESIDENTIAL TERMS &amp; CONDITIONS&lt;span class=&quot;glyphicon glyphicon-menu-right&quot;&gt;&lt;/span&gt;&lt;/a&gt;</value>
+    </labels>
+    <labels>
+        <fullName>ER_LandingPage_RightSideHeaderSection</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_LandingPage_RightSideHeaderSection</shortDescription>
+        <value>&lt;label &gt;&lt;h3 style =&quot;font-weight: normal;color:#333333;font-size: 18px;font-family: FFDINWebbold;line-height: 1.2;&quot;&gt;What’s eligible?&lt;/h3&gt;&lt;/label&gt;
+&lt;p style =&quot;font-family: &apos;FFDINWeb&apos;, Arial;font-size: 16px,font-style: normal;&quot;&gt;
+Verify that the product meets eligibility requirements.&lt;/p&gt;</value>
+    </labels>
+    <labels>
+        <fullName>ER_LandingPage_RightSideTerriary_CTA</fullName>
+        <categories>Missing Links</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_LandingPage_RightSideTerriary CTA</shortDescription>
+        <value>&lt;a class=&quot;col-lg-12 col-md-12 col-sm-12 col-xs-12&quot; style =&quot;padding:0;white-space:pre-line;font-size:14px&quot; href=&quot;https://www.pge.com/en_US/business/save-energy-money/business-solutions-and-rebates/product-rebates/product-rebates.page?&quot; target=&quot;_blank&quot;&gt;BUSINESS ELIGIBILITY REQUIREMENTS&lt;span class=&quot;glyphicon glyphicon-menu-right&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&quot;col-lg-12 col-md-12 col-sm-12 col-xs-12&quot; style =&quot;padding:0;white-space:pre-line;font-size:14px&quot; href=&quot;http://www.pge.com/includes/docs/pdfs/shared/saveenergymoney/rebates/ee_residential_rebate_catalog.pdf&quot; target=&quot;_blank&quot;&gt;RESIDENTIAL ELIGIBILITY REQUIREMENTS&lt;span class=&quot;glyphicon glyphicon-menu-right&quot;&gt;&lt;/span&gt;&lt;/a&gt;</value>
+    </labels>
+    <labels>
+        <fullName>ER_LandingPage_RuContractor</fullName>
+        <categories>Missing Links</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_LandingPage_RuContractor</shortDescription>
+        <value>&lt;h3&gt; &lt;strong &gt;Are you a contractor?&lt;/strong&gt;&lt;/h3&gt; 
+&lt;p &gt; If you are a contractor submitting an application on behalf of a PG&amp;amp;E business 
+customer, please consider becoming a member of the &lt;a class=&quot;anchorUnderline fontColor-black&quot; href=&quot;https://www.pge.com/en_US/for-our-business-partners/channel-partners/partners-trade-professional/partners-trade-professionals.page&quot; target=&quot;_blank&quot;&gt;Trade Professional Alliance.&lt;/a&gt; As a contractor, you will need to mail a paper application on behalf of your &lt;a class=&quot;anchorUnderline fontColor-black&quot; href=&quot;http://www.pge.com/includes/docs/pdfs/shared/saveenergymoney/rebates/ee_residential_rebate_app.pdf&quot; target=&quot;_blank&quot;&gt;residential&lt;/a&gt; or &lt;a class=&quot;anchorUnderline fontColor-black&quot; href=&quot;http://www.pge.com/includes/docs/pdfs/mybusiness/energysavingsrebates/incentivesbyindustry/ee_business_rebate_app_final.pdf&quot; target=&quot;_blank&quot;&gt;business&lt;/a&gt; customer. 
+&lt;/p&gt;</value>
+    </labels>
+    <labels>
+        <fullName>ER_LandingPage_SAIDDialog_Title</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_LandingPage_SAIDDialog_Title</shortDescription>
+        <value>Where is My Service Agreement ID?</value>
+    </labels>
+    <labels>
+        <fullName>ER_LandingPage_SAIDHelpText</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_LandingPage_SAIDHelpText</shortDescription>
+        <value>&lt;p&gt;You’ll find your Service Agreement ID (SAID) on your
+bill. Provide the correct SAID (gas or electric) for
+your rebate product type.
+ &lt;/p&gt;</value>
+    </labels>
+    <labels>
+        <fullName>ER_LandingPage_SAIDModalAltText</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_LandingPage_SAIDModalAltText</shortDescription>
+        <value>Close</value>
+    </labels>
+    <labels>
+        <fullName>ER_LandingPage_SAIDModelhelptext</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_LandingPage_SAIDModelhelptext</shortDescription>
+        <value>This link will give SAID related informtion: opens dialog</value>
+    </labels>
+    <labels>
+        <fullName>ER_PGELogo_AltText</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_PGELogo_AltText</shortDescription>
+        <value>PG&amp;E home page</value>
+    </labels>
+    <labels>
+        <fullName>ER_PGELogo_Link</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_PGELogo_Link</shortDescription>
+        <value>https://www.pge.com</value>
+    </labels>
+    <labels>
+        <fullName>ER_ProductInfoPage_AddRebatesModal_Title</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_ProductInfoPage_AddRebatesModal_Title</shortDescription>
+        <value>Add more rebates or continue</value>
+    </labels>
+    <labels>
+        <fullName>ER_ProductInfoPage_CommentsToolTip</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_ProductInfoPage_CommentsToolTip</shortDescription>
+        <value>Comments are optional; Provide installation information that
+may help us to determine rebate eligibility.</value>
+    </labels>
+    <labels>
+        <fullName>ER_ProductInfoPage_InstallationDateToolTip</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_ProductInfoPage_InstallationDateToolTip</shortDescription>
+        <value>Provide installation information that may help us to
+determine rebate eligibility.</value>
+    </labels>
+    <labels>
+        <fullName>ER_ProductInfoPage_PurchaseDateToolTip</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_ProductInfoPage_PurchaseDateToolTip</shortDescription>
+        <value>Purchase Data represents the date you purchased
+the product you are seeking a rebate for.</value>
+    </labels>
+    <labels>
+        <fullName>ER_ProductInfoPage_ScreenTitle</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_ProductInfoPage_ScreenTitle</shortDescription>
+        <value>Rebate product information</value>
+    </labels>
+    <labels>
+        <fullName>ER_ProjectAndAttachmentOwnerId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_ProjectAndAttachmentOwnerId</shortDescription>
+        <value>00536000004Lf0s</value>
+    </labels>
+    <labels>
+        <fullName>ER_RebateReviewPage_AttachmentFileLengthError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_RebateReviewPage_AttachmentFileLengthError</shortDescription>
+        <value>File name should not exceed more than 80 characters.</value>
+    </labels>
+    <labels>
+        <fullName>ER_RebateReviewPage_LeavingRebateReviewModal_Title</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_RebateReviewPage_LeavingRebateReviewModal_Title</shortDescription>
+        <value>Leaving review and submit page</value>
+    </labels>
+    <labels>
+        <fullName>ER_RebateReviewPage_SignModal_Title</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_RebateReviewPage_SignModal_Title</shortDescription>
+        <value>Sign application to complete</value>
+    </labels>
+    <labels>
+        <fullName>ER_RebateReviewPage_ThankUModal_Title</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_RebateReviewPage_ThankUModal_Title</shortDescription>
+        <value>Thanks, your application is complete!</value>
+    </labels>
+    <labels>
+        <fullName>ER_RebateReview_1stEditOffscreenText</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_RebateReview_1stEditOffscreenText</shortDescription>
+        <value>This link lets you edit the Payee name again: opens a dialog</value>
+    </labels>
+    <labels>
+        <fullName>ER_RebateReview_AttachmentError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_RebateReview_AttachmentError</shortDescription>
+        <value>Attachments may not be unspecified, at least one attachment required.</value>
+    </labels>
+    <labels>
+        <fullName>ER_RebateReview_AttachmentToolTip</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_RebateReview_AttachmentToolTip</shortDescription>
+        <value>Product Documentation: Attach a legible invoice, manufacturer’s specification sheet, image of the installed product or other
+documentation as noted in Proof of Purchase.</value>
+    </labels>
+    <labels>
+        <fullName>ER_RebateReview_Attachment_OffScreenText</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_RebateReview_Attachment_OffScreenText</shortDescription>
+        <value>this is the dialogue</value>
+    </labels>
+    <labels>
+        <fullName>ER_RebateReview_BySubmittingClause</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_RebateReview_BySubmittingClause</shortDescription>
+        <value>&lt;span class=&quot;eRebate-inline&quot; for=&quot;terms-check&quot;&gt; By submitting, you represent to PG&amp;amp;E that you’ve read our &lt;a href=&quot;https://www.pge.com/includes/docs/pdfs/about/company/privacy/PGE_PrivacyPolicy.pdf&quot; target=&quot;_blank&quot; &gt;Privacy Policy&lt;/a&gt; and &lt;/span&gt;</value>
+    </labels>
+    <labels>
+        <fullName>ER_RebateReview_Error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_RebateReview_Error</shortDescription>
+        <value>Maximum size of the attachment is 25MB. Reduce the size of the file and reattach.</value>
+    </labels>
+    <labels>
+        <fullName>ER_RebateReview_ExeFileError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_RebateReview_ExeFileError</shortDescription>
+        <value>Upload a permitted file format: .jpeg, .gif, .png, .pdf, .xls, .xlsx, .doc, .docx, or .ppt</value>
+    </labels>
+    <labels>
+        <fullName>ER_RebateReview_FLNamePopUpText</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_RebateReview_FLNamePopUpText</shortDescription>
+        <value>By typing your first and last name below you agree
+                                    that you have read and will abide by the PG&amp;amp;E
+                                    rebate</value>
+    </labels>
+    <labels>
+        <fullName>ER_RebateReview_Heading</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_RebateReview_Heading</shortDescription>
+        <value>Carefully review the information below and attach the required product documentation. You must also confirm you agree to the rebate terms and conditions.</value>
+    </labels>
+    <labels>
+        <fullName>ER_RebateReview_MailingAddressOffscreenText</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_RebateReview_MailingAddressOffscreenText</shortDescription>
+        <value>This link lets you edit the Mailing address: opens a dialog</value>
+    </labels>
+    <labels>
+        <fullName>ER_RebateReview_NonResidential_T_CLink</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_RebateReview_NonResidential_T&amp;CLink</shortDescription>
+        <value>&lt;u&gt;&lt;a href=&quot;https://www.pge.com/pge_global/common/pdfs/save-energy-money/savings-solutions-and-rebates/rebates-by-product/Terms-and-Conditions-For-Your-Business.pdf&quot; target=&quot;_blank&quot; class=&quot;underlineErrorMessage&quot; &gt;Terms and Conditions&lt;/a&gt;&lt;/u&gt;</value>
+    </labels>
+    <labels>
+        <fullName>ER_RebateReview_NonResidential_TermsofUseLink</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_RebateReview_NonResidential_TermsofUseLink</shortDescription>
+        <value>&lt;span class=&quot;eRebate-inline&quot; for=&quot;terms-check&quot;&gt; &lt;a href=&quot;https://www.pge.com/pge_global/common/pdfs/save-energy-money/savings-solutions-and-rebates/rebates-by-product/Terms-and-Conditions-For-Your-Business.pdf&quot; target=&quot;_blank&quot;&gt;Terms of Use&lt;/a&gt; and agree to comply with the terms and conditions&lt;/span&gt;</value>
+    </labels>
+    <labels>
+        <fullName>ER_RebateReview_OFFSHORE_AttachmentToolTip</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_RebateReview_OFFSHORE_AttachmentToolTip</shortDescription>
+        <value>Product Documentation: Attach a legible invoice, manufacturer’s specification sheet, image of the installed product or other
+documentation as noted in Proof of Purchase.</value>
+    </labels>
+    <labels>
+        <fullName>ER_RebateReview_OFFSHORE_Attachment_OffScreenText</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_RebateReview_OFFSHORE_Attachment_OffScreenText</shortDescription>
+        <value>this is the dialogue</value>
+    </labels>
+    <labels>
+        <fullName>ER_RebateReview_OFFSHORE_Error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_RebateReview_OFFSHORE_Error</shortDescription>
+        <value>Maximum size of the attachment is 25MB. Reduce the size of the file and reattach.</value>
+    </labels>
+    <labels>
+        <fullName>ER_RebateReview_PayeeNameEdit</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_RebateReview_PayeeNameEdit</shortDescription>
+        <value>Should you leave this review page, attachments will be deleted. You will need to re-attach any documents uploaded.</value>
+    </labels>
+    <labels>
+        <fullName>ER_RebateReview_RebateError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_RebateReview_RebateError</shortDescription>
+        <value>Rebates may not be unspecified, at least one rebate required.</value>
+    </labels>
+    <labels>
+        <fullName>ER_RebateReview_Residential_T_CLink</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_RebateReview_Residential_T&amp;CLink</shortDescription>
+        <value>&lt;u&gt;&lt;a href=&quot;https://www.pge.com/pge_global/common/pdfs/save-energy-money/savings-solutions-and-rebates/rebates-by-product/Terms-and-Conditions-For-Your-Home.pdf&quot; target=&quot;_blank&quot; class=&quot;underlineErrorMessage&quot; &gt;Terms and Conditions&lt;/a&gt;&lt;/u&gt;</value>
+    </labels>
+    <labels>
+        <fullName>ER_RebateReview_Residential_TermsofUseLink</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_RebateReview_Residential_TermsofUseLink</shortDescription>
+        <value>&lt;span class=&quot;eRebate-inline&quot; for=&quot;terms-check&quot;&gt; &lt;a href=&quot;https://www.pge.com/pge_global/common/pdfs/save-energy-money/savings-solutions-and-rebates/rebates-by-product/Terms-and-Conditions-For-Your-Home.pdf&quot; target=&quot;_blank&quot;&gt;Terms of Use&lt;/a&gt; and agree to comply with the terms and conditions&lt;/span&gt;</value>
+    </labels>
+    <labels>
+        <fullName>ER_RebateReview_ScreenTitle</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_RebateReview_ScreenTitle</shortDescription>
+        <value>Rebate review and submit</value>
+    </labels>
+    <labels>
+        <fullName>ER_RebateReview_TermsConditionError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_RebateReview_TermsConditionError</shortDescription>
+        <value>Terms and Conditions may not be checked.</value>
+    </labels>
+    <labels>
+        <fullName>ER_RebateReview_ThankYouHeadingText</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_RebateReview_ThankYouHeadingText</shortDescription>
+        <value>Thanks, your rebate application is complete.</value>
+    </labels>
+    <labels>
+        <fullName>ER_RebateReview_ThankYouOKLink</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_RebateReview_ThankYouOKLink</shortDescription>
+        <value>https://www.pge.com</value>
+    </labels>
+    <labels>
+        <fullName>ER_RebateReview_ThankYouPopUpText</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_RebateReview_ThankYouPopUpText</shortDescription>
+        <value>Your application has been successfully submitted
+                                        for review. Your application number is shown below
+                                        and emailed to the address you provided. Please
+                                        save this number for future reference.
+&lt;br/&gt;&lt;br/&gt;
+Your confirmation number will be sent to the email
+address listed below.</value>
+    </labels>
+    <labels>
+        <fullName>ER_RebateSelectPage_Default_Paragraph</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_RebateSelectPage_Default Paragraph</shortDescription>
+        <value>If you are applying for more than one rebate, choose one product at a time. Most applications require you to send your invoice or receipt along with a manufacturer’s specification sheet.</value>
+    </labels>
+    <labels>
+        <fullName>ER_RebateSelectPage_MainHeader_link</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_RebateSelectPage_MainHeader_link</shortDescription>
+        <value>&lt;h2 class=&quot;h2-header &quot;&gt;Congratulations on the purchase of your energy-efficient product&lt;/h2&gt;</value>
+    </labels>
+    <labels>
+        <fullName>ER_RebateSelectPage_PopUpBackMessage</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_RebateSelectPage_PopUpBackMessage</shortDescription>
+        <value>&lt;p  id=&quot;backNote&quot; class=&quot;eRebate-margin-top-20   eRebate-margin-bottom-30 &quot;&gt;&lt;strong&gt; &lt;span &gt;Note: &lt;/span&gt;&lt;/strong&gt;By clicking ok, you will be taken back to the beginning of the application and all data provided will be deleted for security purposes, do you wish to continue?&lt;/p&gt; 
+
+
+&lt;div class=&quot;col-lg-5 col-md-5 col-sm-5 col-xs-5 pull-left  eRebate-nopadding &quot;&gt; 
+&lt;a class=&quot;slo-common-active_blue_btn col-lg-12 col-md-12 col-sm-12 col-xs-12&quot; style=&quot;text-decoration: none;
+    text-align: center;&quot; href=&quot;/eRebateApplication/&quot; target=&quot;_self&quot; &gt;Ok&lt;/a&gt; 
+&lt;/div&gt; 
+&lt;div class=&quot;col-lg-5 col-md-5 col-sm-5 col-xs-5 eRebate-nopadding pull-right&quot;&gt; 
+&lt;button type=&quot;button&quot; id=&quot;btnClose&quot; class=&quot;slo-common-active_orange_btn&quot; data-dismiss=&quot;modal&quot; &gt;Cancel&lt;/button&gt; 
+&lt;/div&gt; 
+&lt;div class=&quot;clearfix &quot;&gt;&lt;/div&gt;</value>
+    </labels>
+    <labels>
+        <fullName>ER_RebateSelectPage_RebateSerachToolTip</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_RebateSelectPage_RebateSerachToolTip</shortDescription>
+        <value>Use the search tool to reduce your options based on
+a description of your product purchase. The online
+rebate catalog is your best resource for locating
+specific item details.</value>
+    </labels>
+    <labels>
+        <fullName>ER_RebateSelectPage_Residential_RightSideHeaderSection3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_RebateSelectPage_Residential_RightSideHeaderSection3</shortDescription>
+        <value>&lt;div style=&quot;margin-top:30px&quot;&gt;
+&lt;h3 style=&quot;font-weight: normal;color:#333333;font-size: 18px;font-family: FFDINWebbold;line-height: 1.2&quot;&gt;Need help?&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div class=&quot;clearfix &quot;&gt;&lt;h4 class=&quot; col-xs-12 col-sm-12 col-md-12 col-lg-12&quot; style=&quot;padding: 0;font-size: 16px;font-family: &apos;FFDINWebbold&apos;; &quot;&gt;Residential customers&lt;/h4&gt; 
+&lt;p&gt; Call the Smarter Energy Line
+ Center at &lt;u&gt;&lt;a href=&quot;tel:1-800-933-9555&quot; style=&quot;white-space: nowrap&quot;&gt;1-800-933-9555 &lt;/a&gt;&lt;/u&gt; or visit 
+&lt;u&gt;&lt;a target=&quot;_blank&quot; href=&quot;https://www.pge.com/en_US/residential/save-energy-money/savings-solutions-and-rebates/rebates-by-product/rebates-by-product.page?WT.mc_id=Vanity_homemoneysaver&quot;&gt;pge.com/homemoneysaver&lt;/a&gt;&lt;/u&gt; 
+&lt;/p&gt; 
+&lt;/div&gt;</value>
+    </labels>
+    <labels>
+        <fullName>ER_RebateSelectPage_Residential_RightSideHeaderSection4</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_RebateSelectPage_Residential_RightSideHeaderSection4</shortDescription>
+        <value>&lt;div class=&quot;clearfix&quot;&gt;&lt;a target=&quot;_blank&quot; href=&quot;https://www.pge.com/pge_global/common/pdfs/save-energy-money/savings-solutions-and-rebates/rebates-by-product/FAQs-For-Your-Home.pdf&quot; class=&quot;slo-common-spacings_vs3 col-lg-12 col-md-12 col-sm-12 col-xs-12 eRebate-nopadding&quot; style=&quot; white-space: pre-line&quot;&gt; RESIDENTIAL REBATE FAQ&lt;em class=&quot;glyphicon glyphicon-menu-right&quot;&gt;&lt;/em&gt;&lt;/a&gt;
+&lt;a target=&quot;_blank&quot; href=&quot;https://www.pge.com/pge_global/common/pdfs/save-energy-money/savings-solutions-and-rebates/rebates-by-product/Terms-and-Conditions-For-Your-Home.pdf&quot; class=&quot;col-lg-12 col-md-12 col-sm-12 col-xs-12 eRebate-nopadding &quot; &gt; RESIDENTIAL TERMS &amp; CONDITIONS&lt;em class=&quot;glyphicon glyphicon-menu-right&quot;&gt;&lt;/em&gt;&lt;/a&gt;&lt;/div&gt;</value>
+    </labels>
+    <labels>
+        <fullName>ER_RebateSelectPage_RightSideHeaderSection</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_RebateSelectPage_RightSideHeaderSection</shortDescription>
+        <value>&lt;label class=&quot;label-title-3&quot; style=&quot;margin-left:0px;&quot;&gt;&lt;h3 style =&quot;font-weight: bold;Arial;font-style: normal;color:#333333;font-size: 18px;font-family: FFDINWebbold;line-height: 1.2&quot;&gt; What&apos;s eligible?&lt;/h3&gt;&lt;/label&gt;
+                     &lt;p style=&quot;margin-bottom:0px&quot;&gt;Verify that the product meets eligibility requirements.&lt;/p&gt;</value>
+    </labels>
+    <labels>
+        <fullName>ER_RebateSelectPage_RightSideHeaderSection3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_RebateSelectPage_RightSideHeaderSection3</shortDescription>
+        <value>&lt;div class=&quot;clearfix&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;slo-common-spacings_vs3&quot;&gt;
+&lt;label&gt;
+&lt;h3 style=&quot;font-weight: normal;color:#333333;font-size: 18px;font-family: FFDINWebbold;line-height: 1.2&quot;&gt;Need help?&lt;/h3&gt;
+&lt;/label&gt;
+&lt;div class=&quot;clearfix&quot;&gt;&lt;/div&gt;
+&lt;label style=&quot;margin-bottom: 0px&quot;  &gt;
+&lt;h4 style=&quot;font-size: 16px;font-family: &apos;FFDINWebbold&apos;;&quot;&gt; Business customers&lt;/h4&gt;
+&lt;/label&gt; 
+&lt;div class=&quot;clearfix&quot;&gt;&lt;p &gt; Call the Business Customer Service 
+Center at&lt;u&gt; &lt;a target=&quot;_blank&quot; href=&quot;tel:1-800-468-4743&quot; style=&quot;white-space:nowrap&quot;&gt;1-800-468-4743&lt;/a&gt;&lt;/u&gt; or visit 
+&lt;u&gt;&lt;a target=&quot;_blank&quot; href=&quot;https://www.pge.com/en_US/business/save-energy-money/business-solutions-and-rebates/product-rebates/product-rebates.page?WT.mc_id=Vanity_businessrebates&quot;&gt;pge.com/businessrebates&lt;/a&gt;&lt;/u&gt;. 
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;</value>
+    </labels>
+    <labels>
+        <fullName>ER_RebateSelectPage_RightSideHeaderSection4</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_RebateSelectPage_RightSideHeaderSection4</shortDescription>
+        <value>&lt;div class=&quot;clearfix&quot;&gt;&lt;a target=&quot;_blank&quot; href=&quot;https://www.pge.com/pge_global/common/pdfs/save-energy-money/savings-solutions-and-rebates/rebates-by-product/FAQs-For-Your-Business.pdf&quot; class=&quot;slo-common-spacings_vs2 col-lg-12 col-md-12 col-sm-12 col-xs-12 eRebate-nopadding&quot; style=&quot; white-space: pre-line&quot;&gt;  BUSINESS REBATE FAQ&lt;em class=&quot;glyphicon glyphicon-menu-right&quot;&gt;&lt;/em&gt;&lt;/a&gt;
+&lt;a target=&quot;_blank&quot; href=&quot;https://www.pge.com/pge_global/common/pdfs/save-energy-money/savings-solutions-and-rebates/rebates-by-product/Terms-and-Conditions-For-Your-Business.pdf&quot; class=&quot;col-lg-12 col-md-12 col-sm-12 col-xs-12 eRebate-nopadding &quot; &gt; BUSINESS TERMS &amp; CONDITIONS&lt;em class=&quot;glyphicon glyphicon-menu-right&quot;&gt;&lt;/em&gt;&lt;/a&gt;
+&lt;/div&gt;</value>
+    </labels>
+    <labels>
+        <fullName>ER_RebateSelectPage_RightSideTerriary_CTA</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_RebateSelectPage_RightSideTerriary Business CTA</shortDescription>
+        <value>&lt;div class=&quot;clearfix&quot;&gt;&lt;a target=&quot;_blank&quot; href=&quot;https://www.pge.com/en_US/business/save-energy-money/business-solutions-and-rebates/product-rebates/product-rebates.page&quot; class=&quot;col-lg-12 col-md-12 col-sm-12 col-xs-12 eRebate-nopadding slo-common-spacings_vs2&quot; style=&quot;white-space:pre-line&quot;&gt; BUSINESS ELIGIBILITY REQUIREMENTS&lt;em class=&quot;glyphicon glyphicon-menu-right&quot;&gt;&lt;/em&gt;&lt;/a&gt; 
+&lt;/div&gt;</value>
+    </labels>
+    <labels>
+        <fullName>ER_RebateSelectPage_RightSideTerriary_Residential_CTA</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_RebateSelectPage_RightSideTerriary Residential CTA</shortDescription>
+        <value>&lt;div class=&quot;clearfix&quot;&gt;&lt;a target=&quot;_blank&quot; href=&quot;http://www.pge.com/includes/docs/pdfs/shared/saveenergymoney/rebates/ee_residential_rebate_catalog.pdf&quot; class=&quot;col-lg-12 col-md-12 col-sm-12 col-xs-12 eRebate-nopadding slo-common-spacings_vs3&quot; style=&quot;white-space:pre-line&quot;&gt; RESIDENTIAL ELIGIBILITY REQUIREMENTS&lt;em class=&quot;glyphicon glyphicon-menu-right&quot;&gt;&lt;/em&gt;&lt;/a&gt; 
+&lt;/div&gt;</value>
+    </labels>
+    <labels>
+        <fullName>ER_RebateSelectionPage_BusinessTypeDialog_Title</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_RebateSelectionPage_BusinessTypeDialog_Title</shortDescription>
+        <value>Choose your business type here</value>
+    </labels>
+    <labels>
+        <fullName>ER_RebateSelectionPage_CustTypeHelpText</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_RebateSelectionPage_CustTypeHelpText</shortDescription>
+        <value>Select the business type option that best reflects your purchased product.</value>
+    </labels>
+    <labels>
+        <fullName>ER_RebateSelectionPage_CustType_AltText</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_RebateSelectionPage_CustType_AltText</shortDescription>
+        <value>Close</value>
+    </labels>
+    <labels>
+        <fullName>ER_RebateSelectionPage_CustomerTypeToolTip</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_RebateSelectionPage_CustomerTypeToolTip</shortDescription>
+        <value>&lt;div  class=&quot;eRebate-margin-top-10&quot;  &gt;
+ 
+&lt;h4&gt;&lt;strong&gt;Agriculture Sector&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;Core Segments/Programs: Food processors, wineries, dairies, greenhouses, refrigerated warehouses&lt;/p&gt;
+&lt;h4 class=&quot;eRebate-margin-top-10&quot;&gt;&lt;strong&gt;Industrial Sector&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;Core Segments/Programs: Fabrication, process, heavy manufacturing, laboratories, clean-rooms, data centers, clean tech, biotech&lt;/p&gt;
+&lt;h4 class=&quot;eRebate-margin-top-10&quot;&gt;&lt;strong&gt;Commercial Sector&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;Core Segments/Programs: Office buildings, general retail, big box retail and supermarkets, health care and hospitality, assisted living facilities, skilled nursing facilities, medical specialty facilities,
+lodging, resort, hotel facilities, restaurants, food services, government and public services, schools, colleges, and universities&lt;/p&gt; &lt;/div&gt;</value>
+    </labels>
+    <labels>
+        <fullName>ER_RebateSelectionPage_Nextlink</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_RebateSelectionPage_Nextlink</shortDescription>
+        <value>Next group of rebates in table above</value>
+    </labels>
+    <labels>
+        <fullName>ER_RebateSelectionPage_Previouslink</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_RebateSelectionPage_Previouslink</shortDescription>
+        <value>Previous group of rebates in table above.</value>
+    </labels>
+    <labels>
+        <fullName>ER_RebateSelectionPage_RebateSearchHelpText</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_RebateSelectionPage_RebateSearchHelpText</shortDescription>
+        <value>This link provides search related details: opens dialog</value>
+    </labels>
+    <labels>
+        <fullName>ER_RebateSelectionPage_ScreenTitle</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER_RebateSelectionPage_ScreenTitle</shortDescription>
+        <value>Select a rebate</value>
+    </labels>
+    <labels>
+        <fullName>EV_ConfirmationEmailList</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EV_ConfirmationEmailList</shortDescription>
+        <value>bxne@pge.com;AppMgmtEvLCFS@pge.com;PRP4@pge.com;balaram.nair@gmail.com</value>
+    </labels>
+    <labels>
+        <fullName>EV_PaymentOutboundEmailList</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EV Payment Outbound Email List</shortDescription>
+        <value>bxne@pge.com;AppMgmtEvLCFS@pge.com;PRP4@pge.com;balaram.nair@gmail.com</value>
+    </labels>
+    <labels>
+        <fullName>HelpTextForGraph</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HelpTextForGraph</shortDescription>
+        <value>This contents loads the Job-status details in the form of bar chart. It toggles from Bar Chart to Pie chart by clicking on &apos;Pie chart&apos; icon&apos;. It also helps in setting user configurations details by clicking on the &apos;gear&apos; icon.</value>
+    </labels>
+    <labels>
+        <fullName>JO_Report</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>JO_Report</shortDescription>
+        <value>https://sps.utility.pge.com/sites/SmartDistributionOps/SitePages/Home.aspx?</value>
+    </labels>
+    <labels>
+        <fullName>JoDashHelpTextForPortfolio</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>JoDashHelpTextForPortfolio</shortDescription>
+        <value>The Section &apos;Project Portfolio&apos; will display all the notifications for the Job Owner selected under the &apos;All&apos; tab. Portfolio View will have default views for that Job Owner on selecting the views it will display the notifications with the fields selected by the user using &apos;Configuration&apos; icon.</value>
+    </labels>
+    <labels>
+        <fullName>JoDashHelpTextForTask</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>JoDashHelpTextForTask</shortDescription>
+        <value>The section &apos;Tasks Requiring Actions&apos; contains all the alerts and their count. Once we click on count we can see list of notifications for that alert in the section &apos;Project Portfolio&apos; under &apos;All&apos; Tab. The icon &apos;Configuration &apos; where we can hide, unhide and sort the alerts .</value>
+    </labels>
+    <labels>
+        <fullName>NoAlerts</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NoAlerts</shortDescription>
+        <value>presently no alerts available to close.</value>
+    </labels>
+    <labels>
+        <fullName>NoAlertsSelected</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NoAlertsSelected</shortDescription>
+        <value>Please select atleast one alert.</value>
+    </labels>
+    <labels>
+        <fullName>OBF_FAMCVLogicStatusError</fullName>
+        <categories>On-Bill Financing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OBF_FAMCVLogicStatusError</shortDescription>
+        <value>The Financing Application is not in the following status Template Received,Credit Review, CR Passed, Awaiting App,CR Failed, CE Review</value>
+    </labels>
+    <labels>
+        <fullName>OBF_FAMDeletionStatusError</fullName>
+        <categories>On-Bill Financing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OBF_FAMDeletionStatusError</shortDescription>
+        <value>Financing Application Measures cannot be deleted from Financing Applications in the following statuses: Project Paid/On-Bill, On-Hold, Disqualified, Withdrawn.</value>
+    </labels>
+    <labels>
+        <fullName>OBF_FAMInsertionStatusError</fullName>
+        <categories>On-Bill Financing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OBF_FAMInsertionStatusError</shortDescription>
+        <value>The Financing Application is not in the following status Template Received,Credit Review, CR Passed, Awaiting App,CR Failed, CE Review.</value>
+    </labels>
+    <labels>
+        <fullName>OBF_NoSavingsRecordFound</fullName>
+        <categories>On-Bill Financing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OBF_NoSavingsRecordFound</shortDescription>
+        <value>No matching Savings Record Found.</value>
+    </labels>
+    <labels>
+        <fullName>OBF_NoUtilityCodeOnMeasure</fullName>
+        <categories>On-Bill Financing</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OBF_NoUtilityCodeOnMeasure</shortDescription>
+        <value>There is no utility measure code on the selected measure to identify the matching savings record.</value>
+    </labels>
+    <labels>
+        <fullName>OBR_FAMInsertionStatusError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OBR_FAMInsertionStatusError</shortDescription>
+        <value>Error: please select post-Install for Alternative Pathway measures</value>
+    </labels>
+    <labels>
+        <fullName>OneClosed</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OneClosed</shortDescription>
+        <value>One of the selected alert already closed.</value>
+    </labels>
+    <labels>
+        <fullName>Outage_message</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Outage_message</shortDescription>
+        <value>Due to scheduled maintenance, application is temporarily
+unavailable today from 2 p.m. to 3 p.m. Thank you for
+your patience and we are sorry for any inconvenience.</value>
+    </labels>
+    <labels>
+        <fullName>Outage_message_copyright</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Outage_message_copyright</shortDescription>
+        <value>by Pacific Gas and Electric Company. All rights reserved. Need assistance?</value>
+    </labels>
+    <labels>
+        <fullName>Outage_message_header</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Outage_message_header</shortDescription>
+        <value>Building and Renovation Services Online</value>
+    </labels>
+    <labels>
+        <fullName>PaymentEI2SAPEmailList</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PaymentEI2SAPEmailList</shortDescription>
+        <value>bxne@pge.com;balaram.nair@gmail.com</value>
+    </labels>
+    <labels>
+        <fullName>PaymentSAP2EIEmailList</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PaymentSAP2EIEmailList</shortDescription>
+        <value>ist2@pge.com;REEa@pge.com;JICF@pge.com;WWW8@pge.com;bxne@pge.com;VVT1@pge.com;CMT8@pge.com;SHS6@pge.com;DDQ1@pge.com;RDLx@pge.com;elrf@pge.com;r1tr@pge.com;v1bl@pge.com</value>
+    </labels>
+    <labels>
+        <fullName>SomeClosedAlerts</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SomeClosedAlerts</shortDescription>
+        <value>Some of the selected alerts already closed.</value>
+    </labels>
+    <labels>
+        <fullName>SucessfulUpdation</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SucessfulUpdation</shortDescription>
+        <value>Alert/s are updated successfully.</value>
+    </labels>
+    <labels>
+        <fullName>VO_Approval_Submit_Comment</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VO Approval Submit Comment</shortDescription>
+        <value>Submitting the New Partner enrollment record for an approval</value>
+    </labels>
+    <labels>
+        <fullName>VO_EI_Acc_Not_Found</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VO EI Acc Not Found</shortDescription>
+        <value>Account Not Found</value>
+    </labels>
+    <labels>
+        <fullName>VO_EI_Already_Primary</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VO EI Already Primary</shortDescription>
+        <value>A Primary Contact already exists.</value>
+    </labels>
+    <labels>
+        <fullName>VO_EI_Already_Trade_Pro_Enrolled</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VO EI Already Trade Pro Enrolled</shortDescription>
+        <value>You are already enrolled in Trade Pros.</value>
+    </labels>
+    <labels>
+        <fullName>VO_EI_Branch_Code</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VO EI Branch Code</shortDescription>
+        <value>Branch Code</value>
+    </labels>
+    <labels>
+        <fullName>VO_EI_Contractor_License_Expiration_Date</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VO EI Contractor License Expiration Date</shortDescription>
+        <value>Contractor License Expiration Date</value>
+    </labels>
+    <labels>
+        <fullName>VO_EI_Contractor_License_Number</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VO EI Contractor License Number</shortDescription>
+        <value>Contractor License Number</value>
+    </labels>
+    <labels>
+        <fullName>VO_EI_DistiGroup</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VO_EI_DistiGroup</shortDescription>
+        <value>Distributor Group for Sharing</value>
+    </labels>
+    <labels>
+        <fullName>VO_EI_Distri</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VO EI Distri</shortDescription>
+        <value>Distributors</value>
+    </labels>
+    <labels>
+        <fullName>VO_EI_DistriAdmin</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VO_EI_DistriAdmin</shortDescription>
+        <value>Distributors Admin</value>
+    </labels>
+    <labels>
+        <fullName>VO_EI_Distributor_Programs</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VO EI Distributor Programs</shortDescription>
+        <value>Distributor Programs</value>
+    </labels>
+    <labels>
+        <fullName>VO_EI_EI_T_C</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VO_EI_EI_T&amp;C</shortDescription>
+        <value>Energy Insight Terms and Conditions</value>
+    </labels>
+    <labels>
+        <fullName>VO_EI_EnrollmentTerms</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VO_EI_EnrollmentTerms</shortDescription>
+        <value>By selecting this checkbox, you acknowledge that you have read and agree to comply with the Energy Savings Program Participation Guidelines specified herein.</value>
+    </labels>
+    <labels>
+        <fullName>VO_EI_EnrollmentTermsFile</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VO_EI_EnrollmentTermsFile</shortDescription>
+        <value>VO_EI_Enrollment_Terms</value>
+    </labels>
+    <labels>
+        <fullName>VO_EI_Enrollment_Submitted_Successfully_Msg</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VO_EI_Enrollment_Submitted_Successfully_Msg</shortDescription>
+        <value>Your Energy Efficiency Partner enrollment request has been submitted successfully. You will be notified via email about the status of your request soon. Thank you for interest in PG&amp;E Energy Efficiency Programs!</value>
+    </labels>
+    <labels>
+        <fullName>VO_EI_Error_on_same_Tax_Id</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VO EI Error on same Tax Id</shortDescription>
+        <value>An existing record with the Tax ID and/or Branch Code that you entered already exists. Please reach out to PG&amp;E for support.</value>
+    </labels>
+    <labels>
+        <fullName>VO_EI_Federal_Tax_Id</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VO EI Federal Tax Id</shortDescription>
+        <value>Federal Tax Id</value>
+    </labels>
+    <labels>
+        <fullName>VO_EI_License_Expiration_Validation</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VO EI License Expiration Validation</shortDescription>
+        <value>Contractor License Expiration date cannot be in past.</value>
+    </labels>
+    <labels>
+        <fullName>VO_EI_Organization_City</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VO EI Organization City</shortDescription>
+        <value>Organization City</value>
+    </labels>
+    <labels>
+        <fullName>VO_EI_Organization_Information</fullName>
+        <categories>Vendor onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VO EI Organization Information</shortDescription>
+        <value>Organization Information</value>
+    </labels>
+    <labels>
+        <fullName>VO_EI_Organization_Name</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VO EI Organization Name</shortDescription>
+        <value>Organization Name</value>
+    </labels>
+    <labels>
+        <fullName>VO_EI_Organization_Phone</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VO EI Organization Phone</shortDescription>
+        <value>Organization Phone</value>
+    </labels>
+    <labels>
+        <fullName>VO_EI_Organization_State</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VO EI Organization State</shortDescription>
+        <value>Organization State</value>
+    </labels>
+    <labels>
+        <fullName>VO_EI_Organization_Street_Address</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VO EI Organization Street Address</shortDescription>
+        <value>Organization Street Address</value>
+    </labels>
+    <labels>
+        <fullName>VO_EI_Organization_Zip</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VO EI Organization Zip</shortDescription>
+        <value>Organization Zip</value>
+    </labels>
+    <labels>
+        <fullName>VO_EI_Participation_Guide_Heading</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VO EI Participation Guide Heading</shortDescription>
+        <value>Acknowledge Participation Guidelines</value>
+    </labels>
+    <labels>
+        <fullName>VO_EI_Participation_Guideline</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VO_EI_Participation_Guideline</shortDescription>
+        <value>%Participation Guidelines%</value>
+    </labels>
+    <labels>
+        <fullName>VO_EI_Partner_Account</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VO EI Partner Account</shortDescription>
+        <value>Partner Account</value>
+    </labels>
+    <labels>
+        <fullName>VO_EI_Partner_Enrollment_Profile</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VO EI Partner Enrollment Profile</shortDescription>
+        <value>EI Partner Enrollment Profile</value>
+    </labels>
+    <labels>
+        <fullName>VO_EI_Partner_Portal_Prefix</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VO EI Partner Portal Prefix</shortDescription>
+        <value>/energyinsight</value>
+    </labels>
+    <labels>
+        <fullName>VO_EI_Partner_Profile</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VO EI Partner Profile</shortDescription>
+        <value>EI Partner</value>
+    </labels>
+    <labels>
+        <fullName>VO_EI_Payee_diff_from_Primary</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VO EI Payee diff from Primary</shortDescription>
+        <value>Is the Payee Contact Information Different from the Primary Contact ?</value>
+    </labels>
+    <labels>
+        <fullName>VO_EI_Prof_Not_Found</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VO EI Prof Not Found</shortDescription>
+        <value>Profile Not Found.</value>
+    </labels>
+    <labels>
+        <fullName>VO_EI_Prog_Type</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VO EI Prog Type</shortDescription>
+        <value>Please select the Program Type</value>
+    </labels>
+    <labels>
+        <fullName>VO_EI_Program_Name_Not_Selected</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VO EI Program Name Not Selected</shortDescription>
+        <value>Please select the Progarm,</value>
+    </labels>
+    <labels>
+        <fullName>VO_EI_Program_Not_selected</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VO EI Program Not selected</shortDescription>
+        <value>Please go back and select a Program Type.</value>
+    </labels>
+    <labels>
+        <fullName>VO_EI_Programs</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VO EI Programs</shortDescription>
+        <value>Programs</value>
+    </labels>
+    <labels>
+        <fullName>VO_EI_Submit</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VO_EI_Submit</shortDescription>
+        <value>Submit</value>
+    </labels>
+    <labels>
+        <fullName>VO_EI_Tax_ID_Validation</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VO EI Tax ID Validation</shortDescription>
+        <value>Tax ID to be 9 digits only, no dashes please.</value>
+    </labels>
+    <labels>
+        <fullName>VO_EI_Tax_Status</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VO EI Tax Status</shortDescription>
+        <value>Tax Status</value>
+    </labels>
+    <labels>
+        <fullName>VO_EI_TradeProAdmin</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VO_EI_TradeProAdmin</shortDescription>
+        <value>Trade Pro Admin</value>
+    </labels>
+    <labels>
+        <fullName>VO_EI_Trade_Pro</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VO EI Trade Pro</shortDescription>
+        <value>Trade Pro</value>
+    </labels>
+    <labels>
+        <fullName>VO_EI_Trade_Pro_Participation_Guidelines</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VO EI Trade Pro Participation Guidelines</shortDescription>
+        <value>Trade Pros Participation Guidelines</value>
+    </labels>
+    <labels>
+        <fullName>VO_EI_Trade_Pros</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VO EI Trade Pros</shortDescription>
+        <value>Trade Pros</value>
+    </labels>
+    <labels>
+        <fullName>VO_EI_VendorEnrollmentSubmitted</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VO_EI_VendorEnrollmentSubmitted</shortDescription>
+        <value>Energy Savings Program Data Submitted Successfully</value>
+    </labels>
+    <labels>
+        <fullName>VO_EI_VendorType</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VO EI VendorType</shortDescription>
+        <value>Partner Type</value>
+    </labels>
+    <labels>
+        <fullName>VO_EI_Vendor_Account</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VO EI Vendor Account</shortDescription>
+        <value>Partner Account</value>
+    </labels>
+    <labels>
+        <fullName>VO_EI_Website</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VO EI Website</shortDescription>
+        <value>Website</value>
+    </labels>
+    <labels>
+        <fullName>VO_EI_Zip_Validation</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VO EI Zip Validation</shortDescription>
+        <value>Please enter valid Zip Code in the field, Organization Zip.</value>
+    </labels>
+    <labels>
+        <fullName>VendorAdminProfile</fullName>
+        <categories>Vendor Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VendorAdminProfile</shortDescription>
+        <value>EI Partner Admin</value>
+    </labels>
+    <labels>
+        <fullName>ZOrder</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ZOrder</shortDescription>
+        <value>https://sapdv8db1.comp.pge.com:1443/sap/bc/gui/sap/its/webgui?transaction=</value>
+    </labels>
+</CustomLabels>

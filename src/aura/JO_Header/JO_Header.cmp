@@ -1,0 +1,27 @@
+<aura:component controller="JO_JobDBAppController" implements="force:appHostable,force:lightningQuickActionWithoutHeader,force:hasRecordId,force:appHostable,flexipage:availableForAllPageTypes">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="loggeInUser" type="String[]" />
+    <aura:attribute name="todate" type="String" />
+    
+    <div class="slds-grid slds-p-around--xxx-small bgColor">        
+        <div class="slds-col--padded slds-medium-size--1-of-2 slds-large-size--1-of-3 ">
+            <!-- <lightning:avatar src="{!$Resource.PGELogo}" variant="empty" size="large" fallbackIconName="custom:Project_Notifications__c" alternativeText="PG E"/> -->
+        </div>
+        <div class="slds-col--padded slds-medium-size--1-of-2 slds-large-size--1-of-3 slds-align_absolute-center">
+            <span aura:id="titleSpanId" class="titleSpan slds-text-body_regular">Job Owner Dashboard</span>
+        </div>
+        <div class="slds-col--padded slds-medium-size--1-of-2 slds-large-size--1-of-3 slds-col_bump-right">        
+            <div class="slds-clearfix">
+                <div class="slds-float_right " style="font-weight:800; color: #ffffff;">
+                    <div class="slds-grid">
+                        <div class="slds-col">
+                    <p class="slds-p-around_x-small slds-p-right_small "> {!v.loggeInUser[0]} | 
+                        <lightning:formattedDateTime value="{!v.todate}" year="numeric" month="short" day="2-digit" weekday="long"/>
+                    </p>
+                </div>
+                    </div></div>
+            </div>
+            <!-- dashboard -->
+        </div>        
+    </div>
+</aura:component>

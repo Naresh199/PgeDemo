@@ -1,0 +1,6 @@
+<aura:event type="APPLICATION" description="Event template" >
+	<aura:attribute name="viewId" type="String" />   
+	<aura:attribute name="contactIds" type="String[]"/>
+	<aura:attribute name="userConfigRec" type="Customer_Config__c"/>  
+	<aura:attribute name="notificationRec" type="List"/>   
+</aura:event>

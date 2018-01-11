@@ -1,0 +1,24 @@
+.THIS .titleSpan{
+    /* position: absolute; */
+    top: 31px;
+    font-weight: 800;
+    color: #ffffff; /*#061c3f;*/
+    text-align: right !important;
+    /*margin-left: 32rem;*/
+    vertical-align: text-top;
+    font-size: 20px;
+}
+.THIS.bgColor{
+     /*background-color: orange;*/
+     background: repeating-linear-gradient(45deg, rgb(84,105,141), rgb(84,105,141) 20px, rgba(84,105,141,.97) 20px, rgba(84,105,141,.97) 40px);
+}
+.THIS .slds-select_container slds-select {
+    height:20px !important;
+    }
+@media all and (min-width: 20%) {
+    .THIS .titleSpan {
+        font-size: 14px;
+        font-weight: 600;
+    }
+ 
+}

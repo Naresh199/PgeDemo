@@ -1,0 +1,3 @@
+<aura:event type="APPLICATION" description="Used in passing the selected status to the JO_Porfolio" access="GLOBAL">
+    <aura:attribute name="SelectedStatus" type="String"/>
+</aura:event>

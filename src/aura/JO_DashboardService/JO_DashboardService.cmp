@@ -1,0 +1,8 @@
+<aura:component Controller="JO_Util">
+    <aura:method name="getDashboardId" action="{!c.getDefaultDashboard}">
+        <aura:attribute name="callback" type="function"/>
+    </aura:method>
+    <aura:method name="getUserContactId" action="{!c.getUserContact}">
+        <aura:attribute name="callback" type="function"/>
+    </aura:method>    
+</aura:component>

@@ -1,0 +1,61 @@
+<aura:component controller="JO_GraphData" implements="force:appHostable,flexipage:availableForAllPageTypes" access="GLOBAL">
+    <ltng:require scripts='/resource/Highchart/PGE/jquery-3.2.1.min.js'/>
+    <ltng:require scripts='/resource/Highchart/PGE/highcharts.js'/>    
+    
+    <aura:attribute name="count" type="Integer" />
+    <aura:attribute name="jobOwnerIds" type="List"/>
+    <aura:attribute name="body" type="String"/>
+    <aura:attribute name="loggedInContact" type="String" />    
+    <aura:attribute name="renderCharts" type="boolean" default="true"/>       
+   	<aura:attribute name="dashboardRec" type="Customer_Config__c" /> 
+    <aura:attribute name="isStatusChanged" type="boolean" default="false" />  
+    <aura:attribute name="selectedStatus" type="String"/>
+
+    <aura:handler event="c:JO_GlobalFilterEvent" action="{!c.filterAction}"/> 
+    <aura:handler event="c:JO_PassSelectedStatus" action="{!c.fetchNotificationIds}"/>
+    <aura:handler name="chartEvnt" event="c:JO_ChartEvent" action="{!c.filterAction}" />    
+    <aura:handler name="change" value="{!v.isStatusChanged}" action="{!c.filterAction}" />    
+    
+    <aura:dependency resource="markup://c:JO_HelpModel" />
+    <aura:dependency resource="markup://c:JO_GraphConfig" />
+    
+    <ul class="slds-tabs_default__nav" role="tablist">
+        <li class="slds-tabs_default__item slds-text-body_regular slds-is-active" title="Job Status" role="presentation">
+            Projects by Status({!v.count})
+        </li>   
+    </ul>
+    <div class="slds-scrollable slds-float_right slds-is-static" style="margin-top: -1.3rem">
+        <ul  class="slds-tabs_default__nav" role="tablist">            
+            <li>
+                <lightning:buttonIcon iconName="utility:help"  alternativeText="Help" variant="bare" onclick="{!c.openModelTask}"/>
+            </li>
+            <li>            
+                <aura:renderIf isTrue="{!v.renderCharts}">
+                    <div align="right">
+                        <lightning:buttonIcon iconName="utility:chart"  alternativeText="Toggle to Pie Chart" variant="bare" onclick="{!c.togglePieChart}"/>
+                    </div>
+                    <aura:set attribute="else">
+                        <div align="right">
+                            <lightning:buttonIcon iconName="utility:metrics"  alternativeText="Toggle to Bar chart" variant="bare" onclick="{!c.toggleBarChart}"/>
+                        </div>
+                    </aura:set>        
+                </aura:renderIf>        
+            </li>
+            <li><lightning:buttonIcon iconName="utility:settings"  alternativeText="Configuration" variant="bare" onclick="{!c.openGraphConfig}"/></li>
+        </ul>
+    </div>
+    <aura:renderIf isTrue="{!v.renderCharts}">
+        <div id="containerBar"></div>
+        <aura:set attribute="else">
+            <div id="containerPie"></div>
+        </aura:set>        
+    </aura:renderIf>      
+    <div aura:id="displayGraphConfigModal" />
+     <div aura:id="ModalDialogPlaceholder" />
+    
+    <aura:attribute name="toggleSpinner" type="Boolean"/>
+    <aura:if isTrue="{!v.toggleSpinner}">
+       <lightning:spinner variant="brand"  size="large" />
+    </aura:if>
+    
+</aura:component>

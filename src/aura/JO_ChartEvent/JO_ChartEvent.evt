@@ -1,0 +1,7 @@
+<aura:event type="COMPONENT" description="Event template" >
+	<aura:attribute name="jobOwnerIds" type="String[]" />
+    <aura:attribute name="loggedInContact" type="String" />
+    <aura:attribute name="dashboardId" type="Customer_Config__c"/>
+   <aura:attribute name="hidecount" type="integer" />
+    <aura:attribute name="visiblecount" type="integer" />
+</aura:event>

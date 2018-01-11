@@ -1,0 +1,147 @@
+<aura:component controller="JO_AlertConfigController" implements="force:appHostable" >
+    <aura:attribute name="alertList" type="List" />
+    <aura:attribute name="alertType" type="JO_Wrapper.JO_AlertConfigWrapper[]" />
+    <aura:attribute name="selectedStatus" type="String" />
+    <aura:attribute name="userPriority" type="List" />
+    <aura:attribute name="msg" type="String" />
+   	<aura:attribute name="contactId" type="String" />
+    <aura:attribute name="jobOwnerIds" type="String[]" /> 
+    <aura:attribute name="dashBoardRecId" type="Customer_Config__c" /> 
+    <aura:method name="doInitOnLoad" action="{!c.onLoadAlertConfig}" access="GLOBAL"/>
+    <!--<aura:handler name="init" value="{!this}" action="{!c.doInit}" />-->
+    <aura:registerEvent name="chartEvnt" type="c:JO_ChartEvent" />
+    
+    <div class="slds-m-around--xx-large slds-modal_large" style="width: 100% !important;">
+        <div role="dialog" tabindex="-1" aria-labelledby="header99" class="slds-modal slds-fade-in-open ">
+            <div class="slds-modal__container" style = "width: 55%;; max-width: none; " >
+                <div class="slds-modal__header">
+                    <button class="slds-button slds-modal__close slds-button__icon_large slds-button--icon-inverse" title="Close" onclick="{!c.closeModel}">
+                        X
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                    <h2 id="header99" class="slds-text-heading--medium">Alerts Configuration</h2>
+                </div>
+                <table class="slds-table slds-table_cell-buffer">
+                    <thead>
+                        <tr >
+                            
+                            <div class="slds-grid slds-grid_align-end">
+                                <th scope="col" style="margin-right:20px;" >
+                                    <div>
+                                        <div class="slds-grid slds-grid_vertical-align-start">
+                                            <div class="slds-p-top_x-medium slds-p-right_medium ">Internal</div>
+                                            <div>
+                                                <ui:inputCheckbox value="false"  change="{!c.onAlertTypeChange}" aura:id="internalId"/>
+                                            </div>
+                                        </div>
+                                    </div>                         
+                                </th>
+                                <th scope="col" style="margin-right:40px;">
+                                    <div>
+                                        <div class="slds-grid slds-grid_vertical-align-start">
+                                            <div class="slds-p-top_x-medium slds-p-right_medium ">External</div>
+                                            <div>
+                                                <ui:inputCheckbox value="false"  change="{!c.onAlertTypeChange}" aura:id="externalId"/>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </th>
+                            </div>
+                        </tr> 
+                        
+                    </thead> 
+                </table>
+                <div style="margin-top: -10px;">
+                  <!-- <lightning:tabset variant="default">
+                    <lightning:tab label="Visibility" class="slds-tabs_default__item slds-is-active">-->
+                        <div class=" slds-table--header-fixed_container slds-modal__content slds-p-around--medium" style="height:350px; margin-top: -1px;" >
+                        <div class="slds-scrollable_y" style="height:100%;">
+                            <table class="slds-table slds-table_bordered slds-max-medium-table_stacked-horizontal slds-cell-wrap">
+                                <thead>
+                                    <tr class="slds-text-heading--label">
+                                        <th scope="col" style="text-align: -webkit-left; ">
+                                            <div class="slds-truncate" title="ID">Alert</div>
+                                        </th>
+                                        <th style="text-align: -webkit-center;">
+                                            <div class="slds-truncate" title="Priority">Visible</div>
+                                        </th>
+                                        
+                                     <!--   <th style="text-align: -webkit-center; ">
+                                            <div class="slds-truncate" title="Priority">Enabled</div>
+                                        </th>
+                                        
+                                       <th style="text-align: -webkit-center; ">
+                                        <div class="slds-truncate" title="Priority">Sysytem Priority</div>
+                                    </th>
+                                    <th style="text-align: -webkit-center; ">
+                                        <div class="slds-truncate" title="Priority">User Priority</div>
+                                    </th> -->
+                                        <th style="text-align: -webkit-center; ">
+                                            <div class="slds-truncate" title="Priority">Alert Type</div>
+                                        </th>
+                                        <!--  <th style="text-align: -webkit-center; ">
+                                        <div class="slds-truncate" title="Priority">Sort</div>
+                                    </th> -->
+                                    </tr>                                        
+                                </thead>
+                                <!-- </table>
+                    </div>     
+                    <div class="slds-scrollable_y" style="height:100%;">
+                        <table class="slds-table slds-table_bordered slds-max-medium-table_stacked-horizontal slds-cell-wrap"> -->       
+                                <tbody>                                    
+                                    <aura:iteration items="{!v.alertList}" var="alert"> 
+                                        <tr>
+                                            <th scope="row" style="text-align: -webkit-left; ">
+                                                <div class="slds-truncate " title="{!alert.Name}">{!alert.joAlertName}</div>
+                                            </th> 
+                                            <th class="slds-text-align_right " scope="col" style="text-align: -webkit-center; "  >
+                                                <ui:inputCheckbox value="{!alert.isHidden}"/>
+                                            </th>
+                                              <!-- <th class="slds-text-align_right " scope="col" style="text-align: -webkit-center; " >
+                                                <ui:inputCheckbox value="{!alert.isEnabled}"/>
+                                            </th>
+                                           <th class="slds-text-align_right " scope="col" style="text-align: -webkit-center; Padding-top : 0.2rem !Important; Padding-bottom : 0.2rem !Important;  " >
+                                            <ui:outputText value="{!alert.sysPriority}"/>
+                                        </th>
+                                        
+                                       <th class="slds-text-align_right " scope="col" style="text-align: -webkit-center;  Padding-top : 0.2rem !Important; Padding-bottom : 0.2rem !Important; " >
+                                            <lightning:select name="selectItem" variant="label-hidden" value="{!alert.selectedUserPriority}" >
+                                                <aura:iteration items="{!v.userPriority}" var="upr">
+                                                    <option text="{!upr}" label="{!upr}" selected="{!upr == alert.selectedUserPriority}" />
+                                                </aura:iteration>                    
+                                            </lightning:select>    
+                                        </th> -->
+                                            <th class="slds-text-align_right " scope="col" style="text-align: -webkit-center;  " >
+                                                <ui:outputText value="{!alert.alertType}"/>
+                                            </th>
+                                            <!-- <th class="slds-text-align_right " scope="col" style="text-align: -webkit-center; Padding-top : 0.2rem !Important; Padding-bottom : 0.2rem !Important; " >
+                                          <div class ="slds-size_3-of-8"> <lightning:input value="{!alert.sortOrder}"  type="text" variant="label-hidden" /></div> 
+                                        </th> -->
+                                        </tr>
+                                        
+                                    </aura:iteration>
+                                </tbody>
+                            </table>                       
+                        </div>                            
+                    </div>
+                    <!--</lightning:tab>
+             
+                </lightning:tabset>-->
+                </div>
+                
+                
+                <div class="slds-modal__footer">
+                    <div>
+                        <div class="slds-text-align_center" style="color:Green;font-weight:600;">{!v.msg}</div>
+                        <div class="slds-text-align_right">
+                            <lightning:button onclick="{!c.saveAlert}" label="Save" variant="brand" type="button" title="Save" />
+                            <lightning:button onclick="{!c.closeModel}" label="Close" variant="brand" type="button" title="Close" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slds-backdrop slds-backdrop--open"></div>
+    </div>
+    
+</aura:component>

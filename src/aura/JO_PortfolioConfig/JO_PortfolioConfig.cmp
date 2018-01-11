@@ -1,0 +1,144 @@
+<aura:component controller="JO_Portfolio" implements="force:appHostable" >
+    <aura:attribute name="defaultPortfolio" type="JO_Wrapper.PortfolioViews" />
+    <aura:attribute name="portfolioList" type="JO_Wrapper.PortfolioViews[]" default="[]"/>
+    <aura:attribute name="listOptions" type="List" default="[]"/>
+    <aura:attribute name="defaultOptions" type="List" default="[]"/> 
+    <aura:attribute name="portfolio" type="JO_Wrapper.PortfolioViews" />
+    <aura:attribute name="contactId" type="String" />
+    <aura:attribute name="dashboardRec" type="Customer_Config__c" />    
+    <aura:attribute name="viewList" type="List" />
+    <aura:attribute name="defaultView" type="String" default="Defaultd" />
+    <aura:attribute name="typeAction" type="String"/>
+    <aura:attribute name="editDisabled" type="Boolean" default="false"/>
+    <aura:attribute name="showNew" type="Boolean" default="false"/>
+    <aura:attribute name="editMode" type="Boolean"/> 
+    <aura:attribute name="msg" type="String" />
+    <aura:registerEvent name="evnParent" type="c:JO_Portfolio_Config_Event" />
+    <aura:method name="doIntOnLoad" action="{!c.doInit}" access="GLOBAL"/>
+
+    <div class="demo-only"  style="height: 100%;">
+        <section  class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container" aura:id="containerId">
+                <div class="slds-modal__header">
+                    <button class="slds-button slds-modal__close slds-button--icon-inverse" title="Close" onclick="{!c.closeModel}">
+                        X
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                    <h2 id="header" class="slds-text-heading--medium slds-text-body_regular">Portfolio View Configuration</h2>
+                </div>                        
+                <div class="slds-modal__content slds-p-around--medium">
+                    <table class="slds-table slds-table_cell-buffer">
+                        <thead>
+                            <tr class="">                                    
+                               <aura:renderIf isTrue="{!v.showNew}">
+                                    <th scope="col"> 
+                                        <div class="slds-size_1-of-2">
+                                            <div class="slds-grid slds-grid_vertical-align-start">
+                                                <div class="slds-p-top_x-medium slds-p-right_medium slds-text-body_regular" style="margin-top: 10px !important;">List Views</div>
+                                                <div class="slds-size_1-of-2"> <!--  style="width: 30rem !important;" -->
+                                                    <lightning:select aura:id="selectV" label="" name="selectItem" variant="label-hidden" onchange="{!c.loadView}">
+                                                        <aura:iteration items="{!v.viewList}" var="l">
+                                                            <option value="{!l.value}" text="{!l.label}" selected="{!l.selected}" ></option>
+                                                        </aura:iteration>                    
+                                                    </lightning:select>  
+                                                </div>
+                                                <div class="slds-size_1-of-10">   
+                                                    <lightning:button label="Edit" variant="brand" onclick="{!c.EditView}" disabled="{!v.editDisabled}" class="slds-text-body_regular"/> 
+                                                    <lightning:button label="Clone" variant="brand" onclick="{!c.newview}" class="slds-text-body_regular"/>
+                                                    <lightning:button label="Delete" variant="brand" onclick="{!c.deleteView}" disabled="{!v.editDisabled}" class="slds-text-body_regular"/> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </th>
+                                   <aura:set attribute="else">
+                                        <th scope="col" >   
+                                            <div class="slds-size_1-of-2">
+                                                <div class="slds-grid slds-grid_vertical-align-start">
+                                                    <div class="slds-p-top_x-medium slds-p-right_medium slds-text-body_regular" style="margin-top: 10px;">View Name</div>
+                                                    <div class="slds-size_6-of-8"> <!--  style="width: 30rem !important;" -->
+                                                        <lightning:input name="PortfolioViews" value="{!v.portfolio.viewName}" messageWhenValueMissing=" Value Missing" class="slds-input:active slds-input:focus" type="input" variant="label-hidden" required="true"/>
+                                                    </div>                                                        
+                                                </div>
+                                            </div>
+                                        </th>
+                                         <th scope="col">
+                                            <div class="slds-size_1-of-2">
+                                                <div class="slds-grid slds-grid_vertical-align-start">
+                                                    <div class="slds-p-top_x-medium slds-p-right_medium slds-text-body_regular" style="margin-top: 0px;">Default</div>
+                                                    <div class="slds-size_6-of-8"> <!--  style="width: 30rem !important;" -->
+                                                       <ui:inputCheckbox value="{!v.portfolio.isDefault}"/>
+                                                    </div>                                                        
+                                                </div>
+                                            </div> 
+                                        </th>
+                                        <th scope="col">
+                                            <div class="slds-size_1-of-2">
+                                                <div class="slds-grid slds-grid_vertical-align-start">
+                                                    <div class="slds-p-top_x-medium slds-p-right_medium slds-text-body_regular" style="margin-top: 0px;">Active</div>
+                                                    <div class="slds-size_6-of-8"> <!--  style="width: 30rem !important;" -->
+                                                       <ui:inputCheckbox value="{!v.portfolio.isActive}"/>
+                                                    </div>                                                        
+                                                </div>
+                                            </div> 
+                                        </th>
+                                    </aura:set>
+                                </aura:renderIf>
+                            </tr> 
+                        </thead> </table>                        
+                     <aura:if isTrue="{!v.editMode}">
+                        <lightning:tabset variant="default" aura:id="tabsetId" class="slds-text-body_regular slds-text-title">
+                                <lightning:tab label="Label Visibility" aura:id="labelsOrderId" class="slds-text-title slds-text-body_regular ">
+                                    <lightning:dualListbox aura:id="statusData" name="Statuses"
+                                                           sourceLabel="Available Fields" 
+                                                           selectedLabel="Selected Fields" 
+                                                           options="{! v.listOptions }"
+                                                           value="{! v.defaultOptions }"
+                                                           onchange="{! c.handleChange }"
+                                                           />                                   
+                                </lightning:tab>
+                                <lightning:tab label="Custom Labels" aura:id="customTabId" class="slds-text-body_regular slds-text-title ">
+                                    <div class="slds-table_edit_container slds-is-relative">
+                                            <table class="slds-table  slds-table_resizable-cols slds-table_fixed-layout slds-no-cell-focus slds-table_edit" role="grid" >
+                                            <thead>
+                                                <tr class="">
+                                                    <th scope="col">
+                                                        <div class="slds-truncate slds-text-body_regular" style="text-align: -webkit-left;margin-left: 7px;" title="System Label">System Label</div>
+                                                    </th>
+                                                    <th scope="col">
+                                                        <div class="slds-truncate slds-text-body_regular" title="Custom Label" style="text-align:-webkit-left;margin-left: 23px;">Custom Label</div>
+                                                    </th>                           
+                                                </tr>                
+                                            </thead>                                    
+                                            <tbody>
+                                                <aura:iteration items="{!v.portfolio.viewfields}" var="pf">
+                                                    <tr >
+                                                        <td  scope="col" class="slds-p-around_none slds-m-around_none slds-text-body_regular">    <!--style="text-align: -webkit-left; ">-->
+                                                            <div class="slds-form-element"  style="text-align: -webkit-left;" title="{!pf.fieldApiLabel}">{!pf.fieldApiLabel}</div>
+                                                        </td>
+                                                        <td scope="col" class="slds-p-around_none slds-m-around_none slds-text-body_regular">
+                                                            <div class="slds-size_4-of-6">
+                                                            <lightning:input value="{!pf.customLabel}" type="input" variant="label-hidden" class="slds-input slds-input_bare "/></div>
+                                                        </td> 
+                                                    </tr>
+                                                </aura:iteration>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </lightning:tab>
+                    </lightning:tabset>
+                    </aura:if>
+                </div>
+                <div class="slds-modal__footer">
+                    <div class="slds-grid slds-grid_vertical-align-start">
+                        <div class="slds-size_1-of-2 slds-is-relative slds-text-align_left" style="-webkit-text-fill-color: red;"> {!v.msg} </div> 
+                        <div class="slds-size_1-of-2 slds-is-relative slds-text-align_left slds-is-relative" style="text-align: -webkit-right;">
+                            <lightning:button onclick="{!c.saveViewConfig}" label="Save" variant="brand" type="button" title="Save" disabled="{!!v.editMode}" /> 
+                            <lightning:button onclick="{!c.closeModel}" label="Close" variant="brand" type="button" title="Close" /> 
+                        </div>              
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop--open"></div>
+    </div>
+</aura:component>

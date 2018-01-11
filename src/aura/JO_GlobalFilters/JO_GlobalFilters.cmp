@@ -1,0 +1,119 @@
+<aura:component controller="JO_GlobalFilters" implements="force:appHostable,force:lightningQuickActionWithoutHeader,force:hasRecordId,force:appHostable,flexipage:availableForAllPageTypes">
+    <ltng:require styles="{! $Resource.select2 + '/select2-4.0.3/dist/css/select2.min.css'}" 
+                  scripts="{!join(',', 
+                           $Resource.jquery224 ,  
+                           $Resource.select2 + '/select2-4.0.3/dist/js/select2.js')
+                           }" afterScriptsLoaded="{!c.scriptsLoaded}"/>    
+    <aura:attribute name="loggedInContact" type="String"/>
+    <aura:attribute name="allJobOwners" type="List" />
+    <aura:attribute name="allJobOwnerRecords" type="List" />    
+    <aura:attribute name="allPeriods" type="List" />
+    <aura:attribute name="selectedJobOwnerId" type="String[]" />
+    <aura:attribute name="selectedJobOwnerName" type="String" />
+    <aura:attribute name="selectedPeriod" type="String" />
+    <aura:attribute name="selectedPeriodName" type="String" />
+    <aura:attribute name="customdate" type="Boolean"/>
+    <aura:attribute name="myDate" type="Date" />
+    <aura:attribute name="dashboardViews" type="List"/>
+    <aura:attribute name="userConfigRec" type="Customer_Config__c" />
+    <aura:attribute name="selectedDashboard" type="String"/> 
+    <aura:attribute name="defaultSelection" type="String" /> 
+    <aura:attribute name="optiontoAdd" type="List" />
+    <aura:attribute name="isCollapsed" type="Boolean" default="false" />
+   <aura:attribute name="dashboardId" type="String"/> 
+    <aura:attribute name="dashbdLst" type="String"/> 
+    <aura:attribute name="joReportUrl" type="String" default="{!$Label.c.JO_Report}"/>   
+    <aura:handler name="init" value="this" action="{!c.doinit}" />
+    <aura:handler event="c:JO_RefreshEvent"  action="{!c.refreshJOB}"/>
+	<aura:handler event="c:JO_Dashboard_ConfigEvnt"  action="{!c.addOptiontoList}"/>
+    <aura:registerEvent name="evntRefresh" type="c:JO_RefreshEvent" />
+    <aura:registerEvent name="evnGlobal" type="c:JO_GlobalFilterEvent" />
+    <aura:registerEvent name="evntCollapse" type="c:JO_CollapseEvent" />
+    <c:JO_DashboardService aura:id="service"/>
+    <aura:dependency resource="markup://c:JO_Dashboard_Config" />
+
+    <!-- Filter fields -->
+    <div class="slds-grid slds-wrap">     
+        <div class="slds-col slds-col slds-size_2-of-6">
+            <div class="slds-grid slds-grid_vertical-align-start">
+                <div class="slds-p-top_x-small slds-p-right_small slds-text-body_regular">Dashboard</div>
+                <div class="slds-p-right_small slds-size_2-of-6">                   
+                    <lightning:select name="Dashboards: " label=""  variant="label-hidden" onchange="{!c.refreshJOB}" aura:id="selectV">
+                        <aura:iteration items="{!v.dashbdLst}" var="db">
+                            <Option value="{!db.value}" text="{!db.label}" selected="{!db.selected}" class="slds-size_1-of-3"/>
+                        </aura:iteration>
+                    </lightning:select>         
+                </div>
+                <div class="slds-col slds-size_3-of-6">
+                    <lightning:buttonGroup >
+                        <!-- <button class="slds-button"><a hre="#"> Load</a></button> &nbsp;&nbsp;
+                        <button class="slds-button"><a hre="#"> New</a></button>
+                        <lightning:button iconName="utility:automate" onclick="{!c.loadDashboard}" label="Load" variant="neutral" type="button" title="Load" />
+                        <lightning:button iconName="utility:new"  onclick="{!c.newDashboard}" label="Clone" variant="neutral" type="button" title="new" class="slds-text-body_regular"/> -->
+                        <span class="slds-p-top_xx-small">
+                            <lightning:buttonIcon iconName="utility:settings" onclick="{!c.newDashboard}" alternativeText="settings" variant="bare" />
+                        </span>
+                        <!--<span class="slds-p-left_small slds-p-top_xx-small">
+                            <lightning:buttonIcon iconName="utility:refresh" onclick="{!c.refreshJOBLst}" alternativeText="Refresh" variant="bare"/>
+                        </span>-->
+                        <span class="slds-p-left_small slds-p-top_xx-small">
+                            <lightning:buttonIcon iconName="utility:graph"  onclick="{!c.graph}"  alternativeText="Reports" variant="bare"/>
+                        </span>
+                        <span class="slds-p-left_small slds-p-top_xx-small">
+                            <lightning:buttonIcon iconName="utility:search" onclick="{!c.gSearch}"  alternativeText="Notification Search" variant="bare"/>
+                        </span>
+                        <span class="slds-p-left_small slds-p-top_xx-small">
+                            <aura:renderIf isTrue="{!v.isCollapsed}">                                       
+                                    <lightning:buttonIcon iconName="utility:preview" alternativeText="Expand Portfolio" onclick="{!c.expandPortfolio}" variant="bare" />
+                                <aura:set attribute="else"> 
+                                    <lightning:buttonIcon iconName="utility:hide" alternativeText="Collpase Portfolio" onclick="{!c.collapsePortfolio}" variant="bare" /> 
+                                </aura:set>        
+                            </aura:renderIf> 
+                         </span> 
+                    </lightning:buttonGroup> 
+                </div>
+            </div>
+        </div>
+        <div class="slds-col slds-grid_vertical-align-start">            
+            <div class="slds-grid ">
+                <div class="slds-p-top_x-small slds-p-right_small slds-text-body_regular"> Job Owner</div>
+                <div class="slds-size_4-of-6"> <!--slds-size_10-of-12  style="width: 30rem !important;" -->
+                    <select id="picklist" aura:id="picklist"  class="select2Class slds-text-body_regular" size="1" multiple="multiple" label="Job Owner" style="width:100% !important;" >    
+                        <aura:iteration items="{!v.allJobOwners}" var="jb">
+                            <option value="{!jb.value}" text="{!jb.label}" selected="{!jb.selected}"></option>
+                        </aura:iteration>
+                    </select>          
+                </div>
+                <span class="slds-p-left_small" style="margin-top: 5px;">
+                <lightning:buttonIcon iconName="utility:refresh" onclick="{!c.refreshJOBLst}" alternativeText="Refresh" variant="bare" class="slds-p-left_small slds-p-top_xx-small"/></span>      
+            </div>
+        </div>
+        <!-- <div class="slds-col slds-grid slds-grid_align-end">
+            <div class="slds-clearfix">
+                <lightning:buttonGroup >
+                    <span class="slds-p-left_small">
+                        <lightning:button iconName="utility:refresh" onclick="{!c.refreshJOB}" label="Refresh" variant="bare" type="button" title="Refresh" class="slds-text-body_regular"/>
+                    </span>
+                    <span class="slds-p-left_small">
+                        <lightning:button iconName="utility:graph"  onclick="{!c.graph}" label="Reports" variant="bare" type="reset" title="Reports"  class="slds-text-body_regular"/>
+                    </span>
+                    <span class="slds-p-left_small">
+                        <lightning:button iconName="utility:search" onclick="{!c.gSearch}" label="G-Search" variant="bare" type="Search" title="G-Search" class="slds-text-body_regular"/>
+                    </span>
+                    <aura:renderIf isTrue="{!v.isCollapsed}">                                       
+                            <lightning:buttonIcon iconName="utility:preview" alternativeText="Show" onclick="{!c.expandPortfolio}" variant="bare" />
+                        <aura:set attribute="else"> 
+                            <lightning:buttonIcon iconName="utility:hide" alternativeText="Hide" onclick="{!c.collapsePortfolio}" variant="bare" />         
+                            
+                        </aura:set>        
+                    </aura:renderIf>  
+                   
+                    
+                </lightning:buttonGroup>
+            </div> 
+        </div> -->
+    </div>
+    <div aura:id="ModalDialogPlaceholder" />
+    <div aura:id="gsearch" />
+    <div aura:id="dashboardBody" />
+</aura:component>

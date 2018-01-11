@@ -1,0 +1,30 @@
+.THIS .globalFilterCLS{
+    margin: 0.5px;
+    border-radius: 5px;
+}
+.THIS .taskActionsCLS{
+    padding-bottom: unset !important;
+    width: 40%; 
+    padding: 5px;
+    margin:2.5px;
+    padding-left: 0% !important;
+    padding-right: 0px !important; 
+    max-height: 17.3rem;
+}
+.THIS .graphAreaCLS{
+   width: 40%;
+    padding: 5px;
+    margin:2.5px
+}
+.THIS .portfolioCLS{
+    margin:2.5px; 
+    padding: 5px;
+    width: 100rem;
+}
+.THIS .slds-icon-action-question-post-action {
+    background-color: rgb(22, 50, 92);
+}
+/*toggleCss.css*/
+.THIS .collapse {
+    display: none;
+}
